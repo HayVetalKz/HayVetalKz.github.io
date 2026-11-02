@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="ru">
 <head>
+    <script>
+(function() {
+    var pref = localStorage.getItem('site_lang');
+    var navLang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    var isRu = /^(ru|be|kk|uk)/i.test(navLang);
+    if (pref === 'en' || (!pref && !isRu)) {
+        var p = window.location.pathname;
+        var target = '/en' + (p === '/' ? '/index.html' : p);
+        if (!target.endsWith('.html') && !target.endsWith('/')) target += '.html';
+        window.location.replace(target + window.location.search + window.location.hash);
+    }
+})();
+</script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Completed Portfolio Projects</title>
-    <base href="https://vitald3.github.io/" />
-    <meta name="description" content="View completed portfolio projects and order development services." />
-    <meta name="keywords" content="App development, mobile development, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
-    <meta property="og:title" content="Completed Portfolio Projects" />
+    <title>Выполненные работы в портфолио</title>
+    <base href="https://hayvetalkz.github.io/" />
+    <meta name="description" content="Посмотреть выполненные работы в портфолио и заказать работу." />
+    <meta name="keywords" content="Создание приложений, мобильная разработка, Flutter, Swift, Kotlin, Laravel, Android, iOS, разработка под ключ" />
+    <meta property="og:title" content="Выполненные работы в портфолио" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vitald3.github.io/projects" />
-    <meta property="og:image" content="https://vitald3.github.io/assets/img/WEB-PROGRAMMING.png" />
+    <meta property="og:url" content="https://hayvetalkz.github.io/projects" />
+    <meta property="og:image" content="https://hayvetalkz.github.io/assets/img/WEB-PROGRAMMING.png" />
     <meta property="og:site_name" content="App-Creator" />
     <link href="/assets/css/main.css?v=6" rel="stylesheet" media="screen">
     <link href="/assets/img/favicon.png" rel="icon" />
-    <link href="https://vitald3.github.io/projects" rel="canonical" />
+    <link href="https://hayvetalkz.github.io/projects" rel="canonical" />
 
     <style>
         :root {
@@ -817,23 +830,51 @@
         ym(111120533, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/111120533" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<style>
+.ac-lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(16, 24, 32, .06);
+    border: 1px solid rgba(16, 24, 32, .1);
+    color: #101820;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    transition: .25s ease;
+    margin-right: 6px;
+}
+.ac-lang-btn:hover {
+    background: #FFA351;
+    color: #101820;
+    transform: scale(1.05);
+}
+body.ac-muted-mode .ac-lang-btn {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .2);
+    color: #fff;
+}
+</style>
 </head>
 <body id="top">
 <header class="site-header ac-header">
     <div class="container">
         <div class="flex jus alc top_menu ac-header-main">
-            <a href="index.html" class="ac-wordmark" aria-label="App-Creator">
+            <a href="/index.html" class="ac-wordmark" aria-label="App-Creator">
                 <span class="ac-wordmark-mark">AC</span>
                 <span class="ac-wordmark-name">APP—CREATOR</span>
             </a>
             <time class="ac-clock" id="acClock"></time>
             <div class="ac-profile">
                 <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
-                <div class="ac-profile-status"><i></i>10+ years in development</div>
-                <h2>Hey, I’m Vitaliy</h2>
-                <p>I build mobile applications, websites and digital products for business.</p>
+                <div class="ac-profile-status"><i></i>10+ лет в разработке</div>
+                <h2>Привет, я Виталий</h2>
+                <p>Создаю мобильные приложения, сайты и цифровые продукты для бизнеса.</p>
                 <div class="ac-profile-actions">
-                    <a href="projects.html">Projects</a>
+                    <a href="/projects.html">Работы</a>
                 </div>
             </div>
             <button type="button" class="burger flex jus column" aria-label="Открыть меню" aria-expanded="false">
@@ -843,17 +884,17 @@
             </button>
             <nav class="menu ac-nav">
                 <ul class="ul flex_row flex alc">
-                    <li><a class="bold" href="index.html">Home</a></li>
-                    <li><a class="bold" href="index.html#about">About Me</a></li>
-                    <li><a class="bold" href="index.html#experience">Experience</a></li>
-                    <li><a class="bold active" href="index.html#work">Projects</a></li>
-                    <li><a class="bold" href="index.html#services">Services</a></li>
-                    <li><a class="bold" href="index.html#skills">Skills</a></li>
-                    <li><a class="bold" href="index.html#reviews">Reviews</a></li>
-                    <li><a class="bold" href="certificates.html">Certificates</a></li>
+                    <li><a class="bold" href="/index.html">Главная</a></li>
+                    <li><a class="bold" href="/index.html#about">Обо мне</a></li>
+                    <li><a class="bold" href="/index.html#experience">Опыт</a></li>
+                    <li><a class="bold active" href="/index.html#work">Работы</a></li>
+                    <li><a class="bold" href="/index.html#services">Услуги</a></li>
+                    <li><a class="bold" href="/index.html#skills">Навыки</a></li>
+                    <li><a class="bold" href="/index.html#reviews">Отзывы</a></li>
+                    <li><a class="bold" href="/certificates.html">Сертификаты</a></li>
                 </ul>
             </nav>
-            <div class="ac-theme-controls"><button type="button" id="acThemeToggle" aria-label="Переключить оформление">☼</button><a href="#top" aria-label="Наверх">↑</a></div>
+            <div class="ac-theme-controls"><a href="/en/projects.html" class="ac-lang-btn" onclick="localStorage.setItem('site_lang', 'en')" title="Switch to EN">EN</a><button type="button" id="acThemeToggle" aria-label="Переключить оформление">☼</button><a href="#top" aria-label="Наверх">↑</a></div>
         </div>
     </div>
 </header>
@@ -874,8 +915,8 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    var appStoreText = "View on the App Store";
-    var googlePlayText = "View on Google Play";
+    var appStoreText = "Смотреть в App Store";
+    var googlePlayText = "Смотреть в Google Play";
     var links = document.querySelectorAll('.content a[href*="apps.apple.com"], .content a[href*="play.google.com"]');
 
     links.forEach(function(link) {
@@ -1295,221 +1336,221 @@ document.addEventListener('DOMContentLoaded', function () {
             <section class="ac-section">
             <header class="ac-catalog-head">
                 <span>01 / Portfolio register</span>
-                <h1>Latest Projects</h1>
+                <h1>Последние работы</h1>
             </header>
             <div class="ac-projects ac-projects--catalog">
-                                    <a class="ac-project" href="project/naimio.html">
+                                    <a class="ac-project" href="/project/naimio.html">
                         <img src="/assets/img/preview_1787880576_36a83e03.webp" alt="Naimio - маркетплейс фриланс услуг">
                         <div class="ac-project-meta">
-                            <span>01 / Case Study</span>
+                            <span>01 / Case study</span>
                             <h3>Naimio - маркетплейс фриланс услуг</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/mozi_sizer.html">
+                                    <a class="ac-project" href="/project/mozi_sizer.html">
                         <img src="/assets/img/preview_1777579432_303375d8.webp" alt="Мобильное кросплатформенное приложение MOZI Sizer">
                         <div class="ac-project-meta">
-                            <span>02 / Case Study</span>
+                            <span>02 / Case study</span>
                             <h3>Мобильное кросплатформенное приложение MOZI Sizer</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/taptym.html">
+                                    <a class="ac-project" href="/project/taptym.html">
                         <img src="/assets/img/preview_1777536883_04c2adf9.webp" alt="Мобильное кросплатформенное приложение TapTym">
                         <div class="ac-project-meta">
-                            <span>03 / Case Study</span>
+                            <span>03 / Case study</span>
                             <h3>Мобильное кросплатформенное приложение TapTym</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/universum_worlds.html">
+                                    <a class="ac-project" href="/project/universum_worlds.html">
                         <img src="/assets/img/preview_1777649875_bf7613e3.webp" alt="Мобильное кросплатформенное приложение Universum Worlds">
                         <div class="ac-project-meta">
-                            <span>04 / Case Study</span>
+                            <span>04 / Case study</span>
                             <h3>Мобильное кросплатформенное приложение Universum Worlds</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/logflightpro.html">
+                                    <a class="ac-project" href="/project/logflightpro.html">
                         <img src="/assets/img/preview_1777652567_4419c044.webp" alt="Мобильное нативное приложение LogFlightPro">
                         <div class="ac-project-meta">
-                            <span>05 / Case Study</span>
+                            <span>05 / Case study</span>
                             <h3>Мобильное нативное приложение LogFlightPro</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/cstrike_skins.html">
+                                    <a class="ac-project" href="/project/cstrike_skins.html">
                         <img src="/assets/img/preview_1777653000_2383ac53.webp" alt="Мобильное кросплатформенное приложение СStrike Skins">
                         <div class="ac-project-meta">
-                            <span>06 / Case Study</span>
+                            <span>06 / Case study</span>
                             <h3>Мобильное кросплатформенное приложение СStrike Skins</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/lol_skins_collection.html">
+                                    <a class="ac-project" href="/project/lol_skins_collection.html">
                         <img src="/assets/img/preview_1777653175_7eaf4cee.webp" alt="Мобильное кросплатформенное приложение LoL Skins Collection">
                         <div class="ac-project-meta">
-                            <span>07 / Case Study</span>
+                            <span>07 / Case study</span>
                             <h3>Мобильное кросплатформенное приложение LoL Skins Collection</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/moba_skins.html">
+                                    <a class="ac-project" href="/project/moba_skins.html">
                         <img src="/assets/img/preview_1777653672_8e3b72f3.webp" alt="Мобильное кросплатформенное приложение Moba Skins">
                         <div class="ac-project-meta">
-                            <span>08 / Case Study</span>
+                            <span>08 / Case study</span>
                             <h3>Мобильное кросплатформенное приложение Moba Skins</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/soulcue.html">
+                                    <a class="ac-project" href="/project/soulcue.html">
                         <img src="/assets/img/preview_1777579207_84975fa9.webp" alt="SoulCue: AI Journal">
                         <div class="ac-project-meta">
-                            <span>09 / Case Study</span>
+                            <span>09 / Case study</span>
                             <h3>SoulCue: AI Journal</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/ttm.html">
+                                    <a class="ac-project" href="/project/ttm.html">
                         <img src="/assets/img/preview_1777538698_fef2ff8f.webp" alt="Трак Трейлер Маркет">
                         <div class="ac-project-meta">
-                            <span>10 / Case Study</span>
+                            <span>10 / Case study</span>
                             <h3>Трак Трейлер Маркет</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/fingpt.html">
+                                    <a class="ac-project" href="/project/fingpt.html">
                         <img src="/assets/img/preview_1777538746_2b4353af.webp" alt="FinGPT - SwiftUI">
                         <div class="ac-project-meta">
-                            <span>11 / Case Study</span>
+                            <span>11 / Case study</span>
                             <h3>FinGPT - SwiftUI</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/luna_deep.html">
+                                    <a class="ac-project" href="/project/luna_deep.html">
                         <img src="/assets/img/preview_1777538906_3963d70e.webp" alt="Luna Deep - Prime music wave">
                         <div class="ac-project-meta">
-                            <span>12 / Case Study</span>
+                            <span>12 / Case study</span>
                             <h3>Luna Deep - Prime music wave</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/icapia_home.html">
+                                    <a class="ac-project" href="/project/icapia_home.html">
                         <img src="/assets/img/preview_1777538957_ccb31b63.webp" alt="Don&#039;t Touch My Phone Guard">
                         <div class="ac-project-meta">
-                            <span>13 / Case Study</span>
+                            <span>13 / Case study</span>
                             <h3>Don&#039;t Touch My Phone Guard</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/auctioncar.html">
+                                    <a class="ac-project" href="/project/auctioncar.html">
                         <img src="/assets/img/preview_1777539013_6d371a57.webp" alt="Мобильное приложение AuctionCar - Flutter ">
                         <div class="ac-project-meta">
-                            <span>14 / Case Study</span>
+                            <span>14 / Case study</span>
                             <h3>Мобильное приложение AuctionCar - Flutter </h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/applock.html">
+                                    <a class="ac-project" href="/project/applock.html">
                         <img src="/assets/img/preview_1777539056_996f2ef3.webp" alt="Super App Lock: Screen Time">
                         <div class="ac-project-meta">
-                            <span>15 / Case Study</span>
+                            <span>15 / Case study</span>
                             <h3>Super App Lock: Screen Time</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/dtmp.html">
+                                    <a class="ac-project" href="/project/dtmp.html">
                         <img src="/assets/img/preview_1777539119_d4dedca9.webp" alt="Don&#039;t Touch My Phone Guard">
                         <div class="ac-project-meta">
-                            <span>16 / Case Study</span>
+                            <span>16 / Case study</span>
                             <h3>Don&#039;t Touch My Phone Guard</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/catdog.html">
+                                    <a class="ac-project" href="/project/catdog.html">
                         <img src="/assets/img/preview_1777539171_5d3c80af.webp" alt="AI Pawsome: CatDog Translator">
                         <div class="ac-project-meta">
-                            <span>17 / Case Study</span>
+                            <span>17 / Case study</span>
                             <h3>AI Pawsome: CatDog Translator</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/ohotica.html">
+                                    <a class="ac-project" href="/project/ohotica.html">
                         <img src="/assets/img/33V.webp" alt="Охотика">
                         <div class="ac-project-meta">
-                            <span>18 / Case Study</span>
+                            <span>18 / Case study</span>
                             <h3>Охотика</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/goat_rock.html">
+                                    <a class="ac-project" href="/project/goat_rock.html">
                         <img src="/assets/img/preview_1777539424_94984a4e.webp" alt="Goat Rock – Prime Rock Station">
                         <div class="ac-project-meta">
-                            <span>19 / Case Study</span>
+                            <span>19 / Case study</span>
                             <h3>Goat Rock – Prime Rock Station</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/tezarius.html">
+                                    <a class="ac-project" href="/project/tezarius.html">
                         <img src="/assets/img/preview_1777539481_d236a459.webp" alt="Tezarius - Торговля и учет">
                         <div class="ac-project-meta">
-                            <span>20 / Case Study</span>
+                            <span>20 / Case study</span>
                             <h3>Tezarius - Торговля и учет</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/taumart.html">
+                                    <a class="ac-project" href="/project/taumart.html">
                         <img src="/assets/img/preview_1777539527_304d9410.webp" alt="Тау-Март">
                         <div class="ac-project-meta">
-                            <span>21 / Case Study</span>
+                            <span>21 / Case study</span>
                             <h3>Тау-Март</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/pro_design.html">
+                                    <a class="ac-project" href="/project/pro_design.html">
                         <img src="/assets/img/preview_1777652851_6f94df6b.webp" alt="Мобильное кросплатформенное приложение ПРО ДИЗАЙН">
                         <div class="ac-project-meta">
-                            <span>22 / Case Study</span>
+                            <span>22 / Case study</span>
                             <h3>Мобильное кросплатформенное приложение ПРО ДИЗАЙН</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/drivezaim.html">
+                                    <a class="ac-project" href="/project/drivezaim.html">
                         <img src="/assets/img/img.webp" alt="DriveZaim Займ под залог авто">
                         <div class="ac-project-meta">
-                            <span>23 / Case Study</span>
+                            <span>23 / Case study</span>
                             <h3>DriveZaim Займ под залог авто</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/instaflora.html">
+                                    <a class="ac-project" href="/project/instaflora.html">
                         <img src="/assets/img/inst.webp" alt="Доставка цветов Москва от Instaflora для тех, кто привык к лучшему, но не хочет переплачивать">
                         <div class="ac-project-meta">
-                            <span>24 / Case Study</span>
+                            <span>24 / Case study</span>
                             <h3>Доставка цветов Москва от Instaflora для тех, кто привык к лучшему, но не хочет переплачивать</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/felicita-flowers.html">
+                                    <a class="ac-project" href="/project/felicita-flowers.html">
                         <img src="/assets/img/felicita-flowers.com_p.webp" alt="Доставка цветов Москва по низким ценам – всегда рады новым заказам и готовы помочь">
                         <div class="ac-project-meta">
-                            <span>25 / Case Study</span>
+                            <span>25 / Case study</span>
                             <h3>Доставка цветов Москва по низким ценам – всегда рады новым заказам и готовы помочь</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/mosoptom.html">
+                                    <a class="ac-project" href="/project/mosoptom.html">
                         <img src="/assets/img/5.webp" alt="MosOptom разработка на Laravel">
                         <div class="ac-project-meta">
-                            <span>26 / Case Study</span>
+                            <span>26 / Case study</span>
                             <h3>MosOptom разработка на Laravel</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="project/1001-sewing-machine.html">
+                                    <a class="ac-project" href="/project/1001-sewing-machine.html">
                         <img src="/assets/img/1.webp" alt="1001 швейная машина">
                         <div class="ac-project-meta">
-                            <span>27 / Case Study</span>
+                            <span>27 / Case study</span>
                             <h3>1001 швейная машина</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
@@ -1565,20 +1606,20 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="ac-footer-grid">
             <div class="ac-footer-index">AC / 2026</div>
             <div class="footer-brand ac-footer-brand">
-                <strong>Digital product development</strong>
-                <p>Mobile apps, websites, e-commerce platforms and complex integrations — focused on speed, UX and stability.</p>
+                <strong>Разработка цифровых продуктов</strong>
+                <p>Мобильные приложения, сайты, интернет-магазины и сложные интеграции — с фокусом на скорость, UX и стабильность.</p>
             </div>
             <div class="footer-links ac-footer-links">
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="reviews.html">Reviews</a>
-                <a href="certificates.html">Certificates</a>
+                <a href="/projects.html">Работы</a>
+                <a href="/about.html">О себе</a>
+                <a href="/reviews.html">Отзывы</a>
+                <a href="/certificates.html">Сертификаты</a>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="power">
     <span class="hid">
-        All rights reserved    </span>
+        Все права защищены    </span>
                 2026 «App-Creator»
             </div>
         </div>
@@ -1586,10 +1627,10 @@ document.addEventListener('DOMContentLoaded', function () {
     <script type="application/ld+json">{
             "@context": "http://schema.org",
             "@type": "Person",
-            "url": "https://vitald3.github.io/",
-            "name": "App-Creator - Vitaliy Khaychenko Portfolio",
-            "logo": "https://vitald3.github.io/assets/img/logo.png",
-            "image": "https://vitald3.github.io/assets/img/vitaliy-portrait.jpg",
+            "url": "https://hayvetalkz.github.io/",
+            "name": "App-Creator - Портфолио Хайченко Виталия",
+            "logo": "https://hayvetalkz.github.io/assets/img/logo.png",
+            "image": "https://hayvetalkz.github.io/assets/img/vitaliy-portrait.jpg",
             "jobTitle": "Software developer"
         }
     </script>
@@ -1658,11 +1699,11 @@ document.addEventListener('DOMContentLoaded', function () {
         <script>
         let reviewsData;
 
-        const footerLocale = "en-US";
-        const dateNotSetText = "Date not specified";
-        const viewReviewText = "View Review";
-        const noReviewsText = "No reviews match this filter";
-        const language = "en";
+        const footerLocale = "ru-RU";
+        const dateNotSetText = "Дата не указана";
+        const viewReviewText = "Смотреть отзыв";
+        const noReviewsText = "Нет отзывов по данному фильтру";
+        const language = "ru";
 
         if ($('.reviews-section').hasClass('rsh')) {
             reviewsData = [{"id":"9","rating":"5","project":"Разработка мобильного приложения для наушников","project_en":"Develop a mobile application for headphones","name":"Заказчик","name_en":"Client","text":"Всё хорошо, заказ выполнен качественно ","text_en":"Everything went well. The project was completed to a high standard.","price":"15000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_945622-2","sort":"9","created_at":"2024-01-15 19:02:59"},{"id":"8","rating":"5","project":"Доработка загрузчика товаров на опенкарте","project_en":"Improve the OpenCart product importer","name":"Дмитрий Ненашев","name_en":"Dmitry Nenashev","text":"Виталий успешно справился с задачей с которой не справился другой разработчик. Пришлось, конечно, повозиться, много тестировать, но результат отличный!","text_en":"Vitaliy successfully completed a task that another developer could not handle. It required a lot of work and extensive testing, but the final result was excellent!","price":"8000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"8","created_at":"2024-01-15 19:02:59"},{"id":"7","rating":"5","project":"Устранить проблему с дублированием email при отправке рассылки писем","project_en":"Fix duplicate emails when sending an email campaign","name":"Заказчик","name_en":"Client","text":"Очень оперативно решен поставленный вопрос. Спасибо за профессиональную работу!","text_en":"The issue was resolved very quickly. Thank you for the professional work!","price":"3000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"7","created_at":"2024-01-07 19:02:59"},{"id":"6","rating":"5","project":"Правка на Опенкарт 3","project_en":"OpenCart 3 modification","name":"Александр Егоров","name_en":"Alexander Egorov","text":"Спасибо большое. Всем доволен. Буду постоянно к вам обращаться","text_en":"Thank you very much. I am completely satisfied with the result and will continue working with you.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"6","created_at":"2023-12-30 19:02:59"},{"id":"5","rating":"5","project":"OpenCart: Настроить интеграции с ТК и Эквайрингом (через готовые модули)","project_en":"OpenCart: Configure shipping and payment gateway integrations using existing modules","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Выполнил все согласно ТЗ, без нареканий. Хороший специалист, обращаемся не первый раз","text_en":"Everything was completed according to the specification without any issues. A skilled developer whom we have worked with more than once.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"5","created_at":"2023-10-09 18:02:59"},{"id":"4","rating":"5","project":"Создать структуру Мобильного приложения","project_en":"Create the structure of a mobile application","name":"Заказчик","name_en":"Client","text":"Все было сделано как надо. Рекомендую!","text_en":"Everything was completed exactly as required. Highly recommended!","price":"10000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"4","created_at":"2023-09-26 18:02:59"},{"id":"3","rating":"5","project":"OpenCart: Доработать стили сайта","project_en":"OpenCart: Improve the website styles","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Повторный заказ. Небольшая доработка, все отлично сделано. ","text_en":"A repeat order. It was a small improvement, and everything was completed perfectly.","price":"1000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920187-2","sort":"3","created_at":"2023-09-18 18:02:59"},{"id":"2","rating":"5","project":"Модуль Opencart 1.5.6 переписать на 3.0","project_en":"Rewrite an OpenCart 1.5.6 module for OpenCart 3.0","name":"Всеволод Антонов-Дидковский\r\n","name_en":"Vsevolod Antonov-Didkovsky","text":"Виталий справился с задачей очень быстро! Проект был сдан вовремя, без каких-либо замечаний. Действительно мастер своего дела! Рекомендую как супер специалиста! ","text_en":"Vitaliy completed the task very quickly! The project was delivered on time without any issues. He is truly a master of his craft. I highly recommend him as an excellent specialist!","price":"8300","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919858-2","sort":"2","created_at":"2023-09-14 17:02:00"},{"id":"1","rating":"5","project":"OpenCart: Доработать и проверить функционал сайта","project_en":"OpenCart: Improve and test the website functionality","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Отличный исполнитель, все сделал четко и быстро, и даже чуть больше, рекомендуем! ","text_en":"Excellent developer. Everything was completed quickly and precisely, and even a little beyond the original scope. Highly recommended!","price":"5000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919652-2","sort":"1","created_at":"2023-09-12 16:19:34"}].slice(0, 3);

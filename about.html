@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="ru">
 <head>
+    <script>
+(function() {
+    var pref = localStorage.getItem('site_lang');
+    var navLang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    var isRu = /^(ru|be|kk|uk)/i.test(navLang);
+    if (pref === 'en' || (!pref && !isRu)) {
+        var p = window.location.pathname;
+        var target = '/en' + (p === '/' ? '/index.html' : p);
+        if (!target.endsWith('.html') && !target.endsWith('/')) target += '.html';
+        window.location.replace(target + window.location.search + window.location.hash);
+    }
+})();
+</script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>About App-Creator</title>
-    <base href="https://vitald3.github.io/" />
-    <meta name="description" content="App-Creator — mobile app, website, e-commerce, Laravel/OpenCart, integration, parsing and automation development." />
-    <meta name="keywords" content="App development, mobile development, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
-    <meta property="og:title" content="About App-Creator" />
+    <title>О компании App-Creator</title>
+    <base href="https://hayvetalkz.github.io/" />
+    <meta name="description" content="App-Creator — разработка мобильных приложений, сайтов, интернет-магазинов, Laravel/OpenCart проектов, интеграций, парсинга и автоматизации." />
+    <meta name="keywords" content="Создание приложений, мобильная разработка, Flutter, Swift, Kotlin, Laravel, Android, iOS, разработка под ключ" />
+    <meta property="og:title" content="О компании App-Creator" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vitald3.github.io/about" />
-    <meta property="og:image" content="https://vitald3.github.io/assets/img/WEB-PROGRAMMING.png" />
+    <meta property="og:url" content="https://hayvetalkz.github.io/about" />
+    <meta property="og:image" content="https://hayvetalkz.github.io/assets/img/WEB-PROGRAMMING.png" />
     <meta property="og:site_name" content="App-Creator" />
     <link href="/assets/css/main.css?v=6" rel="stylesheet" media="screen">
     <link href="/assets/img/favicon.png" rel="icon" />
-    <link href="https://vitald3.github.io/about" rel="canonical" />
+    <link href="https://hayvetalkz.github.io/about" rel="canonical" />
 
     <style>
         :root {
@@ -817,23 +830,51 @@
         ym(111120533, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/111120533" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<style>
+.ac-lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(16, 24, 32, .06);
+    border: 1px solid rgba(16, 24, 32, .1);
+    color: #101820;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    transition: .25s ease;
+    margin-right: 6px;
+}
+.ac-lang-btn:hover {
+    background: #FFA351;
+    color: #101820;
+    transform: scale(1.05);
+}
+body.ac-muted-mode .ac-lang-btn {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .2);
+    color: #fff;
+}
+</style>
 </head>
 <body id="top">
 <header class="site-header ac-header">
     <div class="container">
         <div class="flex jus alc top_menu ac-header-main">
-            <a href="index.html" class="ac-wordmark" aria-label="App-Creator">
+            <a href="/index.html" class="ac-wordmark" aria-label="App-Creator">
                 <span class="ac-wordmark-mark">AC</span>
                 <span class="ac-wordmark-name">APP—CREATOR</span>
             </a>
             <time class="ac-clock" id="acClock"></time>
             <div class="ac-profile">
                 <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
-                <div class="ac-profile-status"><i></i>10+ years in development</div>
-                <h2>Hey, I’m Vitaliy</h2>
-                <p>I build mobile applications, websites and digital products for business.</p>
+                <div class="ac-profile-status"><i></i>10+ лет в разработке</div>
+                <h2>Привет, я Виталий</h2>
+                <p>Создаю мобильные приложения, сайты и цифровые продукты для бизнеса.</p>
                 <div class="ac-profile-actions">
-                    <a href="projects.html">Projects</a>
+                    <a href="/projects.html">Работы</a>
                 </div>
             </div>
             <button type="button" class="burger flex jus column" aria-label="Открыть меню" aria-expanded="false">
@@ -843,17 +884,17 @@
             </button>
             <nav class="menu ac-nav">
                 <ul class="ul flex_row flex alc">
-                    <li><a class="bold" href="index.html">Home</a></li>
-                    <li><a class="bold active" href="index.html#about">About Me</a></li>
-                    <li><a class="bold" href="index.html#experience">Experience</a></li>
-                    <li><a class="bold" href="index.html#work">Projects</a></li>
-                    <li><a class="bold" href="index.html#services">Services</a></li>
-                    <li><a class="bold" href="index.html#skills">Skills</a></li>
-                    <li><a class="bold" href="index.html#reviews">Reviews</a></li>
-                    <li><a class="bold" href="certificates.html">Certificates</a></li>
+                    <li><a class="bold" href="/index.html">Главная</a></li>
+                    <li><a class="bold active" href="/index.html#about">Обо мне</a></li>
+                    <li><a class="bold" href="/index.html#experience">Опыт</a></li>
+                    <li><a class="bold" href="/index.html#work">Работы</a></li>
+                    <li><a class="bold" href="/index.html#services">Услуги</a></li>
+                    <li><a class="bold" href="/index.html#skills">Навыки</a></li>
+                    <li><a class="bold" href="/index.html#reviews">Отзывы</a></li>
+                    <li><a class="bold" href="/certificates.html">Сертификаты</a></li>
                 </ul>
             </nav>
-            <div class="ac-theme-controls"><button type="button" id="acThemeToggle" aria-label="Переключить оформление">☼</button><a href="#top" aria-label="Наверх">↑</a></div>
+            <div class="ac-theme-controls"><a href="/en/about.html" class="ac-lang-btn" onclick="localStorage.setItem('site_lang', 'en')" title="Switch to EN">EN</a><button type="button" id="acThemeToggle" aria-label="Переключить оформление">☼</button><a href="#top" aria-label="Наверх">↑</a></div>
         </div>
     </div>
 </header>
@@ -874,8 +915,8 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    var appStoreText = "View on the App Store";
-    var googlePlayText = "View on Google Play";
+    var appStoreText = "Смотреть в App Store";
+    var googlePlayText = "Смотреть в Google Play";
     var links = document.querySelectorAll('.content a[href*="apps.apple.com"], .content a[href*="play.google.com"]');
 
     links.forEach(function(link) {
@@ -1335,55 +1376,55 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="container ac-page">
     <section class="ac-hero ac-hero--inner">
         <div class="ac-hero-copy">
-            <div class="ac-kicker"><span>01</span>App-Creator — turnkey development</div>
-            <h1>Not just code. <em>Ready-to-use solutions</em> built to sell and grow</h1>
-            <p>I develop mobile applications, websites, online stores and complex integrations. I approach every task as a complete product: architecture, usability, speed, security, scalability and ongoing support.</p>
-            <div class="ac-actions"><a href="projects.html" class="ac-button ac-button--primary">View Projects</a></div>
+            <div class="ac-kicker"><span>01</span>App-Creator — разработка под ключ</div>
+            <h1>Не просто код. <em>Готовые решения</em>, которые продают и растут</h1>
+            <p>Я занимаюсь разработкой мобильных приложений, сайтов, интернет-магазинов и сложных интеграций. Беру задачу не как «написать пару экранов», а как полноценный продукт: архитектура, удобство, скорость, безопасность, масштабируемость и дальнейшая поддержка.</p>
+            <div class="ac-actions"><a href="/projects.html" class="ac-button ac-button--primary">Смотреть работы</a></div>
         </div>
         <aside class="ac-register">
-            <div class="ac-register-head"><span>AC / 01</span><strong>What the client gets</strong></div>
+            <div class="ac-register-head"><span>AC / 01</span><strong>Что получает клиент</strong></div>
             <ol>
-                <li><span>01</span><div><b>A clear project structure without chaos</b></div></li>
-                <li><span>02</span><div><b>A modern responsive interface</b></div></li>
-                <li><span>03</span><div><b>Fast loading and clean code</b></div></li>
-                <li><span>04</span><div><b>Real support after launch</b></div></li>
+                <li><span>01</span><div><b>Понятную структуру проекта без хаоса</b></div></li>
+                <li><span>02</span><div><b>Современный интерфейс и адаптив</b></div></li>
+                <li><span>03</span><div><b>Быструю загрузку и чистый код</b></div></li>
+                <li><span>04</span><div><b>Реальную поддержку после запуска</b></div></li>
             </ol>
         </aside>
     </section>
 
     <div class="ac-ledger">
-        <div><span>01</span><strong>10+</strong><small>years of development experience</small></div>
+        <div><span>01</span><strong>10+</strong><small>лет опыта в разработке</small></div>
         <div><span>02</span><strong>Web</strong><small>Laravel, OpenCart, API</small></div>
         <div><span>03</span><strong>Mobile</strong><small>Flutter, Kotlin, Swift</small></div>
-        <div><span>04</span><strong>Full</strong><small>from idea to launch</small></div>
+        <div><span>04</span><strong>Full</strong><small>от идеи до запуска</small></div>
     </div>
 
     <section class="ac-section">
-        <header class="ac-section-head"><div><span>02 / Services</span><h2>What I Do</h2></div><p>I solve business technical tasks ranging from quick improvements to complete product development from scratch.</p></header>
+        <header class="ac-section-head"><div><span>02 / Services</span><h2>Чем занимаюсь</h2></div><p>Закрываю технические задачи бизнеса: от быстрых доработок до полноценной разработки продукта с нуля.</p></header>
         <div class="ac-services">
-                            <article><span>01</span><h3>Mobile Applications</h3><p>iOS and Android development with Flutter, Kotlin and Swift: authentication, push notifications, payments, maps, APIs, user accounts and store publishing.</p></article>
-                            <article><span>02</span><h3>Websites and Stores</h3><p>Online stores, landing pages, corporate websites, catalogs and services designed to look modern and remain convenient for customers.</p></article>
-                            <article><span>03</span><h3>Laravel / OpenCart</h3><p>Existing project improvements, bug fixing, modules, integrations, admin panels, database optimization and backend logic.</p></article>
-                            <article><span>04</span><h3>Integrations and APIs</h3><p>Payments, CRM, delivery services, Firebase, notifications, external services, data exchange and automated workflows.</p></article>
-                            <article><span>05</span><h3>Parsing and Automation</h3><p>Data collection, price-list processing, bots, routine-task automation and tools that save business time.</p></article>
-                            <article><span>06</span><h3>Optimization</h3><p>Performance improvements, bottleneck fixes, code cleanup, better UX, SEO structure and technical stability.</p></article>
+                            <article><span>01</span><h3>Мобильные приложения</h3><p>Разработка iOS и Android приложений на Flutter, Kotlin и Swift: авторизация, push, платежи, карты, API, личные кабинеты, публикация в сторах.</p></article>
+                            <article><span>02</span><h3>Сайты и магазины</h3><p>Интернет-магазины, лендинги, корпоративные сайты, каталоги и сервисы. Делаю так, чтобы проект выглядел современно и был удобен для клиента.</p></article>
+                            <article><span>03</span><h3>Laravel / OpenCart</h3><p>Доработка готовых проектов, исправление ошибок, модули, интеграции, админ-панели, оптимизация базы данных и серверной логики.</p></article>
+                            <article><span>04</span><h3>Интеграции и API</h3><p>Подключение платежей, CRM, доставок, Firebase, уведомлений, внешних сервисов, обмена данными и автоматических сценариев.</p></article>
+                            <article><span>05</span><h3>Парсинг и автоматизация</h3><p>Сбор данных, обработка прайсов, боты, автоматизация рутинных действий и инструменты, которые экономят время бизнеса.</p></article>
+                            <article><span>06</span><h3>Оптимизация</h3><p>Ускорение загрузки, исправление узких мест, чистка лишнего кода, улучшение UX, SEO-структуры и технической стабильности.</p></article>
                     </div>
     </section>
 
     <section class="ac-section">
-        <header class="ac-section-head"><div><span>03 / Process</span><h2>How I Work</h2></div><p>No unnecessary bureaucracy: I quickly understand the task, propose a clear solution and bring it to completion.</p></header>
+        <header class="ac-section-head"><div><span>03 / Process</span><h2>Как работаю</h2></div><p>Без лишней бюрократии: сначала быстро разбираю задачу, потом предлагаю понятное решение и довожу до результата.</p></header>
         <div class="ac-process">
-                            <article><span>01</span><h3>Discovery</h3><p>I analyze the project goal, audience, limitations and the required final result.</p></article>
-                            <article><span>02</span><h3>Architecture</h3><p>I design the structure, APIs, data, screens and scenarios so the project remains stable as it grows.</p></article>
-                            <article><span>03</span><h3>Development</h3><p>I write the code, build the interface, connect services and test key user flows.</p></article>
-                            <article><span>04</span><h3>Launch</h3><p>I help deploy the project, verify production behavior and prepare a solid base for future development.</p></article>
+                            <article><span>01</span><h3>Погружение</h3><p>Разбираю цель проекта, аудиторию, ограничения и то, какой результат нужен на выходе.</p></article>
+                            <article><span>02</span><h3>Архитектура</h3><p>Продумываю структуру, API, данные, экраны и сценарии, чтобы проект не развалился при росте.</p></article>
+                            <article><span>03</span><h3>Разработка</h3><p>Пишу код, собираю интерфейс, подключаю сервисы, тестирую ключевые пользовательские сценарии.</p></article>
+                            <article><span>04</span><h3>Запуск</h3><p>Помогаю выкатить проект, проверить работу на проде и подготовить основу для дальнейших доработок.</p></article>
                     </div>
     </section>
 
     <section class="ac-section">
-        <header class="ac-section-head"><div><span>04 / Technology</span><h2>Technologies</h2></div><p>I use tools that help launch products quickly and continue developing them confidently.</p></header>
+        <header class="ac-section-head"><div><span>04 / Technology</span><h2>Технологии</h2></div><p>Использую инструменты, которые помогают быстро запускать продукт и спокойно развивать его дальше.</p></header>
         <div class="ac-capabilities ac-capabilities--wide">
-                        <div><span>01</span>Flutter</div><div><span>02</span>Kotlin</div><div><span>03</span>Swift</div><div><span>04</span>Laravel</div><div><span>05</span>OpenCart</div><div><span>06</span>PHP</div><div><span>07</span>MySQL</div><div><span>08</span>Firebase</div><div><span>09</span>REST API</div><div><span>10</span>HTML / CSS / JS</div><div><span>11</span>Bootstrap / Flexbox</div><div><span>12</span>Parsing</div><div><span>13</span>Bots</div><div><span>14</span>SEO / Performance</div>        </div>
+                        <div><span>01</span>Flutter</div><div><span>02</span>Kotlin</div><div><span>03</span>Swift</div><div><span>04</span>Laravel</div><div><span>05</span>OpenCart</div><div><span>06</span>PHP</div><div><span>07</span>MySQL</div><div><span>08</span>Firebase</div><div><span>09</span>REST API</div><div><span>10</span>HTML / CSS / JS</div><div><span>11</span>Bootstrap / Flexbox</div><div><span>12</span>Парсинг</div><div><span>13</span>Боты</div><div><span>14</span>SEO / скорость</div>        </div>
     </section>
 </div>
 <script>
@@ -1430,20 +1471,20 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="ac-footer-grid">
             <div class="ac-footer-index">AC / 2026</div>
             <div class="footer-brand ac-footer-brand">
-                <strong>Digital product development</strong>
-                <p>Mobile apps, websites, e-commerce platforms and complex integrations — focused on speed, UX and stability.</p>
+                <strong>Разработка цифровых продуктов</strong>
+                <p>Мобильные приложения, сайты, интернет-магазины и сложные интеграции — с фокусом на скорость, UX и стабильность.</p>
             </div>
             <div class="footer-links ac-footer-links">
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="reviews.html">Reviews</a>
-                <a href="certificates.html">Certificates</a>
+                <a href="/projects.html">Работы</a>
+                <a href="/about.html">О себе</a>
+                <a href="/reviews.html">Отзывы</a>
+                <a href="/certificates.html">Сертификаты</a>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="power">
     <span class="hid">
-        All rights reserved    </span>
+        Все права защищены    </span>
                 2026 «App-Creator»
             </div>
         </div>
@@ -1451,10 +1492,10 @@ document.addEventListener('DOMContentLoaded', function () {
     <script type="application/ld+json">{
             "@context": "http://schema.org",
             "@type": "Person",
-            "url": "https://vitald3.github.io/",
-            "name": "App-Creator - Vitaliy Khaychenko Portfolio",
-            "logo": "https://vitald3.github.io/assets/img/logo.png",
-            "image": "https://vitald3.github.io/assets/img/vitaliy-portrait.jpg",
+            "url": "https://hayvetalkz.github.io/",
+            "name": "App-Creator - Портфолио Хайченко Виталия",
+            "logo": "https://hayvetalkz.github.io/assets/img/logo.png",
+            "image": "https://hayvetalkz.github.io/assets/img/vitaliy-portrait.jpg",
             "jobTitle": "Software developer"
         }
     </script>
@@ -1523,11 +1564,11 @@ document.addEventListener('DOMContentLoaded', function () {
         <script>
         let reviewsData;
 
-        const footerLocale = "en-US";
-        const dateNotSetText = "Date not specified";
-        const viewReviewText = "View Review";
-        const noReviewsText = "No reviews match this filter";
-        const language = "en";
+        const footerLocale = "ru-RU";
+        const dateNotSetText = "Дата не указана";
+        const viewReviewText = "Смотреть отзыв";
+        const noReviewsText = "Нет отзывов по данному фильтру";
+        const language = "ru";
 
         if ($('.reviews-section').hasClass('rsh')) {
             reviewsData = [{"id":"9","rating":"5","project":"Разработка мобильного приложения для наушников","project_en":"Develop a mobile application for headphones","name":"Заказчик","name_en":"Client","text":"Всё хорошо, заказ выполнен качественно ","text_en":"Everything went well. The project was completed to a high standard.","price":"15000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_945622-2","sort":"9","created_at":"2024-01-15 19:02:59"},{"id":"8","rating":"5","project":"Доработка загрузчика товаров на опенкарте","project_en":"Improve the OpenCart product importer","name":"Дмитрий Ненашев","name_en":"Dmitry Nenashev","text":"Виталий успешно справился с задачей с которой не справился другой разработчик. Пришлось, конечно, повозиться, много тестировать, но результат отличный!","text_en":"Vitaliy successfully completed a task that another developer could not handle. It required a lot of work and extensive testing, but the final result was excellent!","price":"8000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"8","created_at":"2024-01-15 19:02:59"},{"id":"7","rating":"5","project":"Устранить проблему с дублированием email при отправке рассылки писем","project_en":"Fix duplicate emails when sending an email campaign","name":"Заказчик","name_en":"Client","text":"Очень оперативно решен поставленный вопрос. Спасибо за профессиональную работу!","text_en":"The issue was resolved very quickly. Thank you for the professional work!","price":"3000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"7","created_at":"2024-01-07 19:02:59"},{"id":"6","rating":"5","project":"Правка на Опенкарт 3","project_en":"OpenCart 3 modification","name":"Александр Егоров","name_en":"Alexander Egorov","text":"Спасибо большое. Всем доволен. Буду постоянно к вам обращаться","text_en":"Thank you very much. I am completely satisfied with the result and will continue working with you.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"6","created_at":"2023-12-30 19:02:59"},{"id":"5","rating":"5","project":"OpenCart: Настроить интеграции с ТК и Эквайрингом (через готовые модули)","project_en":"OpenCart: Configure shipping and payment gateway integrations using existing modules","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Выполнил все согласно ТЗ, без нареканий. Хороший специалист, обращаемся не первый раз","text_en":"Everything was completed according to the specification without any issues. A skilled developer whom we have worked with more than once.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"5","created_at":"2023-10-09 18:02:59"},{"id":"4","rating":"5","project":"Создать структуру Мобильного приложения","project_en":"Create the structure of a mobile application","name":"Заказчик","name_en":"Client","text":"Все было сделано как надо. Рекомендую!","text_en":"Everything was completed exactly as required. Highly recommended!","price":"10000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"4","created_at":"2023-09-26 18:02:59"},{"id":"3","rating":"5","project":"OpenCart: Доработать стили сайта","project_en":"OpenCart: Improve the website styles","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Повторный заказ. Небольшая доработка, все отлично сделано. ","text_en":"A repeat order. It was a small improvement, and everything was completed perfectly.","price":"1000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920187-2","sort":"3","created_at":"2023-09-18 18:02:59"},{"id":"2","rating":"5","project":"Модуль Opencart 1.5.6 переписать на 3.0","project_en":"Rewrite an OpenCart 1.5.6 module for OpenCart 3.0","name":"Всеволод Антонов-Дидковский\r\n","name_en":"Vsevolod Antonov-Didkovsky","text":"Виталий справился с задачей очень быстро! Проект был сдан вовремя, без каких-либо замечаний. Действительно мастер своего дела! Рекомендую как супер специалиста! ","text_en":"Vitaliy completed the task very quickly! The project was delivered on time without any issues. He is truly a master of his craft. I highly recommend him as an excellent specialist!","price":"8300","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919858-2","sort":"2","created_at":"2023-09-14 17:02:00"},{"id":"1","rating":"5","project":"OpenCart: Доработать и проверить функционал сайта","project_en":"OpenCart: Improve and test the website functionality","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Отличный исполнитель, все сделал четко и быстро, и даже чуть больше, рекомендуем! ","text_en":"Excellent developer. Everything was completed quickly and precisely, and even a little beyond the original scope. Highly recommended!","price":"5000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919652-2","sort":"1","created_at":"2023-09-12 16:19:34"}].slice(0, 3);

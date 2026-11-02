@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <script>
+(function() {
+    var pref = localStorage.getItem('site_lang');
+    var navLang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    var isRu = /^(ru|be|kk|uk)/i.test(navLang);
+    if (pref === 'ru' || (!pref && isRu)) {
+        var p = window.location.pathname;
+        var target = p.replace(/^\/en/, '') || '/index.html';
+        if (!target.endsWith('.html') && !target.endsWith('/')) target += '.html';
+        window.location.replace(target + window.location.search + window.location.hash);
+    }
+})();
+</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Certificates & Skill Verification — App-Creator</title>
+    <base href="https://hayvetalkz.github.io/" />
+    <meta name="description" content="Verified professional qualifications and official state certificates: PHP, Docker, API, OOP, HTML, Git, CSS, JavaScript, PostgreSQL, Golang." />
+    <meta name="keywords" content="App development, mobile development, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
+    <meta property="og:title" content="Certificates & Skill Verification — App-Creator" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hayvetalkz.github.io/certificates" />
+    <meta property="og:image" content="https://hayvetalkz.github.io/assets/img/WEB-PROGRAMMING.png" />
+    <meta property="og:site_name" content="App-Creator" />
+    <link href="/assets/css/main.css?v=6" rel="stylesheet" media="screen">
+    <link href="/assets/img/favicon.png" rel="icon" />
+    <link href="https://hayvetalkz.github.io/certificates" rel="canonical" />
+
+    <style>
+        :root {
+            --w21-dark: #101820;
+            --w21-accent: #FFA351;
+            --w21-blue: #5A7CFF;
+            --w21-muted: rgba(16, 24, 32, .68);
+            --w21-line: rgba(16, 24, 32, .1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        .logo-link {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            width: 172px;
+            height: 54px;
+            padding: 7px 14px;
+            border-radius: 20px;
+            background: #101820;
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: 0 18px 38px rgba(16, 24, 32, .18);
+            overflow: hidden;
+        }
+
+        .logo-link:before {
+            display: none !important;
+            content: none !important;
+        }
+
+        .logo-link img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: 148px;
+            max-height: 40px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 520px) {
+            .logo-link {
+                width: 142px;
+                height: 48px;
+                padding: 6px 12px;
+                border-radius: 18px;
+            }
+
+            .logo-link img {
+                max-width: 122px;
+                max-height: 36px;
+            }
+        }
+        body {
+            background:
+                    radial-gradient(circle at 12% 18%, rgba(255, 163, 81, .16), transparent 30%),
+                    radial-gradient(circle at 88% 34%, rgba(90, 124, 255, .12), transparent 28%),
+                    linear-gradient(180deg, #fff 0%, #f7f8fb 100%);
+        }
+
+        body.active {
+            overflow: hidden;
+        }
+
+        .site-header {
+            position: relative;
+            z-index: 1000;
+            padding: 18px 0;
+            transition: .28s ease;
+        }
+
+        .site-header.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px 0;
+            background: rgba(255, 255, 255, .78);
+            border-bottom: 1px solid rgba(16, 24, 32, .08);
+            box-shadow: 0 18px 45px rgba(16, 24, 32, .08);
+            backdrop-filter: blur(18px);
+        }
+
+        .top_menu {
+            min-height: 64px;
+            padding: 10px 14px;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, .72);
+            border: 1px solid rgba(16, 24, 32, .08);
+            box-shadow: 0 18px 60px rgba(16, 24, 32, .08);
+            backdrop-filter: blur(16px);
+        }
+
+        .logo .h1,
+        .logo a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+            color: var(--w21-dark);
+            text-decoration: none;
+            font-size: 26px;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .logo .h1:before,
+        .logo a:not(.logo-link):before {
+            content: '</>';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 16px;
+            background: var(--w21-dark);
+            color: var(--w21-accent);
+            font-size: 15px;
+            box-shadow: 0 14px 30px rgba(16, 24, 32, .18);
+        }
+
+        .menu .ul {
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .menu .ul > li > a.bold {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            padding: 0 16px;
+            border-radius: 999px;
+            color: var(--w21-dark);
+            text-decoration: none;
+            transition: .25s ease;
+        }
+        .content {
+            white-space: pre-line;
+            font-size: 18px;
+            line-height: 1.75;
+            color: rgba(16, 24, 32, .82);
+            max-width: 760px;
+            overflow: visible;
+            letter-spacing: 0.2px;
+            opacity: 0;
+            transform: translateY(16px);
+            animation: contentFade .6s ease forwards;
+        }
+
+        .content p {
+            margin-bottom: 16px;
+        }
+
+        .content strong {
+            font-family: 'Gilroy-Bold';
+            color: #101820;
+            -webkit-text-fill-color: #101820;
+        }
+
+        .content a:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background: #FFA351;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: .25s ease;
+        }
+
+        .content a:hover:after {
+            transform: scaleX(1);
+        }
+
+        .store-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            margin-top: 12px;
+            padding: 14px 22px;
+
+            border-radius: 999px;
+            background: linear-gradient(135deg, #FFA351, #ff8c2a);
+            color: #101820 !important;
+
+            font-family: 'Gilroy-Bold';
+            font-size: 15px;
+            text-decoration: none;
+            -webkit-text-fill-color: #101820;
+            overflow: visible;
+
+            box-shadow: 0 18px 40px rgba(255,163,81,0.3);
+            transition: .3s ease;
+        }
+
+        .store-btn:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 26px 60px rgba(255,163,81,0.45);
+        }
+
+        .store-btn:after {
+            display: none !important;
+        }
+
+        .store-btn.apple::before {
+            content: '';
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            background-color: #101820;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath d='M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z'/%3E%3C/svg%3E") center / contain no-repeat;
+        }
+
+        .store-btn.google::before {
+            content: '';
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            background-color: #101820;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M325.3 234.3L104.7 96.1C86.5 84.9 64 98.1 64 120.7v270.5c0 22.6 22.5 35.8 40.7 24.6l220.6-138.2c17.5-10.9 17.5-36.3 0-47.3z'/%3E%3C/svg%3E") center / contain no-repeat;
+                    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M325.3 234.3L104.7 96.1C86.5 84.9 64 98.1 64 120.7v270.5c0 22.6 22.5 35.8 40.7 24.6l220.6-138.2c17.5-10.9 17.5-36.3 0-47.3z'/%3E%3C/svg%3E") center / contain no-repeat;
+        }
+
+        @keyframes contentFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .menu .ul > li > a.bold:hover {
+            background: var(--w21-dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .menu .ul > li > a.bold.active {
+            background: rgba(255, 163, 81, .18);
+            color: var(--w21-dark);
+        }
+
+        .ref {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 10px 24px rgba(16, 24, 32, .12);
+            transition: .25s ease;
+        }
+
+        .ref:hover {
+            transform: translateY(-3px) rotate(4deg);
+        }
+
+        .ref img:first-child {
+            display: none;
+        }
+
+        .ref img:last-child {
+            width: 44px;
+            height: 44px;
+            object-fit: cover;
+        }
+
+        .burger {
+            display: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 17px;
+            background: var(--w21-dark);
+            padding: 14px 12px;
+            box-shadow: 0 16px 32px rgba(16, 24, 32, .18);
+            cursor: pointer;
+        }
+
+        .burger span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            border-radius: 20px;
+            background: #fff;
+            transition: .25s ease;
+        }
+
+        .burger.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .burger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        main {
+            min-height: 64vh;
+        }
+
+        .site-footer {
+            position: relative;
+            margin-top: 80px;
+            padding: 54px 0 32px;
+            overflow: hidden;
+            background: var(--w21-dark);
+            color: #fff;
+        }
+
+        .site-footer:before {
+            content: '';
+            position: absolute;
+            width: 460px;
+            height: 460px;
+            right: -160px;
+            top: -200px;
+            border-radius: 50%;
+            background: rgba(255, 163, 81, .18);
+            filter: blur(50px);
+        }
+
+        .footer-modern {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .footer-brand {
+            max-width: 620px;
+        }
+
+        .footer-brand strong {
+            display: block;
+            margin-bottom: 12px;
+            font-size: clamp(30px, 4vw, 54px);
+            line-height: 1;
+            letter-spacing: -1.5px;
+        }
+
+        .footer-brand p {
+            margin: 0;
+            color: rgba(255, 255, 255, .68);
+            line-height: 1.65;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 0 16px;
+            border-radius: 999px;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, .14);
+            text-decoration: none;
+            transition: .25s ease;
+        }
+
+        .footer-links a:hover {
+            background: var(--w21-accent);
+            color: var(--w21-dark);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            position: relative;
+            margin-top: 34px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            color: rgba(255, 255, 255, .58);
+        }
+
+        @media (max-width: 860px) {
+            .burger {
+                display: flex;
+            }
+
+            .menu {
+                position: fixed;
+                left: -100%;
+                top: 0;
+                width: 100%;
+                height: 100vh;
+                padding: 104px 22px 30px;
+                background: rgba(16, 24, 32, .96);
+                backdrop-filter: blur(18px);
+                z-index: 999;
+            }
+
+            .menu .ul {
+                display: grid;
+                gap: 14px;
+            }
+
+            .menu .ul > li > a.bold {
+                width: 100%;
+                min-height: 62px;
+                justify-content: center;
+                background: rgba(255, 255, 255, .08);
+                color: #fff;
+                font-size: 22px;
+            }
+
+            .menu .ul > li > a.bold.active {
+                background: var(--w21-accent);
+                color: var(--w21-dark);
+            }
+
+            .menu .ul li:last-child {
+                display: flex;
+                justify-content: center;
+                margin-top: 8px;
+            }
+
+            .top_menu {
+                border-radius: 22px;
+            }
+
+            .footer-modern {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .site-header {
+                padding: 10px 0;
+            }
+
+            .top_menu {
+                min-height: 58px;
+            }
+
+            .logo .h1,
+            .logo a:not(.logo-link) {
+                font-size: 22px;
+            }
+
+            .logo .h1:before,
+            .logo a:not(.logo-link):before {
+                width: 38px;
+                height: 38px;
+                border-radius: 14px;
+            }
+
+            .site-footer {
+                margin-top: 54px;
+                padding-top: 42px;
+            }
+        }
+
+        .reviews-section {
+            padding: 4rem 0;
+        }
+
+        .reviews-section .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .reviews-section .section-header .h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .reviews-section .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .reviews-section .stars-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #fff8e7, #fff);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #f59e0b;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .reviews-section .filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .reviews-section .filter-btn {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            padding: 0.7rem 1.8rem;
+            border-radius: 100px;
+            color: #374151;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .reviews-section .filter-btn:hover {
+            border-color: #a855f7;
+            color: #a855f7;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(168,85,247,0.15);
+        }
+
+        .reviews-section .filter-btn.active {
+            background: #000;
+            border-color: transparent;
+            color: white;
+        }
+
+        .reviews-section .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .reviews-section .review-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem;
+            border: 1px solid #f0f0f0;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .reviews-section .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(168,85,247,0.05), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .reviews-section .review-card:hover::before {
+            left: 100%;
+        }
+
+        .reviews-section .review-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(168,85,247,0.3);
+            box-shadow: 0 20px 35px -15px rgba(168,85,247,0.2);
+        }
+
+        .reviews-section .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .reviews-section .project-name {
+            font-size: 1.3rem;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .reviews-section .rating {
+            display: flex;
+            gap: 0.2rem;
+        }
+
+        .reviews-section .star {
+            font-size: 1.6rem;
+            color: #e5e7eb;
+            transition: transform 0.2s;
+        }
+
+        .reviews-section .star.filled {
+            color: #fbbf24;
+        }
+
+        .reviews-section .star.half {
+            color: #fbbf24;
+            position: relative;
+        }
+
+        .reviews-section .client-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            margin: 0.5rem 0;
+        }
+
+        .reviews-section .review-text {
+            color: #4b5563;
+            line-height: 1.6;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            max-height: 100px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+
+        .reviews-section .review-text::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        .reviews-section .review-text::-webkit-scrollbar-track {
+            background: #f3f4f6;
+            border-radius: 10px;
+        }
+
+        .reviews-section .review-text::-webkit-scrollbar-thumb {
+            background: #a855f7;
+            border-radius: 10px;
+        }
+
+        .reviews-section .price-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f3f4f6;
+        }
+
+        .reviews-section .price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0166ec, #8b56fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .reviews-section .price span {
+            font-size: 0.7rem;
+            font-weight: normal;
+            color: #9ca3af;
+        }
+
+        .reviews-section .review-link {
+            color: #000;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: gap 0.3s;
+        }
+
+        .reviews-section .review-link:hover {
+            gap: 0.6rem;
+        }
+
+        .reviews-section .review-date {
+            font-size: 0.7rem;
+            color: #9ca3af;
+            margin-top: 0.8rem;
+            text-align: right;
+        }
+
+        .reviews-section .center {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        @keyframes reviewFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reviews-section .review-card {
+            animation: reviewFadeIn 0.5s ease forwards;
+        }
+
+        @media (max-width: 900px) {
+            .reviews-section .section-header h1 {
+                font-size: 2rem;
+            }
+            .reviews-section .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .reviews-section {
+                padding: 2rem 1rem;
+            }
+        }
+
+        .reviews-section .particle {
+            position: fixed;
+            pointer-events: none;
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: particleFloat 12s infinite linear;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.4; }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .reviews-section .loader {
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .reviews-section .loader span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #a855f7;
+            margin: 0 0.3rem;
+            animation: loaderBounce 1.4s infinite ease-in-out both;
+        }
+
+        .reviews-section .loader span:nth-child(1) { animation-delay: -0.32s; }
+        .reviews-section .loader span:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes loaderBounce {
+            0%, 80%, 100% {
+                transform: scale(0);
+                opacity: 0.3;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .mt30 {
+            margin-top: 30px;
+        }
+    </style>
+    <link href="/assets/css/isak.css?v=3" rel="stylesheet" media="screen">
+    <link href="/assets/css/isak-dark.css?v=13" rel="stylesheet" media="screen">
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111120533', 'ym');
+
+        ym(111120533, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111120533" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<style>
+.ac-lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(16, 24, 32, .06);
+    border: 1px solid rgba(16, 24, 32, .1);
+    color: #101820;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    transition: .25s ease;
+    margin-right: 6px;
+}
+.ac-lang-btn:hover {
+    background: #FFA351;
+    color: #101820;
+    transform: scale(1.05);
+}
+body.ac-muted-mode .ac-lang-btn {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .2);
+    color: #fff;
+}
+</style>
+</head>
+<body id="top">
+<header class="site-header ac-header">
+    <div class="container">
+        <div class="flex jus alc top_menu ac-header-main">
+            <a href="/en/index.html" class="ac-wordmark" aria-label="App-Creator">
+                <span class="ac-wordmark-mark">AC</span>
+                <span class="ac-wordmark-name">APP—CREATOR</span>
+            </a>
+            <time class="ac-clock" id="acClock"></time>
+            <div class="ac-profile">
+                <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
+                <div class="ac-profile-status"><i></i>10+ years in development</div>
+                <h2>Hey, I’m Vitaliy</h2>
+                <p>I build mobile applications, websites and digital products for business.</p>
+                <div class="ac-profile-actions">
+                    <a href="/en/projects.html">Projects</a>
+                </div>
+            </div>
+            <button type="button" class="burger flex jus column" aria-label="Открыть меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="menu ac-nav">
+                <ul class="ul flex_row flex alc">
+                    <li><a class="bold" href="/en/index.html">Home</a></li>
+                    <li><a class="bold" href="/en/index.html#about">About Me</a></li>
+                    <li><a class="bold" href="/en/index.html#experience">Experience</a></li>
+                    <li><a class="bold" href="/en/index.html#work">Projects</a></li>
+                    <li><a class="bold" href="/en/index.html#services">Services</a></li>
+                    <li><a class="bold" href="/en/index.html#skills">Skills</a></li>
+                    <li><a class="bold" href="/en/index.html#reviews">Reviews</a></li>
+                    <li><a class="bold active" href="/en/certificates.html">Certificates</a></li>
+                </ul>
+            </nav>
+            <div class="ac-theme-controls"><a href="/certificates.html" class="ac-lang-btn" onclick="localStorage.setItem('site_lang', 'ru')" title="Switch to RU">RU</a><button type="button" id="acThemeToggle" aria-label="Переключить оформление">☼</button><a href="#top" aria-label="Наверх">↑</a></div>
+        </div>
+    </div>
+</header>
+<main>
+
+<script>
+    (function () {
+        var clock = document.getElementById('acClock');
+        if (!clock) return;
+        function updateClock() {
+            var now = new Date();
+            clock.innerHTML = now.toLocaleDateString([], {weekday: 'short', month: 'short', day: 'numeric'}) + '<br>' + now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+        }
+        updateClock();
+        window.setInterval(updateClock, 30000);
+    }());
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var appStoreText = "View on the App Store";
+    var googlePlayText = "View on Google Play";
+    var links = document.querySelectorAll('.content a[href*="apps.apple.com"], .content a[href*="play.google.com"]');
+
+    links.forEach(function(link) {
+        const isApple = link.href.indexOf('apps.apple.com') !== -1;
+
+        const btn = document.createElement('a');
+        btn.href = link.href;
+        btn.target = '_blank';
+        btn.rel = 'nofollow';
+
+        btn.className = 'store-btn ' + (isApple ? 'apple' : 'google');
+        btn.innerText = isApple ? appStoreText : googlePlayText;
+
+        link.replaceWith(btn);
+    });
+});
+</script>
+  <style>
+      .about-page {
+          position: relative;
+          overflow: hidden;
+          padding-bottom: 60px;
+      }
+
+      .about-page:before,
+      .about-page:after {
+          content: '';
+          position: fixed;
+          width: 440px;
+          height: 440px;
+          border-radius: 50%;
+          filter: blur(75px);
+          opacity: .16;
+          pointer-events: none;
+          z-index: -1;
+      }
+
+      .about-page:before {
+          left: -170px;
+          top: 160px;
+          background: #FFA351;
+      }
+
+      .about-page:after {
+          right: -160px;
+          top: 460px;
+          background: #5A7CFF;
+      }
+
+      .about-hero {
+          padding: 72px 0 46px;
+      }
+
+      .about-hero-grid {
+          display: grid;
+          grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
+          gap: 34px;
+          align-items: center;
+      }
+
+      .about-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 9px 15px;
+          border-radius: 999px;
+          border: 1px solid rgba(255, 163, 81, .35);
+          background: rgba(255, 255, 255, .74);
+          box-shadow: 0 12px 40px rgba(16, 24, 32, .08);
+          font-size: 14px;
+          margin-bottom: 20px;
+      }
+
+      .about-badge span {
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background: #FFA351;
+          box-shadow: 0 0 0 7px rgba(255, 163, 81, .16);
+      }
+
+      .about-hero h1 {
+          margin: 0;
+          font-size: clamp(40px, 6vw, 76px);
+          line-height: .98;
+          letter-spacing: -2.5px;
+      }
+
+      .about-hero h1 em {
+          font-style: normal;
+          color: #FFA351;
+      }
+
+      .about-lead {
+          max-width: 720px;
+          margin: 24px 0 0;
+          font-size: 20px;
+          line-height: 1.62;
+          color: rgba(16, 24, 32, .76);
+      }
+
+      .about-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 14px;
+          margin-top: 32px;
+      }
+
+      .about-card {
+          position: relative;
+          padding: 28px;
+          border-radius: 34px;
+          background: rgba(255, 255, 255, .82);
+          border: 1px solid rgba(16, 24, 32, .08);
+          box-shadow: 0 30px 80px rgba(16, 24, 32, .12);
+          backdrop-filter: blur(18px);
+          animation: aboutFloat 5s ease-in-out infinite;
+      }
+
+      .about-card:before {
+          content: '';
+          position: absolute;
+          inset: 14px;
+          border-radius: 26px;
+          border: 1px dashed rgba(16, 24, 32, .16);
+          pointer-events: none;
+      }
+
+      .about-card-title {
+          font-size: 23px;
+          font-family: 'Gilroy-Bold';
+          margin-bottom: 18px;
+      }
+
+      .about-checks {
+          display: grid;
+          gap: 12px;
+      }
+
+      .about-checks div {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 14px 15px;
+          border-radius: 18px;
+          background: #101820;
+          color: #fff;
+      }
+
+      .about-checks div:nth-child(even) {
+          background: #FFA351;
+          color: #101820;
+      }
+
+      .about-checks b {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex: 0 0 28px;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, .16);
+      }
+
+      .about-stats {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 16px;
+          margin: 16px 0 54px;
+      }
+
+      .about-stat {
+          padding: 24px;
+          border-radius: 26px;
+          background: #101820;
+          color: #fff;
+          box-shadow: 0 22px 50px rgba(16, 24, 32, .14);
+      }
+
+      .about-stat strong {
+          display: block;
+          margin-bottom: 8px;
+          color: #FFA351;
+          font-size: 34px;
+          line-height: 1;
+      }
+
+      .about-section-head {
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          gap: 24px;
+          margin-bottom: 28px;
+      }
+
+      .about-section-head h2 {
+          margin: 0;
+          font-size: clamp(32px, 4vw, 56px);
+          letter-spacing: -1.5px;
+      }
+
+      .about-section-head p {
+          max-width: 520px;
+          margin: 0;
+          color: rgba(16, 24, 32, .68);
+          line-height: 1.55;
+      }
+
+      .cert-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          gap: 20px;
+      }
+
+      .cert-card {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 26px;
+          border-radius: 26px;
+          background: rgba(255, 255, 255, .88);
+          border: 1px solid rgba(16, 24, 32, .08);
+          box-shadow: 0 16px 45px rgba(16, 24, 32, .06);
+          text-decoration: none;
+          color: inherit;
+          transition: all .3s ease;
+          overflow: hidden;
+      }
+
+      .cert-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 26px 60px rgba(16, 24, 32, .14);
+          border-color: rgba(255, 163, 81, .5);
+      }
+
+      .cert-card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+          border-bottom: 1px solid rgba(16, 24, 32, .06);
+          padding-bottom: 14px;
+      }
+
+      .cert-card-header h3 {
+          margin: 0;
+          font-size: 24px;
+          font-family: 'Gilroy-Bold';
+          color: #101820;
+      }
+
+      .cert-arrow {
+          color: #5A7CFF;
+          font-size: 20px;
+          font-weight: bold;
+          transition: transform .25s ease;
+      }
+
+      .cert-card:hover .cert-arrow {
+          transform: translateX(4px);
+      }
+
+      .cert-detail {
+          margin-bottom: 12px;
+      }
+
+      .cert-detail:last-child {
+          margin-bottom: 0;
+      }
+
+      .cert-label {
+          display: block;
+          font-size: 13px;
+          color: rgba(16, 24, 32, .55);
+          margin-bottom: 3px;
+      }
+
+      .cert-val {
+          display: block;
+          font-size: 15px;
+          font-weight: 600;
+          color: #101820;
+      }
+
+      .cert-val.highlight {
+          color: #FFA351;
+          background: #101820;
+          display: inline-block;
+          padding: 2px 10px;
+          border-radius: 8px;
+          font-size: 14px;
+      }
+
+      .cert-footer {
+          margin-top: 20px;
+          padding-top: 14px;
+          border-top: 1px dashed rgba(16, 24, 32, .1);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .cert-btn-text {
+          font-size: 14px;
+          font-weight: 600;
+          color: #FFA351;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+      }
+
+      .about-reveal {
+          opacity: 0;
+          transform: translateY(24px);
+          transition: opacity .7s ease, transform .7s ease;
+      }
+
+      .about-reveal.visible {
+          opacity: 1;
+          transform: translateY(0);
+      }
+
+      @keyframes aboutFloat {
+          0%, 100% { transform: translateY(0) rotate(0.6deg); }
+          50% { transform: translateY(-10px) rotate(-0.6deg); }
+      }
+
+      @media (max-width: 980px) {
+          .about-hero-grid {
+              grid-template-columns: 1fr;
+          }
+
+          .about-stats {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+      }
+
+      @media (max-width: 620px) {
+          .about-hero {
+              padding-top: 42px;
+          }
+
+          .about-hero h1 {
+              letter-spacing: -1.5px;
+          }
+
+          .about-stats,
+          .cert-grid {
+              grid-template-columns: 1fr;
+          }
+
+          .about-section-head {
+              display: block;
+          }
+
+          .about-actions .btn {
+              width: 100%;
+          }
+      }
+  </style>
+
+  <div class="container ac-page">
+    <section class="ac-hero ac-hero--inner">
+      <div class="ac-hero-copy">
+        <div class="ac-kicker"><span>01</span>Gosuslugi — Official Verification</div>
+        <h1>Proven Tech Stack. <em>Certificates</em> & Skills</h1>
+        <p>Key skills and core technologies verified via independent governmental assessment (Gosuslugi) with Advanced proficiency level.</p>
+        <div class="ac-actions"><a href="/en/projects.html" class="ac-button ac-button--primary">View Projects</a></div>
+      </div>
+      <aside class="ac-register">
+        <div class="ac-register-head"><span>AC / 01</span><strong>Expertise Guaranteed</strong></div>
+        <ol>
+          <li><span>01</span><div><b>Officially certified technical skills</b></div></li>
+          <li><span>02</span><div><b>Advanced proficiency level</b></div></li>
+          <li><span>03</span><div><b>Solid theoretical & practical basis</b></div></li>
+          <li><span>04</span><div><b>Modern industry standards</b></div></li>
+        </ol>
+      </aside>
+    </section>
+
+    <div class="ac-ledger">
+      <div><span>01</span><strong>10</strong><small>verified skills</small></div>
+      <div><span>02</span><strong>Advanced</strong><small>proficiency on all tests</small></div>
+      <div><span>03</span><strong>2027</strong><small>certificate validity</small></div>
+      <div><span>04</span><strong>State Portal</strong><small>independent assessment</small></div>
+    </div>
+
+    <section class="ac-section">
+      <header class="ac-section-head"><div><span>02 / Qualification register</span><h2>Verified Competencies</h2></div><p>Click on any card to view or download the official PDF certificate.</p></header>
+      <div class="ac-certificates">
+                  <a href="https://hayvetalkz.github.io/php.pdf" target="_blank" rel="noopener noreferrer" class="ac-certificate">
+            <div class="ac-certificate-code"><span>01</span><small>PDF / AC</small></div>
+            <h3>PHP</h3>
+            <dl>
+              <div><dt>Proficiency level</dt><dd>Advanced level</dd></div>
+              <div><dt>Certificate valid</dt><dd>28.08.2027</dd></div>
+              <div><dt>Verification type</dt><dd>Theory and practice</dd></div>
+            </dl>
+            <span class="ac-certificate-link">View PDF ↗</span>
+          </a>
+                  <a href="https://hayvetalkz.github.io/docker.pdf" target="_blank" rel="noopener noreferrer" class="ac-certificate">
+            <div class="ac-certificate-code"><span>02</span><small>PDF / AC</small></div>
+            <h3>Docker</h3>
+            <dl>
+              <div><dt>Proficiency level</dt><dd>Advanced level</dd></div>
+              <div><dt>Certificate valid</dt><dd>28.08.2027</dd></div>
+              <div><dt>Verification type</dt><dd>Theory</dd></div>
+            </dl>
+            <span class="ac-certificate-link">View PDF ↗</span>
+          </a>
+                  <a href="https://hayvetalkz.github.io/api.pdf" target="_blank" rel="noopener noreferrer" class="ac-certificate">
+            <div class="ac-certificate-code"><span>03</span><small>PDF / AC</small></div>
+            <h3>API</h3>
+            <dl>
+              <div><dt>Proficiency level</dt><dd>Advanced level</dd></div>
+              <div><dt>Certificate valid</dt><dd>28.08.2027</dd></div>
+              <div><dt>Verification type</dt><dd>Theory</dd></div>
+            </dl>
+            <span class="ac-certificate-link">View PDF ↗</span>
+          </a>
+                  <a href="https://hayvetalkz.github.io/oop.pdf" target="_blank" rel="noopener noreferrer" class="ac-certificate">
+            <div class="ac-certificate-code"><span>04</span><small>PDF / AC</small></div>
+            <h3>ООП / OOP</h3>
+            <dl>
+              <div><dt>Proficiency level</dt><dd>Advanced level</dd></div>
+              <div><dt>Certificate valid</dt><dd>28.08.2027</dd></div>
+              <div><dt>Verification type</dt><dd>Theory</dd></div>
+            </dl>
+            <span class="ac-certificate-link">View PDF ↗</span>
+          </a>
+                  <a href="https://hayvetalkz.github.io/html.pdf" target="_blank" rel="noopener noreferrer" class="ac-certificate">
+            <div class="ac-certificate-code"><span>05</span><small>PDF / AC</small></div>
+            <h3>HTML</h3>
+            <dl>
+              <div><dt>Proficiency level</dt><dd>Advanced level</dd></div>
+              <div><dt>Certificate valid</dt><dd>28.08.2027</dd></div>
+              <div><dt>Verification type</dt><dd>Theory</dd></div>
+            </dl>
+            <span class="ac-certificate-link">View PDF ↗</span>
+          </a>
+                  <a href="https://hayvetalkz.github.io/git.pdf" target="_blank" rel="noopener noreferrer" class="ac-certificate">
+            <div class="ac-certificate-code"><span>06</span><small>PDF / AC</small></div>
+            <h3>Git</h3>
+            <dl>
+              <div><dt>Proficiency level</dt><dd>Advanced level</dd></div>
+              <div><dt>Certificate valid</dt><dd>28.08.2027</dd></div>
+              <div><dt>Verification type</dt><dd>Theory</dd></div>
+            </dl>
+            <span class="ac-certificate-link">View PDF ↗</span>
+          </a>
+                  <a href="https://hayvetalkz.github.io/css.pdf" target="_blank" rel="noopener noreferrer" class="ac-certificate">
+            <div class="ac-certificate-code"><span>07</span><small>PDF / AC</small></div>
+            <h3>CSS</h3>
+            <dl>
+              <div><dt>Proficiency level</dt><dd>Advanced level</dd></div>
+              <div><dt>Certificate valid</dt><dd>27.08.2027</dd></div>
+              <div><dt>Verification type</dt><dd>Theory</dd></div>
+            </dl>
+            <span class="ac-certificate-link">View PDF ↗</span>
+          </a>
+                  <a href="https://hayvetalkz.github.io/javascript.pdf" target="_blank" rel="noopener noreferrer" class="ac-certificate">
+            <div class="ac-certificate-code"><span>08</span><small>PDF / AC</small></div>
+            <h3>JavaScript</h3>
+            <dl>
+              <div><dt>Proficiency level</dt><dd>Advanced level</dd></div>
+              <div><dt>Certificate valid</dt><dd>28.08.2027</dd></div>
+              <div><dt>Verification type</dt><dd>Theory</dd></div>
+            </dl>
+            <span class="ac-certificate-link">View PDF ↗</span>
+          </a>
+                  <a href="https://hayvetalkz.github.io/postgreSQL.pdf" target="_blank" rel="noopener noreferrer" class="ac-certificate">
+            <div class="ac-certificate-code"><span>09</span><small>PDF / AC</small></div>
+            <h3>PostgreSQL</h3>
+            <dl>
+              <div><dt>Proficiency level</dt><dd>Advanced level</dd></div>
+              <div><dt>Certificate valid</dt><dd>28.08.2027</dd></div>
+              <div><dt>Verification type</dt><dd>Theory</dd></div>
+            </dl>
+            <span class="ac-certificate-link">View PDF ↗</span>
+          </a>
+                  <a href="https://hayvetalkz.github.io/golang.pdf" target="_blank" rel="noopener noreferrer" class="ac-certificate">
+            <div class="ac-certificate-code"><span>10</span><small>PDF / AC</small></div>
+            <h3>Golang</h3>
+            <dl>
+              <div><dt>Proficiency level</dt><dd>Advanced level</dd></div>
+              <div><dt>Certificate valid</dt><dd>28.08.2027</dd></div>
+              <div><dt>Verification type</dt><dd>Theory</dd></div>
+            </dl>
+            <span class="ac-certificate-link">View PDF ↗</span>
+          </a>
+              </div>
+    </section>
+  </div>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          var items = document.querySelectorAll('.about-reveal');
+
+          function showVisible() {
+              items.forEach(function (item) {
+                  var rect = item.getBoundingClientRect();
+                  if (rect.top < window.innerHeight && rect.bottom > 0) {
+                      item.classList.add('visible');
+                  }
+              });
+          }
+
+          showVisible();
+
+          if (!('IntersectionObserver' in window)) {
+              window.addEventListener('scroll', showVisible);
+              return;
+          }
+
+          var observer = new IntersectionObserver(function (entries) {
+              entries.forEach(function (entry) {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add('visible');
+                      observer.unobserve(entry.target);
+                  }
+              });
+          }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+
+          items.forEach(function (item) {
+              if (!item.classList.contains('visible')) {
+                  observer.observe(item);
+              }
+          });
+
+          window.addEventListener('load', showVisible);
+      });
+  </script>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        <div class="ac-footer-grid">
+            <div class="ac-footer-index">AC / 2026</div>
+            <div class="footer-brand ac-footer-brand">
+                <strong>Digital product development</strong>
+                <p>Mobile apps, websites, e-commerce platforms and complex integrations — focused on speed, UX and stability.</p>
+            </div>
+            <div class="footer-links ac-footer-links">
+                <a href="/en/projects.html">Projects</a>
+                <a href="/en/about.html">About</a>
+                <a href="/en/reviews.html">Reviews</a>
+                <a href="/en/certificates.html">Certificates</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="power">
+    <span class="hid">
+        All rights reserved    </span>
+                2026 «App-Creator»
+            </div>
+        </div>
+    </div>
+    <script type="application/ld+json">{
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "url": "https://hayvetalkz.github.io/",
+            "name": "App-Creator - Vitaliy Khaychenko Portfolio",
+            "logo": "https://hayvetalkz.github.io/assets/img/logo.png",
+            "image": "https://hayvetalkz.github.io/assets/img/vitaliy-portrait.jpg",
+            "jobTitle": "Software developer"
+        }
+    </script>
+    <script src="/assets/js/jquery-2.1.1.min.js"></script>
+        <script>
+        function fixed_top() {
+            var header = $('header.site-header');
+            $('body').css('padding-top', 0);
+            header.toggleClass('fixed', $(window).scrollTop() > 0);
+        }
+
+        $(document).ready(function () {
+            fixed_top();
+            $(window).on('scroll resize', fixed_top);
+        });
+
+        $(document).on('click', '.burger', function(){
+            var isOpen = !$(this).hasClass('active');
+            $(this).toggleClass('active', isOpen).attr('aria-expanded', isOpen);
+            $('body').toggleClass('active', isOpen);
+        });
+
+        $(document).on('click', '.menu a', function(){
+            $('body').removeClass('active');
+            $('.burger').removeClass('active').attr('aria-expanded', 'false');
+        });
+
+        $(document).on('keydown', function(event) {
+            if (event.key === 'Escape') {
+                $('body').removeClass('active');
+                $('.burger').removeClass('active').attr('aria-expanded', 'false');
+            }
+        });
+
+        $(document).on('click', '.ac-service-toggle', function() {
+            var item = $(this).closest('.ac-service-item');
+            var list = item.parent();
+            list.find('.ac-service-item').not(item).removeClass('active')
+                .find('.ac-service-toggle').attr('aria-expanded', 'false').find('i').text('+');
+            item.toggleClass('active');
+            $(this).attr('aria-expanded', item.hasClass('active'))
+                .find('i').text(item.hasClass('active') ? '−' : '+');
+        });
+
+        $(document).on('click', '#acThemeToggle', function() {
+            $('body').toggleClass('ac-muted-mode');
+            $(this).attr('aria-pressed', $('body').hasClass('ac-muted-mode'));
+        });
+
+        if ('IntersectionObserver' in window && location.pathname === '/') {
+            var navLinks = document.querySelectorAll('.ac-nav a[href^="#"]');
+            var sections = Array.prototype.map.call(navLinks, function(link) {
+                return document.querySelector(link.getAttribute('href'));
+            }).filter(Boolean);
+            var sectionObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (!entry.isIntersecting) return;
+                    navLinks.forEach(function(link) {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                });
+            }, {rootMargin: '-35% 0px -55% 0px'});
+            sections.forEach(function(section) { sectionObserver.observe(section); });
+        }
+    </script>
+        <script>
+        let reviewsData;
+
+        const footerLocale = "en-US";
+        const dateNotSetText = "Date not specified";
+        const viewReviewText = "View Review";
+        const noReviewsText = "No reviews match this filter";
+        const language = "en";
+
+        if ($('.reviews-section').hasClass('rsh')) {
+            reviewsData = [{"id":"9","rating":"5","project":"Разработка мобильного приложения для наушников","project_en":"Develop a mobile application for headphones","name":"Заказчик","name_en":"Client","text":"Всё хорошо, заказ выполнен качественно ","text_en":"Everything went well. The project was completed to a high standard.","price":"15000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_945622-2","sort":"9","created_at":"2024-01-15 19:02:59"},{"id":"8","rating":"5","project":"Доработка загрузчика товаров на опенкарте","project_en":"Improve the OpenCart product importer","name":"Дмитрий Ненашев","name_en":"Dmitry Nenashev","text":"Виталий успешно справился с задачей с которой не справился другой разработчик. Пришлось, конечно, повозиться, много тестировать, но результат отличный!","text_en":"Vitaliy successfully completed a task that another developer could not handle. It required a lot of work and extensive testing, but the final result was excellent!","price":"8000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"8","created_at":"2024-01-15 19:02:59"},{"id":"7","rating":"5","project":"Устранить проблему с дублированием email при отправке рассылки писем","project_en":"Fix duplicate emails when sending an email campaign","name":"Заказчик","name_en":"Client","text":"Очень оперативно решен поставленный вопрос. Спасибо за профессиональную работу!","text_en":"The issue was resolved very quickly. Thank you for the professional work!","price":"3000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"7","created_at":"2024-01-07 19:02:59"},{"id":"6","rating":"5","project":"Правка на Опенкарт 3","project_en":"OpenCart 3 modification","name":"Александр Егоров","name_en":"Alexander Egorov","text":"Спасибо большое. Всем доволен. Буду постоянно к вам обращаться","text_en":"Thank you very much. I am completely satisfied with the result and will continue working with you.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"6","created_at":"2023-12-30 19:02:59"},{"id":"5","rating":"5","project":"OpenCart: Настроить интеграции с ТК и Эквайрингом (через готовые модули)","project_en":"OpenCart: Configure shipping and payment gateway integrations using existing modules","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Выполнил все согласно ТЗ, без нареканий. Хороший специалист, обращаемся не первый раз","text_en":"Everything was completed according to the specification without any issues. A skilled developer whom we have worked with more than once.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"5","created_at":"2023-10-09 18:02:59"},{"id":"4","rating":"5","project":"Создать структуру Мобильного приложения","project_en":"Create the structure of a mobile application","name":"Заказчик","name_en":"Client","text":"Все было сделано как надо. Рекомендую!","text_en":"Everything was completed exactly as required. Highly recommended!","price":"10000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"4","created_at":"2023-09-26 18:02:59"},{"id":"3","rating":"5","project":"OpenCart: Доработать стили сайта","project_en":"OpenCart: Improve the website styles","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Повторный заказ. Небольшая доработка, все отлично сделано. ","text_en":"A repeat order. It was a small improvement, and everything was completed perfectly.","price":"1000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920187-2","sort":"3","created_at":"2023-09-18 18:02:59"},{"id":"2","rating":"5","project":"Модуль Opencart 1.5.6 переписать на 3.0","project_en":"Rewrite an OpenCart 1.5.6 module for OpenCart 3.0","name":"Всеволод Антонов-Дидковский\r\n","name_en":"Vsevolod Antonov-Didkovsky","text":"Виталий справился с задачей очень быстро! Проект был сдан вовремя, без каких-либо замечаний. Действительно мастер своего дела! Рекомендую как супер специалиста! ","text_en":"Vitaliy completed the task very quickly! The project was delivered on time without any issues. He is truly a master of his craft. I highly recommend him as an excellent specialist!","price":"8300","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919858-2","sort":"2","created_at":"2023-09-14 17:02:00"},{"id":"1","rating":"5","project":"OpenCart: Доработать и проверить функционал сайта","project_en":"OpenCart: Improve and test the website functionality","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Отличный исполнитель, все сделал четко и быстро, и даже чуть больше, рекомендуем! ","text_en":"Excellent developer. Everything was completed quickly and precisely, and even a little beyond the original scope. Highly recommended!","price":"5000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919652-2","sort":"1","created_at":"2023-09-12 16:19:34"}].slice(0, 3);
+        } else {
+            reviewsData = [{"id":"9","rating":"5","project":"Разработка мобильного приложения для наушников","project_en":"Develop a mobile application for headphones","name":"Заказчик","name_en":"Client","text":"Всё хорошо, заказ выполнен качественно ","text_en":"Everything went well. The project was completed to a high standard.","price":"15000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_945622-2","sort":"9","created_at":"2024-01-15 19:02:59"},{"id":"8","rating":"5","project":"Доработка загрузчика товаров на опенкарте","project_en":"Improve the OpenCart product importer","name":"Дмитрий Ненашев","name_en":"Dmitry Nenashev","text":"Виталий успешно справился с задачей с которой не справился другой разработчик. Пришлось, конечно, повозиться, много тестировать, но результат отличный!","text_en":"Vitaliy successfully completed a task that another developer could not handle. It required a lot of work and extensive testing, but the final result was excellent!","price":"8000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"8","created_at":"2024-01-15 19:02:59"},{"id":"7","rating":"5","project":"Устранить проблему с дублированием email при отправке рассылки писем","project_en":"Fix duplicate emails when sending an email campaign","name":"Заказчик","name_en":"Client","text":"Очень оперативно решен поставленный вопрос. Спасибо за профессиональную работу!","text_en":"The issue was resolved very quickly. Thank you for the professional work!","price":"3000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"7","created_at":"2024-01-07 19:02:59"},{"id":"6","rating":"5","project":"Правка на Опенкарт 3","project_en":"OpenCart 3 modification","name":"Александр Егоров","name_en":"Alexander Egorov","text":"Спасибо большое. Всем доволен. Буду постоянно к вам обращаться","text_en":"Thank you very much. I am completely satisfied with the result and will continue working with you.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"6","created_at":"2023-12-30 19:02:59"},{"id":"5","rating":"5","project":"OpenCart: Настроить интеграции с ТК и Эквайрингом (через готовые модули)","project_en":"OpenCart: Configure shipping and payment gateway integrations using existing modules","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Выполнил все согласно ТЗ, без нареканий. Хороший специалист, обращаемся не первый раз","text_en":"Everything was completed according to the specification without any issues. A skilled developer whom we have worked with more than once.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"5","created_at":"2023-10-09 18:02:59"},{"id":"4","rating":"5","project":"Создать структуру Мобильного приложения","project_en":"Create the structure of a mobile application","name":"Заказчик","name_en":"Client","text":"Все было сделано как надо. Рекомендую!","text_en":"Everything was completed exactly as required. Highly recommended!","price":"10000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"4","created_at":"2023-09-26 18:02:59"},{"id":"3","rating":"5","project":"OpenCart: Доработать стили сайта","project_en":"OpenCart: Improve the website styles","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Повторный заказ. Небольшая доработка, все отлично сделано. ","text_en":"A repeat order. It was a small improvement, and everything was completed perfectly.","price":"1000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920187-2","sort":"3","created_at":"2023-09-18 18:02:59"},{"id":"2","rating":"5","project":"Модуль Opencart 1.5.6 переписать на 3.0","project_en":"Rewrite an OpenCart 1.5.6 module for OpenCart 3.0","name":"Всеволод Антонов-Дидковский\r\n","name_en":"Vsevolod Antonov-Didkovsky","text":"Виталий справился с задачей очень быстро! Проект был сдан вовремя, без каких-либо замечаний. Действительно мастер своего дела! Рекомендую как супер специалиста! ","text_en":"Vitaliy completed the task very quickly! The project was delivered on time without any issues. He is truly a master of his craft. I highly recommend him as an excellent specialist!","price":"8300","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919858-2","sort":"2","created_at":"2023-09-14 17:02:00"},{"id":"1","rating":"5","project":"OpenCart: Доработать и проверить функционал сайта","project_en":"OpenCart: Improve and test the website functionality","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Отличный исполнитель, все сделал четко и быстро, и даже чуть больше, рекомендуем! ","text_en":"Excellent developer. Everything was completed quickly and precisely, and even a little beyond the original scope. Highly recommended!","price":"5000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919652-2","sort":"1","created_at":"2023-09-12 16:19:34"}];
+        }
+
+        function renderStars(rating) {
+            let stars = '';
+            const fullStars = Math.floor(rating);
+            const hasHalf = rating % 1 !== 0;
+
+            for (let i = 1; i <= 5; i++) {
+                if (i <= fullStars) {
+                    stars += '<span class="star filled">★</span>';
+                } else if (hasHalf && i === fullStars + 1) {
+                    stars += '<span class="star half">★</span>';
+                } else {
+                    stars += '<span class="star">★</span>';
+                }
+            }
+            return stars;
+        }
+
+        function formatPrice(price) {
+            return new Intl.NumberFormat(footerLocale).format(price) + ' ₽';
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return dateNotSetText;
+
+            const date = new Date(dateStr);
+
+            return date.toLocaleDateString(footerLocale, {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function createCard(review) {
+            return `
+        <div class="review-card" data-rating="${review.rating}" data-price="${review.price}" data-id="${review.id}">
+    <div class="card-header">
+        <span class="project-name">
+            ${escapeHtml(language === 'en' ? review.project_en : review.project)}
+        </span>
+
+        <div class="rating">
+            ${renderStars(parseFloat(review.rating))}
+        </div>
+    </div>
+
+    <div class="client-name">
+        ${escapeHtml(language === 'en' ? review.name_en : review.name)}
+    </div>
+
+    <div class="review-text">
+        ${escapeHtml(language === 'en' ? review.text_en : review.text)}
+    </div>
+
+    <div class="price-link">
+        <div class="price">
+            ${formatPrice(parseFloat(review.price))}
+        </div>
+
+        <a href="${escapeHtml(review.link)}" target="_blank" class="review-link">
+            ${viewReviewText}
+        </a>
+    </div>
+
+    <div class="review-date">
+        ${formatDate(review.created_at)}
+    </div>
+</div>
+    `;
+        }
+
+        let currentFilter = 'all';
+
+        function filterReviews() {
+            let filtered = [...reviewsData];
+
+            switch (currentFilter) {
+                case '5':
+                    filtered = filtered.filter(r => parseFloat(r.rating) === 5);
+                    break;
+                case '4':
+                    filtered = filtered.filter(r => parseFloat(r.rating) >= 4);
+                    break;
+                case 'high-price':
+                    filtered = filtered.filter(r => parseFloat(r.price) >= 200000);
+                    break;
+                default:
+                    filtered = [...reviewsData];
+            }
+
+            const grid = document.getElementById('reviewsGrid');
+
+            if (grid) {
+                if (filtered.length === 0) {
+                    grid.innerHTML =
+                        '<div style="text-align: center; padding: 3rem; background: #f9fafb; border-radius: 30px; color: #6b7280;">' +
+                        noReviewsText +
+                        '</div>';
+                    return;
+                }
+
+                grid.innerHTML = filtered.map(createCard).join('');
+            }
+        }
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                filterReviews();
+            });
+        });
+
+        function createParticles() {
+            const section = document.querySelector('.reviews-section');
+
+            if (section) {
+                for (let i = 0; i < 30; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDuration = 8 + Math.random() * 15 + 's';
+                    particle.style.animationDelay = Math.random() * 20 + 's';
+                    particle.style.width = particle.style.height = (2 + Math.random() * 5) + 'px';
+                    particle.style.background = `#a855f7`;
+                    particle.style.opacity = 0.1 + Math.random() * 0.2;
+                    section.appendChild(particle);
+                }
+            }
+        }
+
+        setTimeout(() => {
+            filterReviews();
+        }, 100);
+
+        createParticles();
+    </script>
+    <script>
+        (function () {
+            if (!window.matchMedia('(pointer: fine)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            var effect = document.createElement('div');
+            effect.className = 'ac-pointer-fx';
+            effect.setAttribute('aria-hidden', 'true');
+            effect.innerHTML = '<span class="ac-pointer-glow"></span><span class="ac-pointer-ring"></span><span class="ac-pointer-trail"></span><span class="ac-pointer-trail"></span><span class="ac-pointer-trail"></span>';
+            document.body.appendChild(effect);
+
+            var glow = effect.querySelector('.ac-pointer-glow');
+            var ring = effect.querySelector('.ac-pointer-ring');
+            var trails = Array.prototype.slice.call(effect.querySelectorAll('.ac-pointer-trail'));
+            var points = [{x: 0, y: 0}, {x: 0, y: 0}, {x: 0, y: 0}, {x: 0, y: 0}];
+            var target = {x: 0, y: 0};
+            var frame = 0;
+            var ready = false;
+
+            function place(node, point) {
+                node.style.transform = 'translate3d(' + point.x + 'px,' + point.y + 'px,0) translate(-50%,-50%)';
+            }
+
+            function render() {
+                points[0].x += (target.x - points[0].x) * .2;
+                points[0].y += (target.y - points[0].y) * .2;
+
+                for (var index = 1; index < points.length; index++) {
+                    points[index].x += (points[index - 1].x - points[index].x) * (.24 - index * .025);
+                    points[index].y += (points[index - 1].y - points[index].y) * (.24 - index * .025);
+                    place(trails[index - 1], points[index]);
+                }
+
+                place(glow, points[0]);
+                place(ring, points[0]);
+
+                if (Math.abs(target.x - points[3].x) > .2 || Math.abs(target.y - points[3].y) > .2) {
+                    frame = window.requestAnimationFrame(render);
+                } else {
+                    frame = 0;
+                }
+            }
+
+            document.addEventListener('pointermove', function (event) {
+                target.x = event.clientX;
+                target.y = event.clientY;
+
+                if (!ready) {
+                    points.forEach(function (point) {
+                        point.x = target.x;
+                        point.y = target.y;
+                    });
+                    ready = true;
+                    effect.classList.add('is-visible');
+                }
+
+                effect.classList.toggle('is-hovering', Boolean(event.target.closest('a, button, [role="button"]')));
+                if (!frame) frame = window.requestAnimationFrame(render);
+            }, {passive: true});
+
+            document.documentElement.addEventListener('mouseleave', function () {
+                effect.classList.remove('is-visible', 'is-hovering');
+                ready = false;
+            });
+
+            document.documentElement.addEventListener('mouseenter', function () {
+                if (ready) effect.classList.add('is-visible');
+            });
+        })();
+    </script>
+</footer>
+</body>
+</html>

@@ -532,23 +532,36 @@ body.project-gallery-open {
     });
 </script>
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="ru">
 <head>
+    <script>
+(function() {
+    var pref = localStorage.getItem('site_lang');
+    var navLang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    var isRu = /^(ru|be|kk|uk)/i.test(navLang);
+    if (pref === 'en' || (!pref && !isRu)) {
+        var p = window.location.pathname;
+        var target = '/en' + (p === '/' ? '/index.html' : p);
+        if (!target.endsWith('.html') && !target.endsWith('/')) target += '.html';
+        window.location.replace(target + window.location.search + window.location.hash);
+    }
+})();
+</script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Мобильное нативное(SwiftUI) приложение LogFlightPro</title>
-    <base href="https://vitald3.github.io/" />
+    <base href="https://hayvetalkz.github.io/" />
     <meta name="description" content="LogFlightPro — Professional Pilot Logbook" />
-    <meta name="keywords" content="App development, mobile development, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
+    <meta name="keywords" content="Создание приложений, мобильная разработка, Flutter, Swift, Kotlin, Laravel, Android, iOS, разработка под ключ" />
     <meta property="og:title" content="Мобильное нативное(SwiftUI) приложение LogFlightPro" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vitald3.github.io/project/logflightpro" />
-    <meta property="og:image" content="https://vitald3.github.io/assets/img/WEB-PROGRAMMING.png" />
+    <meta property="og:url" content="https://hayvetalkz.github.io/project/logflightpro" />
+    <meta property="og:image" content="https://hayvetalkz.github.io/assets/img/WEB-PROGRAMMING.png" />
     <meta property="og:site_name" content="App-Creator" />
     <link href="/assets/css/main.css?v=6" rel="stylesheet" media="screen">
     <link href="/assets/img/favicon.png" rel="icon" />
-    <link href="https://vitald3.github.io/project/logflightpro" rel="canonical" />
+    <link href="https://hayvetalkz.github.io/project/logflightpro" rel="canonical" />
 
     <style>
         :root {
@@ -1350,23 +1363,51 @@ body.project-gallery-open {
         ym(111120533, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/111120533" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<style>
+.ac-lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(16, 24, 32, .06);
+    border: 1px solid rgba(16, 24, 32, .1);
+    color: #101820;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    transition: .25s ease;
+    margin-right: 6px;
+}
+.ac-lang-btn:hover {
+    background: #FFA351;
+    color: #101820;
+    transform: scale(1.05);
+}
+body.ac-muted-mode .ac-lang-btn {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .2);
+    color: #fff;
+}
+</style>
 </head>
 <body id="top">
 <header class="site-header ac-header">
     <div class="container">
         <div class="flex jus alc top_menu ac-header-main">
-            <a href="index.html" class="ac-wordmark" aria-label="App-Creator">
+            <a href="/index.html" class="ac-wordmark" aria-label="App-Creator">
                 <span class="ac-wordmark-mark">AC</span>
                 <span class="ac-wordmark-name">APP—CREATOR</span>
             </a>
             <time class="ac-clock" id="acClock"></time>
             <div class="ac-profile">
                 <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
-                <div class="ac-profile-status"><i></i>10+ years in development</div>
-                <h2>Hey, I’m Vitaliy</h2>
-                <p>I build mobile applications, websites and digital products for business.</p>
+                <div class="ac-profile-status"><i></i>10+ лет в разработке</div>
+                <h2>Привет, я Виталий</h2>
+                <p>Создаю мобильные приложения, сайты и цифровые продукты для бизнеса.</p>
                 <div class="ac-profile-actions">
-                    <a href="projects.html">Projects</a>
+                    <a href="/projects.html">Работы</a>
                 </div>
             </div>
             <button type="button" class="burger flex jus column" aria-label="Открыть меню" aria-expanded="false">
@@ -1376,17 +1417,17 @@ body.project-gallery-open {
             </button>
             <nav class="menu ac-nav">
                 <ul class="ul flex_row flex alc">
-                    <li><a class="bold" href="index.html">Home</a></li>
-                    <li><a class="bold" href="index.html#about">About Me</a></li>
-                    <li><a class="bold" href="index.html#experience">Experience</a></li>
-                    <li><a class="bold active" href="index.html#work">Projects</a></li>
-                    <li><a class="bold" href="index.html#services">Services</a></li>
-                    <li><a class="bold" href="index.html#skills">Skills</a></li>
-                    <li><a class="bold" href="index.html#reviews">Reviews</a></li>
-                    <li><a class="bold" href="certificates.html">Certificates</a></li>
+                    <li><a class="bold" href="/index.html">Главная</a></li>
+                    <li><a class="bold" href="/index.html#about">Обо мне</a></li>
+                    <li><a class="bold" href="/index.html#experience">Опыт</a></li>
+                    <li><a class="bold active" href="/index.html#work">Работы</a></li>
+                    <li><a class="bold" href="/index.html#services">Услуги</a></li>
+                    <li><a class="bold" href="/index.html#skills">Навыки</a></li>
+                    <li><a class="bold" href="/index.html#reviews">Отзывы</a></li>
+                    <li><a class="bold" href="/certificates.html">Сертификаты</a></li>
                 </ul>
             </nav>
-            <div class="ac-theme-controls"><button type="button" id="acThemeToggle" aria-label="Переключить оформление">☼</button><a href="#top" aria-label="Наверх">↑</a></div>
+            <div class="ac-theme-controls"><a href="/en/project/logflightpro.html" class="ac-lang-btn" onclick="localStorage.setItem('site_lang', 'en')" title="Switch to EN">EN</a><button type="button" id="acThemeToggle" aria-label="Переключить оформление">☼</button><a href="#top" aria-label="Наверх">↑</a></div>
         </div>
     </div>
 </header>
@@ -1407,8 +1448,8 @@ body.project-gallery-open {
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    var appStoreText = "View on the App Store";
-    var googlePlayText = "View on Google Play";
+    var appStoreText = "Смотреть в App Store";
+    var googlePlayText = "Смотреть в Google Play";
     var links = document.querySelectorAll('.content a[href*="apps.apple.com"], .content a[href*="play.google.com"]');
 
     links.forEach(function(link) {
@@ -1522,20 +1563,20 @@ https://logflightpro.com/eula
         <div class="ac-footer-grid">
             <div class="ac-footer-index">AC / 2026</div>
             <div class="footer-brand ac-footer-brand">
-                <strong>Digital product development</strong>
-                <p>Mobile apps, websites, e-commerce platforms and complex integrations — focused on speed, UX and stability.</p>
+                <strong>Разработка цифровых продуктов</strong>
+                <p>Мобильные приложения, сайты, интернет-магазины и сложные интеграции — с фокусом на скорость, UX и стабильность.</p>
             </div>
             <div class="footer-links ac-footer-links">
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="reviews.html">Reviews</a>
-                <a href="certificates.html">Certificates</a>
+                <a href="/projects.html">Работы</a>
+                <a href="/about.html">О себе</a>
+                <a href="/reviews.html">Отзывы</a>
+                <a href="/certificates.html">Сертификаты</a>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="power">
     <span class="hid">
-        All rights reserved    </span>
+        Все права защищены    </span>
                 2026 «App-Creator»
             </div>
         </div>
@@ -1543,10 +1584,10 @@ https://logflightpro.com/eula
     <script type="application/ld+json">{
             "@context": "http://schema.org",
             "@type": "Person",
-            "url": "https://vitald3.github.io/",
-            "name": "App-Creator - Vitaliy Khaychenko Portfolio",
-            "logo": "https://vitald3.github.io/assets/img/logo.png",
-            "image": "https://vitald3.github.io/assets/img/vitaliy-portrait.jpg",
+            "url": "https://hayvetalkz.github.io/",
+            "name": "App-Creator - Портфолио Хайченко Виталия",
+            "logo": "https://hayvetalkz.github.io/assets/img/logo.png",
+            "image": "https://hayvetalkz.github.io/assets/img/vitaliy-portrait.jpg",
             "jobTitle": "Software developer"
         }
     </script>
@@ -1615,11 +1656,11 @@ https://logflightpro.com/eula
         <script>
         let reviewsData;
 
-        const footerLocale = "en-US";
-        const dateNotSetText = "Date not specified";
-        const viewReviewText = "View Review";
-        const noReviewsText = "No reviews match this filter";
-        const language = "en";
+        const footerLocale = "ru-RU";
+        const dateNotSetText = "Дата не указана";
+        const viewReviewText = "Смотреть отзыв";
+        const noReviewsText = "Нет отзывов по данному фильтру";
+        const language = "ru";
 
         if ($('.reviews-section').hasClass('rsh')) {
             reviewsData = [{"id":"9","rating":"5","project":"Разработка мобильного приложения для наушников","project_en":"Develop a mobile application for headphones","name":"Заказчик","name_en":"Client","text":"Всё хорошо, заказ выполнен качественно ","text_en":"Everything went well. The project was completed to a high standard.","price":"15000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_945622-2","sort":"9","created_at":"2024-01-15 19:02:59"},{"id":"8","rating":"5","project":"Доработка загрузчика товаров на опенкарте","project_en":"Improve the OpenCart product importer","name":"Дмитрий Ненашев","name_en":"Dmitry Nenashev","text":"Виталий успешно справился с задачей с которой не справился другой разработчик. Пришлось, конечно, повозиться, много тестировать, но результат отличный!","text_en":"Vitaliy successfully completed a task that another developer could not handle. It required a lot of work and extensive testing, but the final result was excellent!","price":"8000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"8","created_at":"2024-01-15 19:02:59"},{"id":"7","rating":"5","project":"Устранить проблему с дублированием email при отправке рассылки писем","project_en":"Fix duplicate emails when sending an email campaign","name":"Заказчик","name_en":"Client","text":"Очень оперативно решен поставленный вопрос. Спасибо за профессиональную работу!","text_en":"The issue was resolved very quickly. Thank you for the professional work!","price":"3000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"7","created_at":"2024-01-07 19:02:59"},{"id":"6","rating":"5","project":"Правка на Опенкарт 3","project_en":"OpenCart 3 modification","name":"Александр Егоров","name_en":"Alexander Egorov","text":"Спасибо большое. Всем доволен. Буду постоянно к вам обращаться","text_en":"Thank you very much. I am completely satisfied with the result and will continue working with you.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"6","created_at":"2023-12-30 19:02:59"},{"id":"5","rating":"5","project":"OpenCart: Настроить интеграции с ТК и Эквайрингом (через готовые модули)","project_en":"OpenCart: Configure shipping and payment gateway integrations using existing modules","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Выполнил все согласно ТЗ, без нареканий. Хороший специалист, обращаемся не первый раз","text_en":"Everything was completed according to the specification without any issues. A skilled developer whom we have worked with more than once.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"5","created_at":"2023-10-09 18:02:59"},{"id":"4","rating":"5","project":"Создать структуру Мобильного приложения","project_en":"Create the structure of a mobile application","name":"Заказчик","name_en":"Client","text":"Все было сделано как надо. Рекомендую!","text_en":"Everything was completed exactly as required. Highly recommended!","price":"10000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"4","created_at":"2023-09-26 18:02:59"},{"id":"3","rating":"5","project":"OpenCart: Доработать стили сайта","project_en":"OpenCart: Improve the website styles","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Повторный заказ. Небольшая доработка, все отлично сделано. ","text_en":"A repeat order. It was a small improvement, and everything was completed perfectly.","price":"1000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920187-2","sort":"3","created_at":"2023-09-18 18:02:59"},{"id":"2","rating":"5","project":"Модуль Opencart 1.5.6 переписать на 3.0","project_en":"Rewrite an OpenCart 1.5.6 module for OpenCart 3.0","name":"Всеволод Антонов-Дидковский\r\n","name_en":"Vsevolod Antonov-Didkovsky","text":"Виталий справился с задачей очень быстро! Проект был сдан вовремя, без каких-либо замечаний. Действительно мастер своего дела! Рекомендую как супер специалиста! ","text_en":"Vitaliy completed the task very quickly! The project was delivered on time without any issues. He is truly a master of his craft. I highly recommend him as an excellent specialist!","price":"8300","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919858-2","sort":"2","created_at":"2023-09-14 17:02:00"},{"id":"1","rating":"5","project":"OpenCart: Доработать и проверить функционал сайта","project_en":"OpenCart: Improve and test the website functionality","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Отличный исполнитель, все сделал четко и быстро, и даже чуть больше, рекомендуем! ","text_en":"Excellent developer. Everything was completed quickly and precisely, and even a little beyond the original scope. Highly recommended!","price":"5000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919652-2","sort":"1","created_at":"2023-09-12 16:19:34"}].slice(0, 3);

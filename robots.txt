@@ -1,12 +1,4 @@
 User-agent: *
-Disallow: /add_project
-Disallow: /project
-Disallow: /extension
-Disallow: /sitemap
-Allow: /project/*
-Allow: /projects
-Allow: /extension/*
-Allow: /extensions
-Allow: /sitemap.xml
-Host: https://yoursite71.ru/
-Sitemap: https://yoursite71.ru/sitemap.xml
+Allow: /
+Host: https://hayvetalkz.github.io/
+Sitemap: https://hayvetalkz.github.io/sitemap.xml
