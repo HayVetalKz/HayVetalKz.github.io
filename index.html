@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio</title>
+    <base href="https://app-creator.site/" />
+    <meta name="description" content="App-Creator - Portfolio of completed mobile and web development projects." />
+    <meta name="keywords" content="App development, mobile development, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
+    <meta property="og:title" content="Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://app-creator.site/" />
+    <meta property="og:image" content="https://app-creator.site/assets/img/WEB-PROGRAMMING.png" />
+    <meta property="og:site_name" content="App-Creator" />
+    <link href="/assets/css/main.css?v=6" rel="stylesheet" media="screen">
+    <link href="/assets/img/favicon.png" rel="icon" />
+    <link href="https://app-creator.site/" rel="canonical" />
+
+    <style>
+        :root {
+            --w21-dark: #101820;
+            --w21-accent: #FFA351;
+            --w21-blue: #5A7CFF;
+            --w21-muted: rgba(16, 24, 32, .68);
+            --w21-line: rgba(16, 24, 32, .1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        .logo-link {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            width: 172px;
+            height: 54px;
+            padding: 7px 14px;
+            border-radius: 20px;
+            background: #101820;
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: 0 18px 38px rgba(16, 24, 32, .18);
+            overflow: hidden;
+        }
+
+        .logo-link:before {
+            display: none !important;
+            content: none !important;
+        }
+
+        .logo-link img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: 148px;
+            max-height: 40px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 520px) {
+            .logo-link {
+                width: 142px;
+                height: 48px;
+                padding: 6px 12px;
+                border-radius: 18px;
+            }
+
+            .logo-link img {
+                max-width: 122px;
+                max-height: 36px;
+            }
+        }
+        body {
+            background:
+                    radial-gradient(circle at 12% 18%, rgba(255, 163, 81, .16), transparent 30%),
+                    radial-gradient(circle at 88% 34%, rgba(90, 124, 255, .12), transparent 28%),
+                    linear-gradient(180deg, #fff 0%, #f7f8fb 100%);
+        }
+
+        body.active {
+            overflow: hidden;
+        }
+
+        .site-header {
+            position: relative;
+            z-index: 1000;
+            padding: 18px 0;
+            transition: .28s ease;
+        }
+
+        .site-header.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px 0;
+            background: rgba(255, 255, 255, .78);
+            border-bottom: 1px solid rgba(16, 24, 32, .08);
+            box-shadow: 0 18px 45px rgba(16, 24, 32, .08);
+            backdrop-filter: blur(18px);
+        }
+
+        .top_menu {
+            min-height: 64px;
+            padding: 10px 14px;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, .72);
+            border: 1px solid rgba(16, 24, 32, .08);
+            box-shadow: 0 18px 60px rgba(16, 24, 32, .08);
+            backdrop-filter: blur(16px);
+        }
+
+        .logo .h1,
+        .logo a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+            color: var(--w21-dark);
+            text-decoration: none;
+            font-size: 26px;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .logo .h1:before,
+        .logo a:not(.logo-link):before {
+            content: '</>';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 16px;
+            background: var(--w21-dark);
+            color: var(--w21-accent);
+            font-size: 15px;
+            box-shadow: 0 14px 30px rgba(16, 24, 32, .18);
+        }
+
+        .menu .ul {
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .menu .ul > li > a.bold {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            padding: 0 16px;
+            border-radius: 999px;
+            color: var(--w21-dark);
+            text-decoration: none;
+            transition: .25s ease;
+        }
+        .content {
+            white-space: pre-line;
+            font-size: 18px;
+            line-height: 1.75;
+            color: rgba(16, 24, 32, .82);
+            max-width: 760px;
+            overflow: visible;
+            letter-spacing: 0.2px;
+            opacity: 0;
+            transform: translateY(16px);
+            animation: contentFade .6s ease forwards;
+        }
+
+        .content p {
+            margin-bottom: 16px;
+        }
+
+        .content strong {
+            font-family: 'Gilroy-Bold';
+            color: #101820;
+            -webkit-text-fill-color: #101820;
+        }
+
+        .content a:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background: #FFA351;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: .25s ease;
+        }
+
+        .content a:hover:after {
+            transform: scaleX(1);
+        }
+
+        .store-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            margin-top: 12px;
+            padding: 14px 22px;
+
+            border-radius: 999px;
+            background: linear-gradient(135deg, #FFA351, #ff8c2a);
+            color: #101820 !important;
+
+            font-family: 'Gilroy-Bold';
+            font-size: 15px;
+            text-decoration: none;
+            -webkit-text-fill-color: #101820;
+            overflow: visible;
+
+            box-shadow: 0 18px 40px rgba(255,163,81,0.3);
+            transition: .3s ease;
+        }
+
+        .store-btn:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 26px 60px rgba(255,163,81,0.45);
+        }
+
+        .store-btn:after {
+            display: none !important;
+        }
+
+        .store-btn.apple::before {
+            content: '';
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            background-color: #101820;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath d='M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z'/%3E%3C/svg%3E") center / contain no-repeat;
+        }
+
+        .store-btn.google::before {
+            content: '';
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            background-color: #101820;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M325.3 234.3L104.7 96.1C86.5 84.9 64 98.1 64 120.7v270.5c0 22.6 22.5 35.8 40.7 24.6l220.6-138.2c17.5-10.9 17.5-36.3 0-47.3z'/%3E%3C/svg%3E") center / contain no-repeat;
+                    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M325.3 234.3L104.7 96.1C86.5 84.9 64 98.1 64 120.7v270.5c0 22.6 22.5 35.8 40.7 24.6l220.6-138.2c17.5-10.9 17.5-36.3 0-47.3z'/%3E%3C/svg%3E") center / contain no-repeat;
+        }
+
+        @keyframes contentFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .menu .ul > li > a.bold:hover {
+            background: var(--w21-dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .menu .ul > li > a.bold.active {
+            background: rgba(255, 163, 81, .18);
+            color: var(--w21-dark);
+        }
+
+        .ref {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 10px 24px rgba(16, 24, 32, .12);
+            transition: .25s ease;
+        }
+
+        .ref:hover {
+            transform: translateY(-3px) rotate(4deg);
+        }
+
+        .ref img:first-child {
+            display: none;
+        }
+
+        .ref img:last-child {
+            width: 44px;
+            height: 44px;
+            object-fit: cover;
+        }
+
+        .burger {
+            display: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 17px;
+            background: var(--w21-dark);
+            padding: 14px 12px;
+            box-shadow: 0 16px 32px rgba(16, 24, 32, .18);
+            cursor: pointer;
+        }
+
+        .burger span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            border-radius: 20px;
+            background: #fff;
+            transition: .25s ease;
+        }
+
+        .burger.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .burger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        main {
+            min-height: 64vh;
+        }
+
+        .site-footer {
+            position: relative;
+            margin-top: 80px;
+            padding: 54px 0 32px;
+            overflow: hidden;
+            background: var(--w21-dark);
+            color: #fff;
+        }
+
+        .site-footer:before {
+            content: '';
+            position: absolute;
+            width: 460px;
+            height: 460px;
+            right: -160px;
+            top: -200px;
+            border-radius: 50%;
+            background: rgba(255, 163, 81, .18);
+            filter: blur(50px);
+        }
+
+        .footer-modern {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .footer-brand {
+            max-width: 620px;
+        }
+
+        .footer-brand strong {
+            display: block;
+            margin-bottom: 12px;
+            font-size: clamp(30px, 4vw, 54px);
+            line-height: 1;
+            letter-spacing: -1.5px;
+        }
+
+        .footer-brand p {
+            margin: 0;
+            color: rgba(255, 255, 255, .68);
+            line-height: 1.65;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 0 16px;
+            border-radius: 999px;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, .14);
+            text-decoration: none;
+            transition: .25s ease;
+        }
+
+        .footer-links a:hover {
+            background: var(--w21-accent);
+            color: var(--w21-dark);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            position: relative;
+            margin-top: 34px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            color: rgba(255, 255, 255, .58);
+        }
+
+        @media (max-width: 860px) {
+            .burger {
+                display: flex;
+            }
+
+            .menu {
+                position: fixed;
+                left: -100%;
+                top: 0;
+                width: 100%;
+                height: 100vh;
+                padding: 104px 22px 30px;
+                background: rgba(16, 24, 32, .96);
+                backdrop-filter: blur(18px);
+                z-index: 999;
+            }
+
+            .menu .ul {
+                display: grid;
+                gap: 14px;
+            }
+
+            .menu .ul > li > a.bold {
+                width: 100%;
+                min-height: 62px;
+                justify-content: center;
+                background: rgba(255, 255, 255, .08);
+                color: #fff;
+                font-size: 22px;
+            }
+
+            .menu .ul > li > a.bold.active {
+                background: var(--w21-accent);
+                color: var(--w21-dark);
+            }
+
+            .menu .ul li:last-child {
+                display: flex;
+                justify-content: center;
+                margin-top: 8px;
+            }
+
+            .top_menu {
+                border-radius: 22px;
+            }
+
+            .footer-modern {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .site-header {
+                padding: 10px 0;
+            }
+
+            .top_menu {
+                min-height: 58px;
+            }
+
+            .logo .h1,
+            .logo a:not(.logo-link) {
+                font-size: 22px;
+            }
+
+            .logo .h1:before,
+            .logo a:not(.logo-link):before {
+                width: 38px;
+                height: 38px;
+                border-radius: 14px;
+            }
+
+            .site-footer {
+                margin-top: 54px;
+                padding-top: 42px;
+            }
+        }
+
+        .reviews-section {
+            padding: 4rem 0;
+        }
+
+        .reviews-section .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .reviews-section .section-header .h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .reviews-section .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .reviews-section .stars-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #fff8e7, #fff);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #f59e0b;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .reviews-section .filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .reviews-section .filter-btn {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            padding: 0.7rem 1.8rem;
+            border-radius: 100px;
+            color: #374151;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .reviews-section .filter-btn:hover {
+            border-color: #a855f7;
+            color: #a855f7;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(168,85,247,0.15);
+        }
+
+        .reviews-section .filter-btn.active {
+            background: #000;
+            border-color: transparent;
+            color: white;
+        }
+
+        .reviews-section .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .reviews-section .review-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem;
+            border: 1px solid #f0f0f0;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .reviews-section .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(168,85,247,0.05), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .reviews-section .review-card:hover::before {
+            left: 100%;
+        }
+
+        .reviews-section .review-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(168,85,247,0.3);
+            box-shadow: 0 20px 35px -15px rgba(168,85,247,0.2);
+        }
+
+        .reviews-section .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .reviews-section .project-name {
+            font-size: 1.3rem;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .reviews-section .rating {
+            display: flex;
+            gap: 0.2rem;
+        }
+
+        .reviews-section .star {
+            font-size: 1.6rem;
+            color: #e5e7eb;
+            transition: transform 0.2s;
+        }
+
+        .reviews-section .star.filled {
+            color: #fbbf24;
+        }
+
+        .reviews-section .star.half {
+            color: #fbbf24;
+            position: relative;
+        }
+
+        .reviews-section .client-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            margin: 0.5rem 0;
+        }
+
+        .reviews-section .review-text {
+            color: #4b5563;
+            line-height: 1.6;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            max-height: 100px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+
+        .reviews-section .review-text::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        .reviews-section .review-text::-webkit-scrollbar-track {
+            background: #f3f4f6;
+            border-radius: 10px;
+        }
+
+        .reviews-section .review-text::-webkit-scrollbar-thumb {
+            background: #a855f7;
+            border-radius: 10px;
+        }
+
+        .reviews-section .price-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f3f4f6;
+        }
+
+        .reviews-section .price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0166ec, #8b56fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .reviews-section .price span {
+            font-size: 0.7rem;
+            font-weight: normal;
+            color: #9ca3af;
+        }
+
+        .reviews-section .review-link {
+            color: #000;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: gap 0.3s;
+        }
+
+        .reviews-section .review-link:hover {
+            gap: 0.6rem;
+        }
+
+        .reviews-section .review-date {
+            font-size: 0.7rem;
+            color: #9ca3af;
+            margin-top: 0.8rem;
+            text-align: right;
+        }
+
+        .reviews-section .center {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        @keyframes reviewFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reviews-section .review-card {
+            animation: reviewFadeIn 0.5s ease forwards;
+        }
+
+        @media (max-width: 900px) {
+            .reviews-section .section-header h1 {
+                font-size: 2rem;
+            }
+            .reviews-section .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .reviews-section {
+                padding: 2rem 1rem;
+            }
+        }
+
+        .reviews-section .particle {
+            position: fixed;
+            pointer-events: none;
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: particleFloat 12s infinite linear;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.4; }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .reviews-section .loader {
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .reviews-section .loader span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #a855f7;
+            margin: 0 0.3rem;
+            animation: loaderBounce 1.4s infinite ease-in-out both;
+        }
+
+        .reviews-section .loader span:nth-child(1) { animation-delay: -0.32s; }
+        .reviews-section .loader span:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes loaderBounce {
+            0%, 80%, 100% {
+                transform: scale(0);
+                opacity: 0.3;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .mt30 {
+            margin-top: 30px;
+        }
+    </style>
+    <link href="/assets/css/isak.css?v=3" rel="stylesheet" media="screen">
+    <link href="/assets/css/isak-dark.css?v=13" rel="stylesheet" media="screen">
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111120533', 'ym');
+
+        ym(111120533, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111120533" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</head>
+<body id="top">
+<header class="site-header ac-header">
+    <div class="container">
+        <div class="flex jus alc top_menu ac-header-main">
+            <a href="/" class="ac-wordmark" aria-label="App-Creator">
+                <span class="ac-wordmark-mark">AC</span>
+                <span class="ac-wordmark-name">APP—CREATOR</span>
+            </a>
+            <time class="ac-clock" id="acClock"></time>
+            <div class="ac-profile">
+                <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
+                <div class="ac-profile-status"><i></i>10+ years in development</div>
+                <h2>Hey, I’m Vitaliy</h2>
+                <p>I build mobile applications, websites and digital products for business.</p>
+                <div class="ac-profile-actions">
+                    <a href="/projects.html">Projects</a>
+                </div>
+            </div>
+            <button type="button" class="burger flex jus column" aria-label="Открыть меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="menu ac-nav">
+                <ul class="ul flex_row flex alc">
+                    <li><a class="bold active" href="#top">Home</a></li>
+                    <li><a class="bold" href="#about">About Me</a></li>
+                    <li><a class="bold" href="#experience">Experience</a></li>
+                    <li><a class="bold" href="#work">Projects</a></li>
+                    <li><a class="bold" href="#services">Services</a></li>
+                    <li><a class="bold" href="#skills">Skills</a></li>
+                    <li><a class="bold" href="#reviews">Reviews</a></li>
+                    <li><a class="bold" href="/certificates.html">Certificates</a></li>
+                </ul>
+            </nav>
+            <div class="ac-theme-controls"><button type="button" id="acThemeToggle" aria-label="Переключить оформление">☼</button><a href="#top" aria-label="Наверх">↑</a></div>
+        </div>
+    </div>
+</header>
+<main>
+
+<script>
+    (function () {
+        var clock = document.getElementById('acClock');
+        if (!clock) return;
+        function updateClock() {
+            var now = new Date();
+            clock.innerHTML = now.toLocaleDateString([], {weekday: 'short', month: 'short', day: 'numeric'}) + '<br>' + now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+        }
+        updateClock();
+        window.setInterval(updateClock, 30000);
+    }());
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var appStoreText = "View on the App Store";
+    var googlePlayText = "View on Google Play";
+    var links = document.querySelectorAll('.content a[href*="apps.apple.com"], .content a[href*="play.google.com"]');
+
+    links.forEach(function(link) {
+        const isApple = link.href.indexOf('apps.apple.com') !== -1;
+
+        const btn = document.createElement('a');
+        btn.href = link.href;
+        btn.target = '_blank';
+        btn.rel = 'nofollow';
+
+        btn.className = 'store-btn ' + (isApple ? 'apple' : 'google');
+        btn.innerText = isApple ? appStoreText : googlePlayText;
+
+        link.replaceWith(btn);
+    });
+});
+</script>
+<style>
+    .portfolio-page {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .portfolio-page:before,
+    .portfolio-page:after {
+        content: '';
+        position: fixed;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        filter: blur(70px);
+        opacity: .18;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .portfolio-page:before {
+        left: -140px;
+        top: 140px;
+        background: #FFA351;
+    }
+
+    .portfolio-page:after {
+        right: -120px;
+        top: 420px;
+        background: #5A7CFF;
+    }
+
+    .portfolio-hero {
+        position: relative;
+        padding: 72px 0 54px;
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+        gap: 34px;
+        align-items: center;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 15px;
+        border: 1px solid rgba(255, 163, 81, .35);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, .72);
+        box-shadow: 0 12px 40px rgba(16, 24, 32, .08);
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .hero-badge span {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #FFA351;
+        box-shadow: 0 0 0 7px rgba(255, 163, 81, .16);
+    }
+
+    .portfolio-hero h1 {
+        margin: 0;
+        max-width: 860px;
+        font-size: clamp(42px, 7vw, 86px);
+        line-height: .95;
+        letter-spacing: -3px;
+    }
+
+    .portfolio-hero h1 em {
+        font-style: normal;
+        color: #FFA351;
+    }
+
+    .hero-lead {
+        max-width: 640px;
+        margin: 24px 0 0;
+        font-size: 20px;
+        line-height: 1.55;
+        color: rgba(16, 24, 32, .76);
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 32px;
+    }
+
+    .hero-actions .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 24px;
+        border-radius: 999px;
+        border: 1px solid rgba(16, 24, 32, .16);
+        color: #101820;
+        background: rgba(255, 255, 255, .74);
+        text-decoration: none;
+        transition: .25s ease;
+    }
+
+    .hero-actions .btn-secondary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 45px rgba(16, 24, 32, .12);
+    }
+
+    .hero-card {
+        position: relative;
+        padding: 26px;
+        border-radius: 34px;
+        background: rgba(255, 255, 255, .78);
+        border: 1px solid rgba(16, 24, 32, .08);
+        box-shadow: 0 30px 80px rgba(16, 24, 32, .12);
+        backdrop-filter: blur(18px);
+        transform: rotate(1deg);
+        animation: floatCard 5s ease-in-out infinite;
+    }
+
+    .hero-card:before {
+        content: '';
+        position: absolute;
+        inset: 14px;
+        border-radius: 26px;
+        border: 1px dashed rgba(16, 24, 32, .16);
+        pointer-events: none;
+    }
+
+    .hero-card-title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 18px;
+    }
+
+    .hero-stack {
+        display: grid;
+        gap: 12px;
+    }
+
+    .hero-stack div {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 15px 16px;
+        border-radius: 18px;
+        background: #101820;
+        color: #fff;
+    }
+
+    .hero-stack div:nth-child(even) {
+        background: #FFA351;
+        color: #101820;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+        margin: 18px 0 54px;
+    }
+
+    .stat-card {
+        padding: 24px;
+        border-radius: 26px;
+        background: #101820;
+        color: #fff;
+        box-shadow: 0 22px 50px rgba(16, 24, 32, .14);
+    }
+
+    .stat-card strong {
+        display: block;
+        font-size: 34px;
+        line-height: 1;
+        color: #FFA351;
+        margin-bottom: 8px;
+    }
+
+    .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 28px;
+    }
+
+    .section-head h2,
+    .section-head h1 {
+        margin: 0;
+        font-size: clamp(32px, 4vw, 56px);
+        letter-spacing: -1.5px;
+    }
+
+    .section-head p {
+        max-width: 480px;
+        margin: 0;
+        color: rgba(16, 24, 32, .68);
+        line-height: 1.55;
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .portfolio-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;
+        min-height: 280px;
+        background: #101820;
+        box-shadow: 0 28px 70px rgba(16, 24, 32, .16);
+        transform: translateY(0);
+        transition: transform .35s ease, box-shadow .35s ease;
+    }
+
+    .portfolio-card:hover {
+        transform: translateY(-10px) scale(1.015);
+        box-shadow: 0 36px 90px rgba(16, 24, 32, .25);
+    }
+
+    .portfolio-card img {
+        width: 100%;
+        height: 100%;
+        min-height: 280px;
+        object-fit: cover;
+        display: block;
+        opacity: .78;
+        transition: transform .6s ease, opacity .35s ease;
+    }
+
+    .portfolio-card:hover img {
+        transform: scale(1.08);
+        opacity: .58;
+    }
+
+    .portfolio-card-info {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 24px;
+        color: #fff;
+        background: linear-gradient(180deg, rgba(16, 24, 32, 0), rgba(16, 24, 32, .96));
+    }
+
+    .portfolio-card-info span {
+        display: inline-flex;
+        margin-bottom: 10px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(255, 163, 81, .95);
+        color: #101820;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+    }
+
+    .portfolio-card-info h3 {
+        margin: 0;
+        font-size: 23px;
+        line-height: 1.15;
+    }
+
+    .skills-panel {
+        display: grid;
+        grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+        gap: 24px;
+        padding: 34px;
+        border-radius: 34px;
+        background: rgba(255, 255, 255, .8);
+        border: 1px solid rgba(16, 24, 32, .08);
+        box-shadow: 0 28px 80px rgba(16, 24, 32, .1);
+    }
+
+    .skills-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 14px;
+    }
+
+    .skills-list span {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 60px;
+        padding: 0 16px;
+
+        border-radius: 18px;
+        background: linear-gradient(135deg, #101820, #0b1622);
+        color: #fff;
+
+        font-size: 15px;
+        font-weight: 500;
+
+        border: 1px solid rgba(255,255,255,0.06);
+
+        transition: all .3s ease;
+        cursor: default;
+    }
+
+    .skills-list span:hover {
+        transform: translateY(-6px) scale(1.03);
+        background: linear-gradient(135deg, #FFA351, #ff8c2a);
+        color: #101820;
+        box-shadow: 0 20px 40px rgba(255,163,81,0.3);
+    }
+
+    .skills-list span:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 18px;
+        opacity: 0;
+        transition: .3s;
+    }
+
+    .skills-list span:hover:after {
+        opacity: 1;
+        box-shadow: 0 0 40px rgba(255,163,81,0.4);
+    }
+
+    .about-modern p {
+        font-size: 18px;
+        line-height: 1.65;
+        color: rgba(16, 24, 32, .76);
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @keyframes floatCard {
+        0%, 100% { transform: translateY(0) rotate(1deg); }
+        50% { transform: translateY(-12px) rotate(-1deg); }
+    }
+
+    @media (max-width: 600px) {
+        .skills-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .skills-list span {
+            height: 52px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .hero-grid,
+        .skills-panel {
+            grid-template-columns: 1fr;
+        }
+
+        .stats-grid,
+        .portfolio-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 560px) {
+        .portfolio-hero {
+            padding-top: 42px;
+        }
+
+        .portfolio-hero h1 {
+            letter-spacing: -1.5px;
+        }
+
+        .stats-grid,
+        .portfolio-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .section-head {
+            display: block;
+        }
+
+        .hero-actions .btn,
+        .hero-actions .btn-secondary {
+            width: 100%;
+        }
+    }
+</style>
+<div class="container ac-page">
+    <section class="ac-hero">
+        <div class="ac-hero-copy">
+            <div class="ac-main-identity"><span class="ac-main-avatar"></span><div><strong>Vitaliy Khaychenko</strong><small>10+ years in mobile & web development</small></div></div>
+            <h1>I build <em>websites</em><br><mark>&amp; applications</mark> people<br>remember</h1>
+            <p>Mobile applications, e-commerce, Laravel/OpenCart projects, API integrations and custom development with a focus on clean architecture and business results.</p>
+            <div class="ac-actions">
+                <a href="/projects.html" class="ac-button ac-button--primary">View Projects</a>
+                <a href="#skills" class="ac-button ac-button--quiet">My Skills</a>
+            </div>
+        </div>
+        <aside class="ac-register ac-register--scribble" aria-hidden="true">
+            <div class="ac-register-head"><span>AC / 01</span><strong>Development Focus</strong></div>
+            <ol>
+                <li><span>01</span><div><b>Mobile</b><small>iOS / Android / Flutter</small></div></li>
+                <li><span>02</span><div><b>Backend</b><small>Laravel / API / DB</small></div></li>
+                <li><span>03</span><div><b>E-commerce</b><small>OpenCart / Stores</small></div></li>
+                <li><span>04</span><div><b>Automation</b><small>Parsing / Bots / Integrations</small></div></li>
+            </ol>
+            <svg class="ac-scribble" viewBox="0 0 708 293" role="presentation"><defs><linearGradient id="acScribbleGradient" x1="0" x2="1"><stop offset="0" stop-color="#03160b"/><stop offset=".32" stop-color="#00de51"/><stop offset=".75" stop-color="#00de51"/><stop offset="1" stop-color="#06170c"/></linearGradient></defs><path d="M8 111 C116 138 210 133 298 73 C373 21 430 48 457 112 C487 183 468 263 404 271 C348 278 315 226 333 174 C357 105 451 88 520 104 C590 120 645 119 700 90" fill="none" stroke="url(#acScribbleGradient)" stroke-width="34" stroke-linecap="round"/></svg>
+            <div class="ac-award-seal"><span>10+ ЛЕТ • WEB • MOBILE •</span><i></i></div>
+        </aside>
+        <div class="ac-ledger">
+            <div><span>01</span><strong>10+</strong><small>years of experience</small></div>
+            <div><span>02</span><strong>60+</strong><small>Latest Projects</small></div>
+            <div><span>03</span><strong>iOS</strong><small>Native & Flutter</small></div>
+            <div><span>04</span><strong>API</strong><small>Laravel & Integrations</small></div>
+        </div>
+        <div class="ac-clients"><span>◉ &nbsp; Project fields</span><div>Mobile&nbsp;&nbsp;&nbsp; E-commerce&nbsp;&nbsp;&nbsp; SaaS&nbsp;&nbsp;&nbsp; Startups</div></div>
+    </section>
+
+    <section id="about" class="ac-section ac-isak-about">
+        <header class="ac-section-head">
+            <div><span>02 / About</span><h2>I build memorable products that feel effortless to use</h2></div>
+            <div><p>I build mobile apps, e-commerce platforms, Laravel/OpenCart solutions and custom systems with API integrations, payments, push notifications and admin panels.</p><p>I create products that are fast, scalable, easy to maintain and built for long-term growth.</p></div>
+        </header>
+        <div class="ac-isak-awards">
+            <div><span>01</span><strong>10+</strong><p>years of experience</p></div>
+            <div><span>02</span><strong>iOS / Android</strong><p>Native & Flutter</p></div>
+            <div><span>03</span><strong>Web / API</strong><p>Laravel & Integrations</p></div>
+            <div><span>04</span><strong>60+</strong><p>Latest Projects</p></div>
+            <div><span>05</span><strong>Full cycle</strong><p>Performance & SEO</p></div>
+        </div>
+    </section>
+
+    <section id="experience" class="ac-section ac-isak-experience">
+        <header class="ac-section-head"><div><span>03 / Experience</span><h2>Experience & expertise</h2></div></header>
+        <div class="ac-isak-timeline">
+            <article><time>2015 — Now</time><div><h3>Independent Developer</h3><p>End-to-end design and development of mobile applications, websites and digital services.</p></div></article>
+            <article><time>Mobile</time><div><h3>Mobile Development</h3><p>Native iOS and Android apps, Flutter, publishing and ongoing support.</p></div></article>
+            <article><time>Web</time><div><h3>Web & Automation</h3><p>Laravel, OpenCart, APIs, parsing, integrations and complex business logic.</p></div></article>
+        </div>
+    </section>
+
+            <section id="work" class="ac-section ac-work-showcase">
+            <header class="ac-section-head">
+                <div><span>04 / Selected work</span><h2>Latest Projects</h2></div>
+                <p>Real projects focused on clean UI, intuitive UX and business value.</p>
+            </header>
+            <div class="ac-projects">
+                                    <div class="ac-project-slide">                    <a class="ac-project" href="/project/naimio.html" data-project-index="0">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1787880576_36a83e03.webp" alt="Naimio - маркетплейс фриланс услуг">
+                            <div class="ac-project-meta">
+                                <span>01 / Case Study</span>
+                                <h3>Naimio - маркетплейс фриланс услуг</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/mozi_sizer.html" data-project-index="1">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777579432_303375d8.webp" alt="Мобильное кросплатформенное приложение MOZI Sizer">
+                            <div class="ac-project-meta">
+                                <span>02 / Case Study</span>
+                                <h3>Мобильное кросплатформенное приложение MOZI Sizer</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/taptym.html" data-project-index="2">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777536883_04c2adf9.webp" alt="Мобильное кросплатформенное приложение TapTym">
+                            <div class="ac-project-meta">
+                                <span>03 / Case Study</span>
+                                <h3>Мобильное кросплатформенное приложение TapTym</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                    </div>                                    <div class="ac-project-slide">                    <a class="ac-project" href="/project/universum_worlds.html" data-project-index="3">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777649875_bf7613e3.webp" alt="Мобильное кросплатформенное приложение Universum Worlds">
+                            <div class="ac-project-meta">
+                                <span>04 / Case Study</span>
+                                <h3>Мобильное кросплатформенное приложение Universum Worlds</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/logflightpro.html" data-project-index="4">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777652567_4419c044.webp" alt="Мобильное нативное приложение LogFlightPro">
+                            <div class="ac-project-meta">
+                                <span>05 / Case Study</span>
+                                <h3>Мобильное нативное приложение LogFlightPro</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/cstrike_skins.html" data-project-index="5">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777653000_2383ac53.webp" alt="Мобильное кросплатформенное приложение СStrike Skins">
+                            <div class="ac-project-meta">
+                                <span>06 / Case Study</span>
+                                <h3>Мобильное кросплатформенное приложение СStrike Skins</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                    </div>                                    <div class="ac-project-slide">                    <a class="ac-project" href="/project/lol_skins_collection.html" data-project-index="6">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777653175_7eaf4cee.webp" alt="Мобильное кросплатформенное приложение LoL Skins Collection">
+                            <div class="ac-project-meta">
+                                <span>07 / Case Study</span>
+                                <h3>Мобильное кросплатформенное приложение LoL Skins Collection</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/moba_skins.html" data-project-index="7">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777653672_8e3b72f3.webp" alt="Мобильное кросплатформенное приложение Moba Skins">
+                            <div class="ac-project-meta">
+                                <span>08 / Case Study</span>
+                                <h3>Мобильное кросплатформенное приложение Moba Skins</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/soulcue.html" data-project-index="8">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777579207_84975fa9.webp" alt="SoulCue: AI Journal">
+                            <div class="ac-project-meta">
+                                <span>09 / Case Study</span>
+                                <h3>SoulCue: AI Journal</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                    </div>                                    <div class="ac-project-slide">                    <a class="ac-project" href="/project/ttm.html" data-project-index="9">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777538698_fef2ff8f.webp" alt="Трак Трейлер Маркет">
+                            <div class="ac-project-meta">
+                                <span>10 / Case Study</span>
+                                <h3>Трак Трейлер Маркет</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/fingpt.html" data-project-index="10">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777538746_2b4353af.webp" alt="FinGPT - SwiftUI">
+                            <div class="ac-project-meta">
+                                <span>11 / Case Study</span>
+                                <h3>FinGPT - SwiftUI</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/luna_deep.html" data-project-index="11">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777538906_3963d70e.webp" alt="Luna Deep - Prime music wave">
+                            <div class="ac-project-meta">
+                                <span>12 / Case Study</span>
+                                <h3>Luna Deep - Prime music wave</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                    </div>                                    <div class="ac-project-slide">                    <a class="ac-project" href="/project/icapia_home.html" data-project-index="12">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777538957_ccb31b63.webp" alt="Don&#039;t Touch My Phone Guard">
+                            <div class="ac-project-meta">
+                                <span>13 / Case Study</span>
+                                <h3>Don&#039;t Touch My Phone Guard</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/auctioncar.html" data-project-index="13">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777539013_6d371a57.webp" alt="Мобильное приложение AuctionCar - Flutter ">
+                            <div class="ac-project-meta">
+                                <span>14 / Case Study</span>
+                                <h3>Мобильное приложение AuctionCar - Flutter </h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/applock.html" data-project-index="14">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777539056_996f2ef3.webp" alt="Super App Lock: Screen Time">
+                            <div class="ac-project-meta">
+                                <span>15 / Case Study</span>
+                                <h3>Super App Lock: Screen Time</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                    </div>                                    <div class="ac-project-slide">                    <a class="ac-project" href="/project/dtmp.html" data-project-index="15">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777539119_d4dedca9.webp" alt="Don&#039;t Touch My Phone Guard">
+                            <div class="ac-project-meta">
+                                <span>16 / Case Study</span>
+                                <h3>Don&#039;t Touch My Phone Guard</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/catdog.html" data-project-index="16">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777539171_5d3c80af.webp" alt="AI Pawsome: CatDog Translator">
+                            <div class="ac-project-meta">
+                                <span>17 / Case Study</span>
+                                <h3>AI Pawsome: CatDog Translator</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/ohotica.html" data-project-index="17">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/33V.webp" alt="Охотика">
+                            <div class="ac-project-meta">
+                                <span>18 / Case Study</span>
+                                <h3>Охотика</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                    </div>                                    <div class="ac-project-slide">                    <a class="ac-project" href="/project/goat_rock.html" data-project-index="18">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777539424_94984a4e.webp" alt="Goat Rock – Prime Rock Station">
+                            <div class="ac-project-meta">
+                                <span>19 / Case Study</span>
+                                <h3>Goat Rock – Prime Rock Station</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/tezarius.html" data-project-index="19">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777539481_d236a459.webp" alt="Tezarius - Торговля и учет">
+                            <div class="ac-project-meta">
+                                <span>20 / Case Study</span>
+                                <h3>Tezarius - Торговля и учет</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/taumart.html" data-project-index="20">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777539527_304d9410.webp" alt="Тау-Март">
+                            <div class="ac-project-meta">
+                                <span>21 / Case Study</span>
+                                <h3>Тау-Март</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                    </div>                                    <div class="ac-project-slide">                    <a class="ac-project" href="/project/pro_design.html" data-project-index="21">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/preview_1777652851_6f94df6b.webp" alt="Мобильное кросплатформенное приложение ПРО ДИЗАЙН">
+                            <div class="ac-project-meta">
+                                <span>22 / Case Study</span>
+                                <h3>Мобильное кросплатформенное приложение ПРО ДИЗАЙН</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/drivezaim.html" data-project-index="22">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/img.webp" alt="DriveZaim Займ под залог авто">
+                            <div class="ac-project-meta">
+                                <span>23 / Case Study</span>
+                                <h3>DriveZaim Займ под залог авто</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/instaflora.html" data-project-index="23">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/inst.webp" alt="Доставка цветов Москва от Instaflora для тех, кто привык к лучшему, но не хочет переплачивать">
+                            <div class="ac-project-meta">
+                                <span>24 / Case Study</span>
+                                <h3>Доставка цветов Москва от Instaflora для тех, кто привык к лучшему, но не хочет переплачивать</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                    </div>                                    <div class="ac-project-slide">                    <a class="ac-project" href="/project/felicita-flowers.html" data-project-index="24">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/felicita-flowers.com_p.webp" alt="Доставка цветов Москва по низким ценам – всегда рады новым заказам и готовы помочь">
+                            <div class="ac-project-meta">
+                                <span>25 / Case Study</span>
+                                <h3>Доставка цветов Москва по низким ценам – всегда рады новым заказам и готовы помочь</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/mosoptom.html" data-project-index="25">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/5.webp" alt="MosOptom разработка на Laravel">
+                            <div class="ac-project-meta">
+                                <span>26 / Case Study</span>
+                                <h3>MosOptom разработка на Laravel</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                                                                            <a class="ac-project" href="/project/1001-sewing-machine.html" data-project-index="26">
+                        <div class="ac-project-visual">
+                            <img src="/assets/img/1.webp" alt="1001 швейная машина">
+                            <div class="ac-project-meta">
+                                <span>27 / Case Study</span>
+                                <h3>1001 швейная машина</h3>
+                                <i aria-hidden="true">↗</i>
+                            </div>
+                        </div>
+                    </a>
+                    </div>                            </div>
+            <a href="/projects.html" class="ac-text-link">View All Projects<span>→</span></a>
+        </section>
+    
+    <section id="services" class="ac-section ac-isak-services">
+        <header class="ac-section-head"><div><span>05 / Services</span><h2>Development tailored to your business</h2></div><p>From idea and prototype to publishing, support and scaling.</p></header>
+        <div class="ac-isak-service-list">
+                            <article class="ac-service-item active">
+                    <button type="button" class="ac-service-toggle" aria-expanded="true">
+                        <span>01</span>
+                        <h3>Mobile applications</h3>
+                        <i aria-hidden="true">−</i>
+                    </button>
+                    <div class="ac-service-panel">
+                        <div class="ac-service-panel-inner">
+                                                            <div class="ac-service-previews" aria-hidden="true">
+                                    <figure><img src="/assets/img/project/inst2.webp" alt="" loading="lazy"></figure>
+                                    <figure><img src="/assets/img/project/image_1777538957_1514c39a.webp" alt="" loading="lazy"></figure>
+                                </div>
+                                                        <p>Native and cross-platform development for iOS and Android, from prototype to release and support.</p>
+                        </div>
+                    </div>
+                </article>
+                            <article class="ac-service-item">
+                    <button type="button" class="ac-service-toggle" aria-expanded="false">
+                        <span>02</span>
+                        <h3>Websites & e-commerce</h3>
+                        <i aria-hidden="true">+</i>
+                    </button>
+                    <div class="ac-service-panel">
+                        <div class="ac-service-panel-inner">
+                                                        <p>Fast websites, online stores and customer portals with clear structure and intuitive management.</p>
+                        </div>
+                    </div>
+                </article>
+                            <article class="ac-service-item">
+                    <button type="button" class="ac-service-toggle" aria-expanded="false">
+                        <span>03</span>
+                        <h3>APIs & integrations</h3>
+                        <i aria-hidden="true">+</i>
+                    </button>
+                    <div class="ac-service-panel">
+                        <div class="ac-service-panel-inner">
+                                                        <p>API architecture, payments, authentication, push notifications, parsing and business automation.</p>
+                        </div>
+                    </div>
+                </article>
+                    </div>
+    </section>
+
+    <section id="skills" class="ac-section ac-expertise">
+        <header class="ac-section-head">
+            <div><span>06 / Expertise</span><h2>Developer Portfolio</h2></div>
+            <p>From idea and prototype to publishing, support and scaling.</p>
+        </header>
+        <div class="ac-expertise-grid">
+            <div class="ac-expertise-copy"><p>I build mobile apps, e-commerce platforms, Laravel/OpenCart solutions and custom systems with API integrations, payments, push notifications and admin panels.</p><p>I create products that are fast, scalable, easy to maintain and built for long-term growth.</p></div>
+            <div class="ac-capabilities">
+                                    <div><span>01</span>Flutter</div>
+                                    <div><span>02</span>Kotlin</div>
+                                    <div><span>03</span>Swift</div>
+                                    <div><span>04</span>Laravel</div>
+                                    <div><span>05</span>OpenCart</div>
+                                    <div><span>06</span>REST API</div>
+                                    <div><span>07</span>Firebase</div>
+                                    <div><span>08</span>Push notifications</div>
+                                    <div><span>09</span>Parsing</div>
+                                    <div><span>10</span>Bots</div>
+                                    <div><span>11</span>Performance</div>
+                                    <div><span>12</span>Clean UI</div>
+                            </div>
+        </div>
+    </section>
+
+            <section id="reviews" class="ac-section ac-reviews reviews-section rsh">
+            <header class="ac-section-head">
+                <div><span>07 / Reputation</span><h2>What My Clients Say</h2></div>
+                <a href="/reviews.html" class="ac-text-link">View All Reviews<span>→</span></a>
+            </header>
+            <div class="reviews-grid" id="reviewsGrid"><div class="loader"><span></span><span></span><span></span></div></div>
+        </section>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var items = document.querySelectorAll('.reveal');
+
+        function showVisible() {
+            items.forEach(function (item) {
+                var rect = item.getBoundingClientRect();
+
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+
+        showVisible();
+
+        if (!('IntersectionObserver' in window)) {
+            window.addEventListener('scroll', showVisible);
+            return;
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.05,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        items.forEach(function (item) {
+            if (!item.classList.contains('visible')) {
+                observer.observe(item);
+            }
+        });
+
+        window.addEventListener('load', showVisible);
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var profile = document.querySelector('.ac-profile');
+        var work = document.querySelector('.ac-work-showcase');
+        var slides = work ? Array.prototype.slice.call(work.querySelectorAll('.ac-project-slide')) : [];
+        var cards = work ? Array.prototype.slice.call(work.querySelectorAll('.ac-project')) : [];
+        var activeSlide = -1;
+        var activeCard = 0;
+        var imageLayer = 0;
+        var imageToken = 0;
+        var hoveredCard = null;
+        var timer = 0;
+        var ticking = false;
+
+        if (!profile || !work || !slides.length || !cards.length) return;
+
+        var projectView = document.createElement('a');
+        projectView.className = 'ac-profile-project';
+        projectView.setAttribute('aria-hidden', 'true');
+        projectView.innerHTML = '<img class="is-active" alt=""><img alt=""><div class="ac-profile-project-content"><span></span><h3></h3><b><i aria-hidden="true">↗</i>Open project</b></div>';
+        profile.appendChild(projectView);
+
+        var images = Array.prototype.slice.call(projectView.querySelectorAll('img'));
+        var counter = projectView.querySelector('span');
+        var title = projectView.querySelector('h3');
+
+        function swapImage(source, alt) {
+            var nextLayer = imageLayer === 0 ? 1 : 0;
+            var nextImage = images[nextLayer];
+            var token = ++imageToken;
+
+            function reveal() {
+                if (token !== imageToken) return;
+                images[imageLayer].classList.remove('is-active');
+                nextImage.classList.add('is-active');
+                imageLayer = nextLayer;
+            }
+
+            nextImage.onload = reveal;
+            nextImage.src = source;
+            nextImage.alt = alt;
+            if (nextImage.complete) reveal();
+        }
+
+        function showCard(card) {
+            var image = card.querySelector('.ac-project-visual > img');
+            var cardTitle = card.querySelector('.ac-project-meta h3');
+            var cardCounter = card.querySelector('.ac-project-meta > span');
+
+            if (!image || !cardTitle || !cardCounter) return;
+
+            projectView.href = card.href;
+            counter.textContent = cardCounter.textContent;
+            title.textContent = cardTitle.textContent;
+            swapImage(image.currentSrc || image.src, image.alt || cardTitle.textContent);
+            projectView.classList.add('is-visible');
+            projectView.setAttribute('aria-hidden', 'false');
+        }
+
+        function hideProject() {
+            projectView.classList.remove('is-visible');
+            projectView.setAttribute('aria-hidden', 'true');
+        }
+
+        function stopTimer() {
+            if (timer) window.clearInterval(timer);
+            timer = 0;
+        }
+
+        function startTimer() {
+            stopTimer();
+            if (activeSlide < 0 || hoveredCard || document.hidden) return;
+
+            var rowCards = Array.prototype.slice.call(slides[activeSlide].querySelectorAll('.ac-project'));
+            if (rowCards.length < 2) return;
+
+            timer = window.setInterval(function () {
+                activeCard = (activeCard + 1) % rowCards.length;
+                showCard(rowCards[activeCard]);
+            }, 3000);
+        }
+
+        function selectSlide(index) {
+            if (index === activeSlide) return;
+
+            activeSlide = index;
+            activeCard = 0;
+            stopTimer();
+
+            if (index < 0) {
+                hideProject();
+                return;
+            }
+
+            var firstCard = slides[index].querySelector('.ac-project');
+            if (firstCard) showCard(firstCard);
+            startTimer();
+        }
+
+        function updateActiveSlide() {
+            ticking = false;
+
+            if (window.innerWidth <= 900) {
+                hoveredCard = null;
+                stopTimer();
+                activeSlide = -1;
+                activeCard = 0;
+                hideProject();
+                return;
+            }
+
+            var stickyTop = 132;
+            var currentSlide = -1;
+
+            slides.forEach(function (slide, index) {
+                var rect = slide.getBoundingClientRect();
+                if (rect.top <= stickyTop + 1 && rect.bottom > stickyTop) currentSlide = index;
+            });
+
+            if (currentSlide !== activeSlide) hoveredCard = null;
+            selectSlide(currentSlide);
+        }
+
+        function scheduleUpdate() {
+            if (ticking) return;
+            ticking = true;
+            window.requestAnimationFrame(updateActiveSlide);
+        }
+
+        cards.forEach(function (card) {
+            card.addEventListener('mouseenter', function () {
+                if (window.innerWidth <= 900) return;
+                hoveredCard = card;
+                stopTimer();
+                showCard(card);
+            });
+
+            card.addEventListener('mouseleave', function () {
+                if (hoveredCard !== card) return;
+                hoveredCard = null;
+
+                if (activeSlide < 0) {
+                    hideProject();
+                    return;
+                }
+
+                var rowCards = slides[activeSlide].querySelectorAll('.ac-project');
+                if (rowCards[activeCard]) showCard(rowCards[activeCard]);
+                startTimer();
+            });
+        });
+
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) stopTimer();
+            else startTimer();
+        });
+        window.addEventListener('scroll', scheduleUpdate, {passive: true});
+        window.addEventListener('resize', scheduleUpdate);
+        window.addEventListener('pagehide', stopTimer);
+        updateActiveSlide();
+    });
+</script>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        <div class="ac-footer-grid">
+            <div class="ac-footer-index">AC / 2026</div>
+            <div class="footer-brand ac-footer-brand">
+                <strong>Digital product development</strong>
+                <p>Mobile apps, websites, e-commerce platforms and complex integrations — focused on speed, UX and stability.</p>
+            </div>
+            <div class="footer-links ac-footer-links">
+                <a href="/projects.html">Projects</a>
+                <a href="/about.html">About</a>
+                <a href="/reviews.html">Reviews</a>
+                <a href="/certificates.html">Certificates</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="power">
+    <span class="hid">
+        All rights reserved    </span>
+                2026 «App-Creator»
+            </div>
+        </div>
+    </div>
+    <script type="application/ld+json">{
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "url": "https://app-creator.site/",
+            "name": "App-Creator - Vitaliy Khaychenko Portfolio",
+            "logo": "https://app-creator.site/assets/img/logo.png",
+            "image": "https://app-creator.site/assets/img/vitaliy-portrait.jpg",
+            "jobTitle": "Software developer"
+        }
+    </script>
+    <script src="/assets/js/jquery-2.1.1.min.js"></script>
+        <script>
+        function fixed_top() {
+            var header = $('header.site-header');
+            $('body').css('padding-top', 0);
+            header.toggleClass('fixed', $(window).scrollTop() > 0);
+        }
+
+        $(document).ready(function () {
+            fixed_top();
+            $(window).on('scroll resize', fixed_top);
+        });
+
+        $(document).on('click', '.burger', function(){
+            var isOpen = !$(this).hasClass('active');
+            $(this).toggleClass('active', isOpen).attr('aria-expanded', isOpen);
+            $('body').toggleClass('active', isOpen);
+        });
+
+        $(document).on('click', '.menu a', function(){
+            $('body').removeClass('active');
+            $('.burger').removeClass('active').attr('aria-expanded', 'false');
+        });
+
+        $(document).on('keydown', function(event) {
+            if (event.key === 'Escape') {
+                $('body').removeClass('active');
+                $('.burger').removeClass('active').attr('aria-expanded', 'false');
+            }
+        });
+
+        $(document).on('click', '.ac-service-toggle', function() {
+            var item = $(this).closest('.ac-service-item');
+            var list = item.parent();
+            list.find('.ac-service-item').not(item).removeClass('active')
+                .find('.ac-service-toggle').attr('aria-expanded', 'false').find('i').text('+');
+            item.toggleClass('active');
+            $(this).attr('aria-expanded', item.hasClass('active'))
+                .find('i').text(item.hasClass('active') ? '−' : '+');
+        });
+
+        $(document).on('click', '#acThemeToggle', function() {
+            $('body').toggleClass('ac-muted-mode');
+            $(this).attr('aria-pressed', $('body').hasClass('ac-muted-mode'));
+        });
+
+        if ('IntersectionObserver' in window && location.pathname === '/') {
+            var navLinks = document.querySelectorAll('.ac-nav a[href^="#"]');
+            var sections = Array.prototype.map.call(navLinks, function(link) {
+                return document.querySelector(link.getAttribute('href'));
+            }).filter(Boolean);
+            var sectionObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (!entry.isIntersecting) return;
+                    navLinks.forEach(function(link) {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                });
+            }, {rootMargin: '-35% 0px -55% 0px'});
+            sections.forEach(function(section) { sectionObserver.observe(section); });
+        }
+    </script>
+        <script>
+        let reviewsData;
+
+        const footerLocale = "en-US";
+        const dateNotSetText = "Date not specified";
+        const viewReviewText = "View Review";
+        const noReviewsText = "No reviews match this filter";
+        const language = "en";
+
+        if ($('.reviews-section').hasClass('rsh')) {
+            reviewsData = [{"id":"9","rating":"5","project":"Разработка мобильного приложения для наушников","project_en":"Develop a mobile application for headphones","name":"Заказчик","name_en":"Client","text":"Всё хорошо, заказ выполнен качественно ","text_en":"Everything went well. The project was completed to a high standard.","price":"15000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_945622-2","sort":"9","created_at":"2024-01-15 19:02:59"},{"id":"8","rating":"5","project":"Доработка загрузчика товаров на опенкарте","project_en":"Improve the OpenCart product importer","name":"Дмитрий Ненашев","name_en":"Dmitry Nenashev","text":"Виталий успешно справился с задачей с которой не справился другой разработчик. Пришлось, конечно, повозиться, много тестировать, но результат отличный!","text_en":"Vitaliy successfully completed a task that another developer could not handle. It required a lot of work and extensive testing, but the final result was excellent!","price":"8000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"8","created_at":"2024-01-15 19:02:59"},{"id":"7","rating":"5","project":"Устранить проблему с дублированием email при отправке рассылки писем","project_en":"Fix duplicate emails when sending an email campaign","name":"Заказчик","name_en":"Client","text":"Очень оперативно решен поставленный вопрос. Спасибо за профессиональную работу!","text_en":"The issue was resolved very quickly. Thank you for the professional work!","price":"3000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"7","created_at":"2024-01-07 19:02:59"},{"id":"6","rating":"5","project":"Правка на Опенкарт 3","project_en":"OpenCart 3 modification","name":"Александр Егоров","name_en":"Alexander Egorov","text":"Спасибо большое. Всем доволен. Буду постоянно к вам обращаться","text_en":"Thank you very much. I am completely satisfied with the result and will continue working with you.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"6","created_at":"2023-12-30 19:02:59"},{"id":"5","rating":"5","project":"OpenCart: Настроить интеграции с ТК и Эквайрингом (через готовые модули)","project_en":"OpenCart: Configure shipping and payment gateway integrations using existing modules","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Выполнил все согласно ТЗ, без нареканий. Хороший специалист, обращаемся не первый раз","text_en":"Everything was completed according to the specification without any issues. A skilled developer whom we have worked with more than once.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"5","created_at":"2023-10-09 18:02:59"},{"id":"4","rating":"5","project":"Создать структуру Мобильного приложения","project_en":"Create the structure of a mobile application","name":"Заказчик","name_en":"Client","text":"Все было сделано как надо. Рекомендую!","text_en":"Everything was completed exactly as required. Highly recommended!","price":"10000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"4","created_at":"2023-09-26 18:02:59"},{"id":"3","rating":"5","project":"OpenCart: Доработать стили сайта","project_en":"OpenCart: Improve the website styles","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Повторный заказ. Небольшая доработка, все отлично сделано. ","text_en":"A repeat order. It was a small improvement, and everything was completed perfectly.","price":"1000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920187-2","sort":"3","created_at":"2023-09-18 18:02:59"},{"id":"2","rating":"5","project":"Модуль Opencart 1.5.6 переписать на 3.0","project_en":"Rewrite an OpenCart 1.5.6 module for OpenCart 3.0","name":"Всеволод Антонов-Дидковский\r\n","name_en":"Vsevolod Antonov-Didkovsky","text":"Виталий справился с задачей очень быстро! Проект был сдан вовремя, без каких-либо замечаний. Действительно мастер своего дела! Рекомендую как супер специалиста! ","text_en":"Vitaliy completed the task very quickly! The project was delivered on time without any issues. He is truly a master of his craft. I highly recommend him as an excellent specialist!","price":"8300","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919858-2","sort":"2","created_at":"2023-09-14 17:02:00"},{"id":"1","rating":"5","project":"OpenCart: Доработать и проверить функционал сайта","project_en":"OpenCart: Improve and test the website functionality","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Отличный исполнитель, все сделал четко и быстро, и даже чуть больше, рекомендуем! ","text_en":"Excellent developer. Everything was completed quickly and precisely, and even a little beyond the original scope. Highly recommended!","price":"5000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919652-2","sort":"1","created_at":"2023-09-12 16:19:34"}].slice(0, 3);
+        } else {
+            reviewsData = [{"id":"9","rating":"5","project":"Разработка мобильного приложения для наушников","project_en":"Develop a mobile application for headphones","name":"Заказчик","name_en":"Client","text":"Всё хорошо, заказ выполнен качественно ","text_en":"Everything went well. The project was completed to a high standard.","price":"15000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_945622-2","sort":"9","created_at":"2024-01-15 19:02:59"},{"id":"8","rating":"5","project":"Доработка загрузчика товаров на опенкарте","project_en":"Improve the OpenCart product importer","name":"Дмитрий Ненашев","name_en":"Dmitry Nenashev","text":"Виталий успешно справился с задачей с которой не справился другой разработчик. Пришлось, конечно, повозиться, много тестировать, но результат отличный!","text_en":"Vitaliy successfully completed a task that another developer could not handle. It required a lot of work and extensive testing, but the final result was excellent!","price":"8000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"8","created_at":"2024-01-15 19:02:59"},{"id":"7","rating":"5","project":"Устранить проблему с дублированием email при отправке рассылки писем","project_en":"Fix duplicate emails when sending an email campaign","name":"Заказчик","name_en":"Client","text":"Очень оперативно решен поставленный вопрос. Спасибо за профессиональную работу!","text_en":"The issue was resolved very quickly. Thank you for the professional work!","price":"3000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_932138-2","sort":"7","created_at":"2024-01-07 19:02:59"},{"id":"6","rating":"5","project":"Правка на Опенкарт 3","project_en":"OpenCart 3 modification","name":"Александр Егоров","name_en":"Alexander Egorov","text":"Спасибо большое. Всем доволен. Буду постоянно к вам обращаться","text_en":"Thank you very much. I am completely satisfied with the result and will continue working with you.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"6","created_at":"2023-12-30 19:02:59"},{"id":"5","rating":"5","project":"OpenCart: Настроить интеграции с ТК и Эквайрингом (через готовые модули)","project_en":"OpenCart: Configure shipping and payment gateway integrations using existing modules","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Выполнил все согласно ТЗ, без нареканий. Хороший специалист, обращаемся не первый раз","text_en":"Everything was completed according to the specification without any issues. A skilled developer whom we have worked with more than once.","price":"4000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"5","created_at":"2023-10-09 18:02:59"},{"id":"4","rating":"5","project":"Создать структуру Мобильного приложения","project_en":"Create the structure of a mobile application","name":"Заказчик","name_en":"Client","text":"Все было сделано как надо. Рекомендую!","text_en":"Everything was completed exactly as required. Highly recommended!","price":"10000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920999-2","sort":"4","created_at":"2023-09-26 18:02:59"},{"id":"3","rating":"5","project":"OpenCart: Доработать стили сайта","project_en":"OpenCart: Improve the website styles","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Повторный заказ. Небольшая доработка, все отлично сделано. ","text_en":"A repeat order. It was a small improvement, and everything was completed perfectly.","price":"1000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_920187-2","sort":"3","created_at":"2023-09-18 18:02:59"},{"id":"2","rating":"5","project":"Модуль Opencart 1.5.6 переписать на 3.0","project_en":"Rewrite an OpenCart 1.5.6 module for OpenCart 3.0","name":"Всеволод Антонов-Дидковский\r\n","name_en":"Vsevolod Antonov-Didkovsky","text":"Виталий справился с задачей очень быстро! Проект был сдан вовремя, без каких-либо замечаний. Действительно мастер своего дела! Рекомендую как супер специалиста! ","text_en":"Vitaliy completed the task very quickly! The project was delivered on time without any issues. He is truly a master of his craft. I highly recommend him as an excellent specialist!","price":"8300","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919858-2","sort":"2","created_at":"2023-09-14 17:02:00"},{"id":"1","rating":"5","project":"OpenCart: Доработать и проверить функционал сайта","project_en":"OpenCart: Improve and test the website functionality","name":"Александр Иванов","name_en":"Alexander Ivanov","text":"Отличный исполнитель, все сделал четко и быстро, и даже чуть больше, рекомендуем! ","text_en":"Excellent developer. Everything was completed quickly and precisely, and even a little beyond the original scope. Highly recommended!","price":"5000","link":"https:\/\/www.fl.ru\/users\/flworker21\/opinions\/?period=0&author=2&sort=1#p_919652-2","sort":"1","created_at":"2023-09-12 16:19:34"}];
+        }
+
+        function renderStars(rating) {
+            let stars = '';
+            const fullStars = Math.floor(rating);
+            const hasHalf = rating % 1 !== 0;
+
+            for (let i = 1; i <= 5; i++) {
+                if (i <= fullStars) {
+                    stars += '<span class="star filled">★</span>';
+                } else if (hasHalf && i === fullStars + 1) {
+                    stars += '<span class="star half">★</span>';
+                } else {
+                    stars += '<span class="star">★</span>';
+                }
+            }
+            return stars;
+        }
+
+        function formatPrice(price) {
+            return new Intl.NumberFormat(footerLocale).format(price) + ' ₽';
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return dateNotSetText;
+
+            const date = new Date(dateStr);
+
+            return date.toLocaleDateString(footerLocale, {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function createCard(review) {
+            return `
+        <div class="review-card" data-rating="${review.rating}" data-price="${review.price}" data-id="${review.id}">
+    <div class="card-header">
+        <span class="project-name">
+            ${escapeHtml(language === 'en' ? review.project_en : review.project)}
+        </span>
+
+        <div class="rating">
+            ${renderStars(parseFloat(review.rating))}
+        </div>
+    </div>
+
+    <div class="client-name">
+        ${escapeHtml(language === 'en' ? review.name_en : review.name)}
+    </div>
+
+    <div class="review-text">
+        ${escapeHtml(language === 'en' ? review.text_en : review.text)}
+    </div>
+
+    <div class="price-link">
+        <div class="price">
+            ${formatPrice(parseFloat(review.price))}
+        </div>
+
+        <a href="${escapeHtml(review.link)}" target="_blank" class="review-link">
+            ${viewReviewText}
+        </a>
+    </div>
+
+    <div class="review-date">
+        ${formatDate(review.created_at)}
+    </div>
+</div>
+    `;
+        }
+
+        let currentFilter = 'all';
+
+        function filterReviews() {
+            let filtered = [...reviewsData];
+
+            switch (currentFilter) {
+                case '5':
+                    filtered = filtered.filter(r => parseFloat(r.rating) === 5);
+                    break;
+                case '4':
+                    filtered = filtered.filter(r => parseFloat(r.rating) >= 4);
+                    break;
+                case 'high-price':
+                    filtered = filtered.filter(r => parseFloat(r.price) >= 200000);
+                    break;
+                default:
+                    filtered = [...reviewsData];
+            }
+
+            const grid = document.getElementById('reviewsGrid');
+
+            if (grid) {
+                if (filtered.length === 0) {
+                    grid.innerHTML =
+                        '<div style="text-align: center; padding: 3rem; background: #f9fafb; border-radius: 30px; color: #6b7280;">' +
+                        noReviewsText +
+                        '</div>';
+                    return;
+                }
+
+                grid.innerHTML = filtered.map(createCard).join('');
+            }
+        }
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                filterReviews();
+            });
+        });
+
+        function createParticles() {
+            const section = document.querySelector('.reviews-section');
+
+            if (section) {
+                for (let i = 0; i < 30; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDuration = 8 + Math.random() * 15 + 's';
+                    particle.style.animationDelay = Math.random() * 20 + 's';
+                    particle.style.width = particle.style.height = (2 + Math.random() * 5) + 'px';
+                    particle.style.background = `#a855f7`;
+                    particle.style.opacity = 0.1 + Math.random() * 0.2;
+                    section.appendChild(particle);
+                }
+            }
+        }
+
+        setTimeout(() => {
+            filterReviews();
+        }, 100);
+
+        createParticles();
+    </script>
+    <script>
+        (function () {
+            if (!window.matchMedia('(pointer: fine)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            var effect = document.createElement('div');
+            effect.className = 'ac-pointer-fx';
+            effect.setAttribute('aria-hidden', 'true');
+            effect.innerHTML = '<span class="ac-pointer-glow"></span><span class="ac-pointer-ring"></span><span class="ac-pointer-trail"></span><span class="ac-pointer-trail"></span><span class="ac-pointer-trail"></span>';
+            document.body.appendChild(effect);
+
+            var glow = effect.querySelector('.ac-pointer-glow');
+            var ring = effect.querySelector('.ac-pointer-ring');
+            var trails = Array.prototype.slice.call(effect.querySelectorAll('.ac-pointer-trail'));
+            var points = [{x: 0, y: 0}, {x: 0, y: 0}, {x: 0, y: 0}, {x: 0, y: 0}];
+            var target = {x: 0, y: 0};
+            var frame = 0;
+            var ready = false;
+
+            function place(node, point) {
+                node.style.transform = 'translate3d(' + point.x + 'px,' + point.y + 'px,0) translate(-50%,-50%)';
+            }
+
+            function render() {
+                points[0].x += (target.x - points[0].x) * .2;
+                points[0].y += (target.y - points[0].y) * .2;
+
+                for (var index = 1; index < points.length; index++) {
+                    points[index].x += (points[index - 1].x - points[index].x) * (.24 - index * .025);
+                    points[index].y += (points[index - 1].y - points[index].y) * (.24 - index * .025);
+                    place(trails[index - 1], points[index]);
+                }
+
+                place(glow, points[0]);
+                place(ring, points[0]);
+
+                if (Math.abs(target.x - points[3].x) > .2 || Math.abs(target.y - points[3].y) > .2) {
+                    frame = window.requestAnimationFrame(render);
+                } else {
+                    frame = 0;
+                }
+            }
+
+            document.addEventListener('pointermove', function (event) {
+                target.x = event.clientX;
+                target.y = event.clientY;
+
+                if (!ready) {
+                    points.forEach(function (point) {
+                        point.x = target.x;
+                        point.y = target.y;
+                    });
+                    ready = true;
+                    effect.classList.add('is-visible');
+                }
+
+                effect.classList.toggle('is-hovering', Boolean(event.target.closest('a, button, [role="button"]')));
+                if (!frame) frame = window.requestAnimationFrame(render);
+            }, {passive: true});
+
+            document.documentElement.addEventListener('mouseleave', function () {
+                effect.classList.remove('is-visible', 'is-hovering');
+                ready = false;
+            });
+
+            document.documentElement.addEventListener('mouseenter', function () {
+                if (ready) effect.classList.add('is-visible');
+            });
+        })();
+    </script>
+</footer>
+</body>
+</html>
