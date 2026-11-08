@@ -553,7 +553,7 @@ body.project-gallery-open {
     <title>Мобильное кросплатформенное приложение TapTym, ремонт квартиры без стресса</title>
     <base href="https://hayvetalkz.github.io/" />
     <meta name="description" content="Мобильное кросплатформенное приложение TapTym, ремонт квартиры без стресса. Запусти ремонт под ключ с прозрачной стоимостью и контролем качества. Мы берём на себя организацию, а ты - получаешь результат." />
-    <meta name="keywords" content="App development, mobile development, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
+    <meta name="keywords" content="App development, mobile development, Telegram bots, Telegram Mini Apps, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
     <meta property="og:title" content="Мобильное кросплатформенное приложение TapTym, ремонт квартиры без стресса" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hayvetalkz.github.io/project/taptym" />
@@ -1405,7 +1405,7 @@ body.ac-muted-mode .ac-lang-btn {
                 <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
                 <div class="ac-profile-status"><i></i>10+ years in development</div>
                 <h2>Hey, I’m Vitaliy</h2>
-                <p>I build mobile applications, websites and digital products for business.</p>
+                <p>I build mobile applications, websites, Telegram bots and Mini Apps for business.</p>
                 <div class="ac-profile-actions">
                     <a href="/en/projects.html">Projects</a>
                 </div>
@@ -1494,7 +1494,7 @@ Taptym - ремонт квартиры без стресса
 
 Taptym - просто запусти ремонт.
 				
-				<p><a href="https://apps.apple.com/ru/app/taptym-app/id6762202660" target="_blank" rel="nofollow">Посмотреть  приложение - Apps.apple.com/ru/app/taptym-app/id6762202660</a></p>
+				<p><a href="https://apps.apple.com/ru/app/taptym-app/id6762202660" target="_blank" rel="nofollow">Посмотреть приложение - Apps.apple.com/ru/app/taptym-app/id6762202660</a></p>
 			</div>
 			<img style="margin-top: 30px" class="responsive" src="/assets/img/project/image_1777536883_052a488a.webp" alt="Мобильное кросплатформенное приложение TapTym" />
 		<div class="rating"><div class="project-gallery"><div class="project-gallery-head"><h2 class="project-gallery-title">Скриншоты проекта</h2><span class="project-gallery-count">1 / 5</span></div><div class="project-slider"><div class="project-slider-track"><div class="project-slide" data-index="0"><img src="/assets/img/project/image_1777536883_052a488a.webp" alt="Скриншот проекта 1"></div><div class="project-slide" data-index="1"><img src="/assets/img/project/image_1777536883_3996aa43.webp" alt="Скриншот проекта 2"></div><div class="project-slide" data-index="2"><img src="/assets/img/project/image_1777536883_9cb7a34b.webp" alt="Скриншот проекта 3"></div><div class="project-slide" data-index="3"><img src="/assets/img/project/image_1777536883_c10ffb6e.webp" alt="Скриншот проекта 4"></div><div class="project-slide" data-index="4"><img src="/assets/img/project/image_1777536883_5ebfb6ee.webp" alt="Скриншот проекта 5"></div></div><button class="project-slider-btn project-slider-prev" type="button">‹</button><button class="project-slider-btn project-slider-next" type="button">›</button></div><div class="project-thumbs"><button class="project-thumb active" type="button" data-index="0"><img src="/assets/img/project/image_1777536883_052a488a.webp" alt="Миниатюра 1"></button><button class="project-thumb" type="button" data-index="1"><img src="/assets/img/project/image_1777536883_3996aa43.webp" alt="Миниатюра 2"></button><button class="project-thumb" type="button" data-index="2"><img src="/assets/img/project/image_1777536883_9cb7a34b.webp" alt="Миниатюра 3"></button><button class="project-thumb" type="button" data-index="3"><img src="/assets/img/project/image_1777536883_c10ffb6e.webp" alt="Миниатюра 4"></button><button class="project-thumb" type="button" data-index="4"><img src="/assets/img/project/image_1777536883_5ebfb6ee.webp" alt="Миниатюра 5"></button></div></div></div></section>
@@ -1505,7 +1505,7 @@ Taptym - просто запусти ремонт.
             <div class="ac-footer-index">AC / 2026</div>
             <div class="footer-brand ac-footer-brand">
                 <strong>Digital product development</strong>
-                <p>Mobile apps, websites, e-commerce platforms and complex integrations — focused on speed, UX and stability.</p>
+                <p>Mobile apps, websites, Telegram bots, Mini Apps and complex integrations — focused on speed, UX and stability.</p>
             </div>
             <div class="footer-links ac-footer-links">
                 <a href="/en/projects.html">Projects</a>
@@ -1724,9 +1724,9 @@ Taptym - просто запусти ремонт.
             }
         }
 
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+        document.querySelectorAll('#filters .filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('#filters .filter-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentFilter = btn.dataset.filter;
                 filterReviews();

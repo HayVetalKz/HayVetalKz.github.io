@@ -553,7 +553,7 @@ body.project-gallery-open {
     <title>FelicitaFlowers - Доставка цветов Москва по низким ценам</title>
     <base href="https://hayvetalkz.github.io/" />
     <meta name="description" content="Натяжка готовой верстки на CMS OpenCart версии 2.1, срок проекта 15 дней." />
-    <meta name="keywords" content="Создание приложений, мобильная разработка, Flutter, Swift, Kotlin, Laravel, Android, iOS, разработка под ключ" />
+    <meta name="keywords" content="Создание приложений, мобильная разработка, Telegram-боты, Telegram Mini Apps, Flutter, Swift, Kotlin, Laravel, Android, iOS, разработка под ключ" />
     <meta property="og:title" content="FelicitaFlowers - Доставка цветов Москва по низким ценам" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hayvetalkz.github.io/project/felicita-flowers" />
@@ -1405,7 +1405,7 @@ body.ac-muted-mode .ac-lang-btn {
                 <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
                 <div class="ac-profile-status"><i></i>10+ лет в разработке</div>
                 <h2>Привет, я Виталий</h2>
-                <p>Создаю мобильные приложения, сайты и цифровые продукты для бизнеса.</p>
+                <p>Создаю мобильные приложения, сайты, Telegram-ботов и Mini Apps для бизнеса.</p>
                 <div class="ac-profile-actions">
                     <a href="/projects.html">Работы</a>
                 </div>
@@ -1475,7 +1475,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 Макет формата figma + адаптив всех страниц.
 				
-				<p><a href="https://felicita-flowers.com/ru-ru/moscow/" target="_blank" rel="nofollow">Посмотреть  приложение - Felicita-flowers.com/ru-ru/moscow</a></p>
+				<p><a href="https://felicita-flowers.com/ru-ru/moscow/" target="_blank" rel="nofollow">Посмотреть сайт - Felicita-flowers.com/ru-ru/moscow</a></p>
 			</div>
 			<img style="margin-top: 30px" class="responsive" src="/assets/img/project/felicita-flowers.com.webp" alt="Доставка цветов Москва по низким ценам – всегда рады новым заказам и готовы помочь" />
 		<div class="rating"><div class="project-gallery"><div class="project-gallery-head"><h2 class="project-gallery-title">Скриншоты проекта</h2><span class="project-gallery-count">1 / 1</span></div><div class="project-slider"><div class="project-slider-track"><div class="project-slide" data-index="0"><img src="/assets/img/project/felicita-flowers.com.webp" alt="Скриншот проекта 1"></div></div></div></div></div></section>
@@ -1486,7 +1486,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="ac-footer-index">AC / 2026</div>
             <div class="footer-brand ac-footer-brand">
                 <strong>Разработка цифровых продуктов</strong>
-                <p>Мобильные приложения, сайты, интернет-магазины и сложные интеграции — с фокусом на скорость, UX и стабильность.</p>
+                <p>Мобильные приложения, сайты, Telegram-боты, Mini Apps и сложные интеграции — с фокусом на скорость, UX и стабильность.</p>
             </div>
             <div class="footer-links ac-footer-links">
                 <a href="/projects.html">Работы</a>
@@ -1705,9 +1705,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+        document.querySelectorAll('#filters .filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('#filters .filter-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentFilter = btn.dataset.filter;
                 filterReviews();

@@ -553,7 +553,7 @@ body.project-gallery-open {
     <title>Мобильное кросплатформенное приложение MOZI Sizer</title>
     <base href="https://hayvetalkz.github.io/" />
     <meta name="description" content="Мобильное кросплатформенное приложение MOZI Sizer. Определи размер кольца за секунды с MOZISIZER. Точно, удобно и без примерки. Гайды, советы и всё о ювелирных изделиях в одном приложении." />
-    <meta name="keywords" content="Создание приложений, мобильная разработка, Flutter, Swift, Kotlin, Laravel, Android, iOS, разработка под ключ" />
+    <meta name="keywords" content="Создание приложений, мобильная разработка, Telegram-боты, Telegram Mini Apps, Flutter, Swift, Kotlin, Laravel, Android, iOS, разработка под ключ" />
     <meta property="og:title" content="Мобильное кросплатформенное приложение MOZI Sizer" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hayvetalkz.github.io/project/mozi_sizer" />
@@ -1405,7 +1405,7 @@ body.ac-muted-mode .ac-lang-btn {
                 <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
                 <div class="ac-profile-status"><i></i>10+ лет в разработке</div>
                 <h2>Привет, я Виталий</h2>
-                <p>Создаю мобильные приложения, сайты и цифровые продукты для бизнеса.</p>
+                <p>Создаю мобильные приложения, сайты, Telegram-ботов и Mini Apps для бизнеса.</p>
                 <div class="ac-profile-actions">
                     <a href="/projects.html">Работы</a>
                 </div>
@@ -1500,7 +1500,7 @@ MOZI SIZER — это удобное приложение для точного 
 
 Узнай свой размер — остальное дело вкуса.
 				
-				<p><a href="https://apps.apple.com/ru/app/mozi-sizer/id6764517684" target="_blank" rel="nofollow">Посмотреть  приложение - Apps.apple.com/ru/app/mozi-sizer/id6764517684</a></p>
+				<p><a href="https://apps.apple.com/ru/app/mozi-sizer/id6764517684" target="_blank" rel="nofollow">Посмотреть приложение - Apps.apple.com/ru/app/mozi-sizer/id6764517684</a></p>
 			</div>
 			<img style="margin-top: 30px" class="responsive" src="/assets/img/project/image_1777579432_4f6ba130.webp" alt="Мобильное кросплатформенное приложение MOZI Sizer" />
 		<div class="rating"><div class="project-gallery"><div class="project-gallery-head"><h2 class="project-gallery-title">Скриншоты проекта</h2><span class="project-gallery-count">1 / 3</span></div><div class="project-slider"><div class="project-slider-track"><div class="project-slide" data-index="0"><img src="/assets/img/project/image_1777579432_4f6ba130.webp" alt="Скриншот проекта 1"></div><div class="project-slide" data-index="1"><img src="/assets/img/project/image_1777579433_b8fff210.webp" alt="Скриншот проекта 2"></div><div class="project-slide" data-index="2"><img src="/assets/img/project/image_1777579433_08476a54.webp" alt="Скриншот проекта 3"></div></div><button class="project-slider-btn project-slider-prev" type="button">‹</button><button class="project-slider-btn project-slider-next" type="button">›</button></div><div class="project-thumbs"><button class="project-thumb active" type="button" data-index="0"><img src="/assets/img/project/image_1777579432_4f6ba130.webp" alt="Миниатюра 1"></button><button class="project-thumb" type="button" data-index="1"><img src="/assets/img/project/image_1777579433_b8fff210.webp" alt="Миниатюра 2"></button><button class="project-thumb" type="button" data-index="2"><img src="/assets/img/project/image_1777579433_08476a54.webp" alt="Миниатюра 3"></button></div></div></div></section>
@@ -1511,7 +1511,7 @@ MOZI SIZER — это удобное приложение для точного 
             <div class="ac-footer-index">AC / 2026</div>
             <div class="footer-brand ac-footer-brand">
                 <strong>Разработка цифровых продуктов</strong>
-                <p>Мобильные приложения, сайты, интернет-магазины и сложные интеграции — с фокусом на скорость, UX и стабильность.</p>
+                <p>Мобильные приложения, сайты, Telegram-боты, Mini Apps и сложные интеграции — с фокусом на скорость, UX и стабильность.</p>
             </div>
             <div class="footer-links ac-footer-links">
                 <a href="/projects.html">Работы</a>
@@ -1730,9 +1730,9 @@ MOZI SIZER — это удобное приложение для точного 
             }
         }
 
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+        document.querySelectorAll('#filters .filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('#filters .filter-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentFilter = btn.dataset.filter;
                 filterReviews();

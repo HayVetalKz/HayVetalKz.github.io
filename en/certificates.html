@@ -20,7 +20,7 @@
     <title>Certificates & Skill Verification — App-Creator</title>
     <base href="https://hayvetalkz.github.io/" />
     <meta name="description" content="Verified professional qualifications and official state certificates: PHP, Docker, API, OOP, HTML, Git, CSS, JavaScript, PostgreSQL, Golang." />
-    <meta name="keywords" content="App development, mobile development, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
+    <meta name="keywords" content="App development, mobile development, Telegram bots, Telegram Mini Apps, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
     <meta property="og:title" content="Certificates & Skill Verification — App-Creator" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hayvetalkz.github.io/certificates" />
@@ -872,7 +872,7 @@ body.ac-muted-mode .ac-lang-btn {
                 <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
                 <div class="ac-profile-status"><i></i>10+ years in development</div>
                 <h2>Hey, I’m Vitaliy</h2>
-                <p>I build mobile applications, websites and digital products for business.</p>
+                <p>I build mobile applications, websites, Telegram bots and Mini Apps for business.</p>
                 <div class="ac-profile-actions">
                     <a href="/en/projects.html">Projects</a>
                 </div>
@@ -1458,7 +1458,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="ac-footer-index">AC / 2026</div>
             <div class="footer-brand ac-footer-brand">
                 <strong>Digital product development</strong>
-                <p>Mobile apps, websites, e-commerce platforms and complex integrations — focused on speed, UX and stability.</p>
+                <p>Mobile apps, websites, Telegram bots, Mini Apps and complex integrations — focused on speed, UX and stability.</p>
             </div>
             <div class="footer-links ac-footer-links">
                 <a href="/en/projects.html">Projects</a>
@@ -1677,9 +1677,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+        document.querySelectorAll('#filters .filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('#filters .filter-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentFilter = btn.dataset.filter;
                 filterReviews();

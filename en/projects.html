@@ -20,7 +20,7 @@
     <title>Completed Portfolio Projects</title>
     <base href="https://hayvetalkz.github.io/" />
     <meta name="description" content="View completed portfolio projects and order development services." />
-    <meta name="keywords" content="App development, mobile development, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
+    <meta name="keywords" content="App development, mobile development, Telegram bots, Telegram Mini Apps, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
     <meta property="og:title" content="Completed Portfolio Projects" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hayvetalkz.github.io/projects" />
@@ -872,7 +872,7 @@ body.ac-muted-mode .ac-lang-btn {
                 <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
                 <div class="ac-profile-status"><i></i>10+ years in development</div>
                 <h2>Hey, I’m Vitaliy</h2>
-                <p>I build mobile applications, websites and digital products for business.</p>
+                <p>I build mobile applications, websites, Telegram bots and Mini Apps for business.</p>
                 <div class="ac-profile-actions">
                     <a href="/en/projects.html">Projects</a>
                 </div>
@@ -1338,219 +1338,224 @@ document.addEventListener('DOMContentLoaded', function () {
                 <span>01 / Portfolio register</span>
                 <h1>Latest Projects</h1>
             </header>
-            <div class="ac-projects ac-projects--catalog">
-                                    <a class="ac-project" href="/en/project/naimio.html">
-                        <img src="/assets/img/preview_1787880576_36a83e03.webp" alt="Naimio - маркетплейс фриланс услуг">
+                            <div class="ac-filter-bar ac-project-filter" id="projectFilter">
+                    <button type="button" class="filter-btn active" data-type="all">All <sup>27</sup></button>
+                                            <button type="button" class="filter-btn" data-type="site">Websites <sup>5</sup></button>
+                                            <button type="button" class="filter-btn" data-type="app">Apps <sup>22</sup></button>
+                                    </div>
+                        <div class="ac-projects ac-projects--catalog" id="projectCatalog">
+                                    <a class="ac-project" href="/en/project/naimio.html" data-type="site">
+                        <img src="/assets/img/preview_1787880576_36a83e03.webp" alt="Naimio - маркетплейс фриланс услуг" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>01 / Case Study</span>
+                            <span data-label="Website">01 / Website</span>
                             <h3>Naimio - маркетплейс фриланс услуг</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/mozi_sizer.html">
-                        <img src="/assets/img/preview_1777579432_303375d8.webp" alt="Мобильное кросплатформенное приложение MOZI Sizer">
+                                    <a class="ac-project" href="/en/project/mozi_sizer.html" data-type="app">
+                        <img src="/assets/img/preview_1777579432_303375d8.webp" alt="Мобильное кросплатформенное приложение MOZI Sizer" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>02 / Case Study</span>
+                            <span data-label="App">02 / App</span>
                             <h3>Мобильное кросплатформенное приложение MOZI Sizer</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/taptym.html">
-                        <img src="/assets/img/preview_1777536883_04c2adf9.webp" alt="Мобильное кросплатформенное приложение TapTym">
+                                    <a class="ac-project" href="/en/project/taptym.html" data-type="app">
+                        <img src="/assets/img/preview_1777536883_04c2adf9.webp" alt="Мобильное кросплатформенное приложение TapTym" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>03 / Case Study</span>
+                            <span data-label="App">03 / App</span>
                             <h3>Мобильное кросплатформенное приложение TapTym</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/universum_worlds.html">
-                        <img src="/assets/img/preview_1777649875_bf7613e3.webp" alt="Мобильное кросплатформенное приложение Universum Worlds">
+                                    <a class="ac-project" href="/en/project/universum_worlds.html" data-type="app">
+                        <img src="/assets/img/preview_1777649875_bf7613e3.webp" alt="Мобильное кросплатформенное приложение Universum Worlds" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>04 / Case Study</span>
+                            <span data-label="App">04 / App</span>
                             <h3>Мобильное кросплатформенное приложение Universum Worlds</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/logflightpro.html">
-                        <img src="/assets/img/preview_1777652567_4419c044.webp" alt="Мобильное нативное приложение LogFlightPro">
+                                    <a class="ac-project" href="/en/project/logflightpro.html" data-type="app">
+                        <img src="/assets/img/preview_1777652567_4419c044.webp" alt="Мобильное нативное приложение LogFlightPro" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>05 / Case Study</span>
+                            <span data-label="App">05 / App</span>
                             <h3>Мобильное нативное приложение LogFlightPro</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/cstrike_skins.html">
-                        <img src="/assets/img/preview_1777653000_2383ac53.webp" alt="Мобильное кросплатформенное приложение СStrike Skins">
+                                    <a class="ac-project" href="/en/project/cstrike_skins.html" data-type="app">
+                        <img src="/assets/img/preview_1777653000_2383ac53.webp" alt="Мобильное кросплатформенное приложение СStrike Skins" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>06 / Case Study</span>
+                            <span data-label="App">06 / App</span>
                             <h3>Мобильное кросплатформенное приложение СStrike Skins</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/lol_skins_collection.html">
-                        <img src="/assets/img/preview_1777653175_7eaf4cee.webp" alt="Мобильное кросплатформенное приложение LoL Skins Collection">
+                                    <a class="ac-project" href="/en/project/lol_skins_collection.html" data-type="app">
+                        <img src="/assets/img/preview_1777653175_7eaf4cee.webp" alt="Мобильное кросплатформенное приложение LoL Skins Collection" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>07 / Case Study</span>
+                            <span data-label="App">07 / App</span>
                             <h3>Мобильное кросплатформенное приложение LoL Skins Collection</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/moba_skins.html">
-                        <img src="/assets/img/preview_1777653672_8e3b72f3.webp" alt="Мобильное кросплатформенное приложение Moba Skins">
+                                    <a class="ac-project" href="/en/project/moba_skins.html" data-type="app">
+                        <img src="/assets/img/preview_1777653672_8e3b72f3.webp" alt="Мобильное кросплатформенное приложение Moba Skins" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>08 / Case Study</span>
+                            <span data-label="App">08 / App</span>
                             <h3>Мобильное кросплатформенное приложение Moba Skins</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/soulcue.html">
-                        <img src="/assets/img/preview_1777579207_84975fa9.webp" alt="SoulCue: AI Journal">
+                                    <a class="ac-project" href="/en/project/soulcue.html" data-type="app">
+                        <img src="/assets/img/preview_1777579207_84975fa9.webp" alt="SoulCue: AI Journal" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>09 / Case Study</span>
+                            <span data-label="App">09 / App</span>
                             <h3>SoulCue: AI Journal</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/ttm.html">
-                        <img src="/assets/img/preview_1777538698_fef2ff8f.webp" alt="Трак Трейлер Маркет">
+                                    <a class="ac-project" href="/en/project/ttm.html" data-type="app">
+                        <img src="/assets/img/preview_1777538698_fef2ff8f.webp" alt="Трак Трейлер Маркет" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>10 / Case Study</span>
+                            <span data-label="App">10 / App</span>
                             <h3>Трак Трейлер Маркет</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/fingpt.html">
-                        <img src="/assets/img/preview_1777538746_2b4353af.webp" alt="FinGPT - SwiftUI">
+                                    <a class="ac-project" href="/en/project/fingpt.html" data-type="app">
+                        <img src="/assets/img/preview_1777538746_2b4353af.webp" alt="FinGPT - SwiftUI" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>11 / Case Study</span>
+                            <span data-label="App">11 / App</span>
                             <h3>FinGPT - SwiftUI</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/luna_deep.html">
-                        <img src="/assets/img/preview_1777538906_3963d70e.webp" alt="Luna Deep - Prime music wave">
+                                    <a class="ac-project" href="/en/project/luna_deep.html" data-type="app">
+                        <img src="/assets/img/preview_1777538906_3963d70e.webp" alt="Luna Deep - Prime music wave" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>12 / Case Study</span>
+                            <span data-label="App">12 / App</span>
                             <h3>Luna Deep - Prime music wave</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/icapia_home.html">
-                        <img src="/assets/img/preview_1777538957_ccb31b63.webp" alt="Don&#039;t Touch My Phone Guard">
+                                    <a class="ac-project" href="/en/project/icapia_home.html" data-type="app">
+                        <img src="/assets/img/preview_1777538957_ccb31b63.webp" alt="Don&#039;t Touch My Phone Guard" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>13 / Case Study</span>
+                            <span data-label="App">13 / App</span>
                             <h3>Don&#039;t Touch My Phone Guard</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/auctioncar.html">
-                        <img src="/assets/img/preview_1777539013_6d371a57.webp" alt="Мобильное приложение AuctionCar - Flutter ">
+                                    <a class="ac-project" href="/en/project/auctioncar.html" data-type="app">
+                        <img src="/assets/img/preview_1777539013_6d371a57.webp" alt="Мобильное приложение AuctionCar - Flutter " loading="lazy">
                         <div class="ac-project-meta">
-                            <span>14 / Case Study</span>
+                            <span data-label="App">14 / App</span>
                             <h3>Мобильное приложение AuctionCar - Flutter </h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/applock.html">
-                        <img src="/assets/img/preview_1777539056_996f2ef3.webp" alt="Super App Lock: Screen Time">
+                                    <a class="ac-project" href="/en/project/applock.html" data-type="app">
+                        <img src="/assets/img/preview_1777539056_996f2ef3.webp" alt="Super App Lock: Screen Time" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>15 / Case Study</span>
+                            <span data-label="App">15 / App</span>
                             <h3>Super App Lock: Screen Time</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/dtmp.html">
-                        <img src="/assets/img/preview_1777539119_d4dedca9.webp" alt="Don&#039;t Touch My Phone Guard">
+                                    <a class="ac-project" href="/en/project/dtmp.html" data-type="app">
+                        <img src="/assets/img/preview_1777539119_d4dedca9.webp" alt="Don&#039;t Touch My Phone Guard" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>16 / Case Study</span>
+                            <span data-label="App">16 / App</span>
                             <h3>Don&#039;t Touch My Phone Guard</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/catdog.html">
-                        <img src="/assets/img/preview_1777539171_5d3c80af.webp" alt="AI Pawsome: CatDog Translator">
+                                    <a class="ac-project" href="/en/project/catdog.html" data-type="app">
+                        <img src="/assets/img/preview_1777539171_5d3c80af.webp" alt="AI Pawsome: CatDog Translator" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>17 / Case Study</span>
+                            <span data-label="App">17 / App</span>
                             <h3>AI Pawsome: CatDog Translator</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/ohotica.html">
-                        <img src="/assets/img/33V.webp" alt="Охотика">
+                                    <a class="ac-project" href="/en/project/ohotica.html" data-type="app">
+                        <img src="/assets/img/33V.webp" alt="Охотика" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>18 / Case Study</span>
+                            <span data-label="App">18 / App</span>
                             <h3>Охотика</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/goat_rock.html">
-                        <img src="/assets/img/preview_1777539424_94984a4e.webp" alt="Goat Rock – Prime Rock Station">
+                                    <a class="ac-project" href="/en/project/goat_rock.html" data-type="app">
+                        <img src="/assets/img/preview_1777539424_94984a4e.webp" alt="Goat Rock – Prime Rock Station" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>19 / Case Study</span>
+                            <span data-label="App">19 / App</span>
                             <h3>Goat Rock – Prime Rock Station</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/tezarius.html">
-                        <img src="/assets/img/preview_1777539481_d236a459.webp" alt="Tezarius - Торговля и учет">
+                                    <a class="ac-project" href="/en/project/tezarius.html" data-type="app">
+                        <img src="/assets/img/preview_1777539481_d236a459.webp" alt="Tezarius - Торговля и учет" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>20 / Case Study</span>
+                            <span data-label="App">20 / App</span>
                             <h3>Tezarius - Торговля и учет</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/taumart.html">
-                        <img src="/assets/img/preview_1777539527_304d9410.webp" alt="Тау-Март">
+                                    <a class="ac-project" href="/en/project/taumart.html" data-type="app">
+                        <img src="/assets/img/preview_1777539527_304d9410.webp" alt="Тау-Март" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>21 / Case Study</span>
+                            <span data-label="App">21 / App</span>
                             <h3>Тау-Март</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/pro_design.html">
-                        <img src="/assets/img/preview_1777652851_6f94df6b.webp" alt="Мобильное кросплатформенное приложение ПРО ДИЗАЙН">
+                                    <a class="ac-project" href="/en/project/pro_design.html" data-type="app">
+                        <img src="/assets/img/preview_1777652851_6f94df6b.webp" alt="Мобильное кросплатформенное приложение ПРО ДИЗАЙН" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>22 / Case Study</span>
+                            <span data-label="App">22 / App</span>
                             <h3>Мобильное кросплатформенное приложение ПРО ДИЗАЙН</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/drivezaim.html">
-                        <img src="/assets/img/img.webp" alt="DriveZaim Займ под залог авто">
+                                    <a class="ac-project" href="/en/project/drivezaim.html" data-type="app">
+                        <img src="/assets/img/img.webp" alt="DriveZaim Займ под залог авто" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>23 / Case Study</span>
+                            <span data-label="App">23 / App</span>
                             <h3>DriveZaim Займ под залог авто</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/instaflora.html">
-                        <img src="/assets/img/inst.webp" alt="Доставка цветов Москва от Instaflora для тех, кто привык к лучшему, но не хочет переплачивать">
+                                    <a class="ac-project" href="/en/project/instaflora.html" data-type="site">
+                        <img src="/assets/img/inst.webp" alt="Доставка цветов Москва от Instaflora для тех, кто привык к лучшему, но не хочет переплачивать" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>24 / Case Study</span>
+                            <span data-label="Website">24 / Website</span>
                             <h3>Доставка цветов Москва от Instaflora для тех, кто привык к лучшему, но не хочет переплачивать</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/felicita-flowers.html">
-                        <img src="/assets/img/felicita-flowers.com_p.webp" alt="Доставка цветов Москва по низким ценам – всегда рады новым заказам и готовы помочь">
+                                    <a class="ac-project" href="/en/project/felicita-flowers.html" data-type="site">
+                        <img src="/assets/img/felicita-flowers.com_p.webp" alt="Доставка цветов Москва по низким ценам – всегда рады новым заказам и готовы помочь" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>25 / Case Study</span>
+                            <span data-label="Website">25 / Website</span>
                             <h3>Доставка цветов Москва по низким ценам – всегда рады новым заказам и готовы помочь</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/mosoptom.html">
-                        <img src="/assets/img/5.webp" alt="MosOptom разработка на Laravel">
+                                    <a class="ac-project" href="/en/project/mosoptom.html" data-type="site">
+                        <img src="/assets/img/5.webp" alt="MosOptom разработка на Laravel" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>26 / Case Study</span>
+                            <span data-label="Website">26 / Website</span>
                             <h3>MosOptom разработка на Laravel</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
                     </a>
-                                    <a class="ac-project" href="/en/project/1001-sewing-machine.html">
-                        <img src="/assets/img/1.webp" alt="1001 швейная машина">
+                                    <a class="ac-project" href="/en/project/1001-sewing-machine.html" data-type="site">
+                        <img src="/assets/img/1.webp" alt="1001 швейная машина" loading="lazy">
                         <div class="ac-project-meta">
-                            <span>27 / Case Study</span>
+                            <span data-label="Website">27 / Website</span>
                             <h3>1001 швейная машина</h3>
                             <i aria-hidden="true">↗</i>
                         </div>
@@ -1560,6 +1565,33 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+        var filter = document.getElementById('projectFilter');
+        var catalog = document.getElementById('projectCatalog');
+
+        if (filter && catalog) {
+            var cards = Array.prototype.slice.call(catalog.children);
+
+            filter.addEventListener('click', function (event) {
+                var btn = event.target.closest('.filter-btn');
+                if (!btn) return;
+
+                filter.querySelectorAll('.filter-btn').forEach(function (item) {
+                    item.classList.toggle('active', item === btn);
+                });
+
+                var type = btn.dataset.type;
+                var index = 1;
+
+                catalog.innerHTML = '';
+                cards.forEach(function (card) {
+                    if (type !== 'all' && card.dataset.type !== type) return;
+                    var label = card.querySelector('.ac-project-meta > span');
+                    label.textContent = String(index++).padStart(2, '0') + ' / ' + label.dataset.label;
+                    catalog.appendChild(card);
+                });
+            });
+        }
+
         var items = document.querySelectorAll('.reveal');
 
         function showVisible() {
@@ -1607,7 +1639,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="ac-footer-index">AC / 2026</div>
             <div class="footer-brand ac-footer-brand">
                 <strong>Digital product development</strong>
-                <p>Mobile apps, websites, e-commerce platforms and complex integrations — focused on speed, UX and stability.</p>
+                <p>Mobile apps, websites, Telegram bots, Mini Apps and complex integrations — focused on speed, UX and stability.</p>
             </div>
             <div class="footer-links ac-footer-links">
                 <a href="/en/projects.html">Projects</a>
@@ -1826,9 +1858,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+        document.querySelectorAll('#filters .filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('#filters .filter-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentFilter = btn.dataset.filter;
                 filterReviews();

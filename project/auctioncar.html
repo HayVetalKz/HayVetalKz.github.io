@@ -553,7 +553,7 @@ body.project-gallery-open {
     <title>Мобильное приложение AuctionCar - Flutter </title>
     <base href="https://hayvetalkz.github.io/" />
     <meta name="description" content="Мобильное приложение AuctionCar - Flutter " />
-    <meta name="keywords" content="Создание приложений, мобильная разработка, Flutter, Swift, Kotlin, Laravel, Android, iOS, разработка под ключ" />
+    <meta name="keywords" content="Создание приложений, мобильная разработка, Telegram-боты, Telegram Mini Apps, Flutter, Swift, Kotlin, Laravel, Android, iOS, разработка под ключ" />
     <meta property="og:title" content="Мобильное приложение AuctionCar - Flutter " />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hayvetalkz.github.io/project/auctioncar" />
@@ -1405,7 +1405,7 @@ body.ac-muted-mode .ac-lang-btn {
                 <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
                 <div class="ac-profile-status"><i></i>10+ лет в разработке</div>
                 <h2>Привет, я Виталий</h2>
-                <p>Создаю мобильные приложения, сайты и цифровые продукты для бизнеса.</p>
+                <p>Создаю мобильные приложения, сайты, Telegram-ботов и Mini Apps для бизнеса.</p>
                 <div class="ac-profile-actions">
                     <a href="/projects.html">Работы</a>
                 </div>
@@ -1475,7 +1475,7 @@ document.addEventListener('DOMContentLoaded', function () {
 Aplikacja umożliwia licytowanie w czasie rzeczywistym oraz organizuje wykup i dostawę pojazdów. Nie masz konta? 
 Złóż wniosek o dostęp bezpośrednio w aplikacji, aby uczestniczyć w aukcjach.
 				
-				<p><a href="https://apps.apple.com/us/app/auctioncar/id6569221304" target="_blank" rel="nofollow">Посмотреть  приложение - Apps.apple.com/us/app/auctioncar/id6569221304</a></p>
+				<p><a href="https://apps.apple.com/us/app/auctioncar/id6569221304" target="_blank" rel="nofollow">Посмотреть приложение - Apps.apple.com/us/app/auctioncar/id6569221304</a></p>
 			</div>
 			<img style="margin-top: 30px" class="responsive" src="/assets/img/project/image_1777539013_9625f5a5.webp" alt="Мобильное приложение AuctionCar - Flutter " />
 		<div class="rating"><div class="project-gallery"><div class="project-gallery-head"><h2 class="project-gallery-title">Скриншоты проекта</h2><span class="project-gallery-count">1 / 5</span></div><div class="project-slider"><div class="project-slider-track"><div class="project-slide" data-index="0"><img src="/assets/img/project/image_1777539013_9625f5a5.webp" alt="Скриншот проекта 1"></div><div class="project-slide" data-index="1"><img src="/assets/img/project/image_1777539013_3faad6ae.webp" alt="Скриншот проекта 2"></div><div class="project-slide" data-index="2"><img src="/assets/img/project/image_1777539013_b7ffc3d5.webp" alt="Скриншот проекта 3"></div><div class="project-slide" data-index="3"><img src="/assets/img/project/image_1777539013_b21f0bf3.webp" alt="Скриншот проекта 4"></div><div class="project-slide" data-index="4"><img src="/assets/img/project/image_1777539013_453c80bb.webp" alt="Скриншот проекта 5"></div></div><button class="project-slider-btn project-slider-prev" type="button">‹</button><button class="project-slider-btn project-slider-next" type="button">›</button></div><div class="project-thumbs"><button class="project-thumb active" type="button" data-index="0"><img src="/assets/img/project/image_1777539013_9625f5a5.webp" alt="Миниатюра 1"></button><button class="project-thumb" type="button" data-index="1"><img src="/assets/img/project/image_1777539013_3faad6ae.webp" alt="Миниатюра 2"></button><button class="project-thumb" type="button" data-index="2"><img src="/assets/img/project/image_1777539013_b7ffc3d5.webp" alt="Миниатюра 3"></button><button class="project-thumb" type="button" data-index="3"><img src="/assets/img/project/image_1777539013_b21f0bf3.webp" alt="Миниатюра 4"></button><button class="project-thumb" type="button" data-index="4"><img src="/assets/img/project/image_1777539013_453c80bb.webp" alt="Миниатюра 5"></button></div></div></div></section>
@@ -1486,7 +1486,7 @@ Złóż wniosek o dostęp bezpośrednio w aplikacji, aby uczestniczyć w aukcjac
             <div class="ac-footer-index">AC / 2026</div>
             <div class="footer-brand ac-footer-brand">
                 <strong>Разработка цифровых продуктов</strong>
-                <p>Мобильные приложения, сайты, интернет-магазины и сложные интеграции — с фокусом на скорость, UX и стабильность.</p>
+                <p>Мобильные приложения, сайты, Telegram-боты, Mini Apps и сложные интеграции — с фокусом на скорость, UX и стабильность.</p>
             </div>
             <div class="footer-links ac-footer-links">
                 <a href="/projects.html">Работы</a>
@@ -1705,9 +1705,9 @@ Złóż wniosek o dostęp bezpośrednio w aplikacji, aby uczestniczyć w aukcjac
             }
         }
 
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+        document.querySelectorAll('#filters .filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('#filters .filter-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentFilter = btn.dataset.filter;
                 filterReviews();

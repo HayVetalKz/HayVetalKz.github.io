@@ -553,7 +553,7 @@ body.project-gallery-open {
     <title>Мобильное приложение Super App Lock: Screen Time, разработка на Swift</title>
     <base href="https://hayvetalkz.github.io/" />
     <meta name="description" content="Мобильное приложение Super App Lock: Screen Time разработано на Swift" />
-    <meta name="keywords" content="App development, mobile development, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
+    <meta name="keywords" content="App development, mobile development, Telegram bots, Telegram Mini Apps, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
     <meta property="og:title" content="Мобильное приложение Super App Lock: Screen Time, разработка на Swift" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hayvetalkz.github.io/project/applock" />
@@ -1405,7 +1405,7 @@ body.ac-muted-mode .ac-lang-btn {
                 <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
                 <div class="ac-profile-status"><i></i>10+ years in development</div>
                 <h2>Hey, I’m Vitaliy</h2>
-                <p>I build mobile applications, websites and digital products for business.</p>
+                <p>I build mobile applications, websites, Telegram bots and Mini Apps for business.</p>
                 <div class="ac-profile-actions">
                     <a href="/en/projects.html">Projects</a>
                 </div>
@@ -1473,7 +1473,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			<div class="content">
 				This app is a comprehensive app management tool focused on safeguarding user privacy and optimizing app usage. Easily lock applications, set various schedules to control app usage time, enhance focus, and eliminate privacy concerns. Monitor each app’s usage details, including time spent. The Toolbox enables seamless toggling of functions and system settings, making you a more efficient and organized user.
 				
-				<p><a href="https://apps.apple.com/us/app/super-app-lock-screen-time/id6504559259" target="_blank" rel="nofollow">Посмотреть  приложение - Apps.apple.com/us/app/super-app-lock-screen-time/id6504559259</a></p>
+				<p><a href="https://apps.apple.com/us/app/super-app-lock-screen-time/id6504559259" target="_blank" rel="nofollow">Посмотреть приложение - Apps.apple.com/us/app/super-app-lock-screen-time/id6504559259</a></p>
 			</div>
 			<img style="margin-top: 30px" class="responsive" src="/assets/img/project/image_1777539056_fc8750c8.webp" alt="Super App Lock: Screen Time" />
 		<div class="rating"><div class="project-gallery"><div class="project-gallery-head"><h2 class="project-gallery-title">Скриншоты проекта</h2><span class="project-gallery-count">1 / 4</span></div><div class="project-slider"><div class="project-slider-track"><div class="project-slide" data-index="0"><img src="/assets/img/project/image_1777539056_fc8750c8.webp" alt="Скриншот проекта 1"></div><div class="project-slide" data-index="1"><img src="/assets/img/project/image_1777539056_69235aa4.webp" alt="Скриншот проекта 2"></div><div class="project-slide" data-index="2"><img src="/assets/img/project/image_1777539057_760acabc.webp" alt="Скриншот проекта 3"></div><div class="project-slide" data-index="3"><img src="/assets/img/project/image_1777539057_40f64d46.webp" alt="Скриншот проекта 4"></div></div><button class="project-slider-btn project-slider-prev" type="button">‹</button><button class="project-slider-btn project-slider-next" type="button">›</button></div><div class="project-thumbs"><button class="project-thumb active" type="button" data-index="0"><img src="/assets/img/project/image_1777539056_fc8750c8.webp" alt="Миниатюра 1"></button><button class="project-thumb" type="button" data-index="1"><img src="/assets/img/project/image_1777539056_69235aa4.webp" alt="Миниатюра 2"></button><button class="project-thumb" type="button" data-index="2"><img src="/assets/img/project/image_1777539057_760acabc.webp" alt="Миниатюра 3"></button><button class="project-thumb" type="button" data-index="3"><img src="/assets/img/project/image_1777539057_40f64d46.webp" alt="Миниатюра 4"></button></div></div></div></section>
@@ -1484,7 +1484,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="ac-footer-index">AC / 2026</div>
             <div class="footer-brand ac-footer-brand">
                 <strong>Digital product development</strong>
-                <p>Mobile apps, websites, e-commerce platforms and complex integrations — focused on speed, UX and stability.</p>
+                <p>Mobile apps, websites, Telegram bots, Mini Apps and complex integrations — focused on speed, UX and stability.</p>
             </div>
             <div class="footer-links ac-footer-links">
                 <a href="/en/projects.html">Projects</a>
@@ -1703,9 +1703,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+        document.querySelectorAll('#filters .filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('#filters .filter-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentFilter = btn.dataset.filter;
                 filterReviews();

@@ -19,8 +19,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>About App-Creator</title>
     <base href="https://hayvetalkz.github.io/" />
-    <meta name="description" content="App-Creator — mobile app, website, e-commerce, Laravel/OpenCart, integration, parsing and automation development." />
-    <meta name="keywords" content="App development, mobile development, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
+    <meta name="description" content="App-Creator — mobile app, website, Telegram bot, Telegram Mini App, e-commerce, Laravel/OpenCart, integration, parsing and automation development." />
+    <meta name="keywords" content="App development, mobile development, Telegram bots, Telegram Mini Apps, Flutter, Swift, Kotlin, Laravel, Android, iOS, turnkey development" />
     <meta property="og:title" content="About App-Creator" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hayvetalkz.github.io/about" />
@@ -872,7 +872,7 @@ body.ac-muted-mode .ac-lang-btn {
                 <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
                 <div class="ac-profile-status"><i></i>10+ years in development</div>
                 <h2>Hey, I’m Vitaliy</h2>
-                <p>I build mobile applications, websites and digital products for business.</p>
+                <p>I build mobile applications, websites, Telegram bots and Mini Apps for business.</p>
                 <div class="ac-profile-actions">
                     <a href="/en/projects.html">Projects</a>
                 </div>
@@ -1378,7 +1378,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="ac-hero-copy">
             <div class="ac-kicker"><span>01</span>App-Creator — turnkey development</div>
             <h1>Not just code. <em>Ready-to-use solutions</em> built to sell and grow</h1>
-            <p>I develop mobile applications, websites, online stores and complex integrations. I approach every task as a complete product: architecture, usability, speed, security, scalability and ongoing support.</p>
+            <p>I develop mobile applications, websites, online stores, Telegram bots, Mini Apps and complex integrations. I approach every task as a complete product: architecture, usability, speed, security, scalability and ongoing support.</p>
             <div class="ac-actions"><a href="/en/projects.html" class="ac-button ac-button--primary">View Projects</a></div>
         </div>
         <aside class="ac-register">
@@ -1408,6 +1408,9 @@ document.addEventListener('DOMContentLoaded', function () {
                             <article><span>04</span><h3>Integrations and APIs</h3><p>Payments, CRM, delivery services, Firebase, notifications, external services, data exchange and automated workflows.</p></article>
                             <article><span>05</span><h3>Parsing and Automation</h3><p>Data collection, price-list processing, bots, routine-task automation and tools that save business time.</p></article>
                             <article><span>06</span><h3>Optimization</h3><p>Performance improvements, bottleneck fixes, code cleanup, better UX, SEO structure and technical stability.</p></article>
+                            <article><span>07</span><h3>Telegram Bots</h3><p>Bots for sales, bookings, support and broadcasts: menus and flows, payments, CRM and database integration, admin panel and analytics.</p></article>
+                            <article><span>08</span><h3>Telegram Mini Apps</h3><p>Full web applications inside Telegram: catalogs, stores, user accounts, Telegram login and payments with Telegram Stars.</p></article>
+                            <article><span>09</span><h3>Support and Growth</h3><p>Post-launch support: updates, new features, monitoring, new store releases and server migrations.</p></article>
                     </div>
     </section>
 
@@ -1424,7 +1427,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <section class="ac-section">
         <header class="ac-section-head"><div><span>04 / Technology</span><h2>Technologies</h2></div><p>I use tools that help launch products quickly and continue developing them confidently.</p></header>
         <div class="ac-capabilities ac-capabilities--wide">
-                        <div><span>01</span>Flutter</div><div><span>02</span>Kotlin</div><div><span>03</span>Swift</div><div><span>04</span>Laravel</div><div><span>05</span>OpenCart</div><div><span>06</span>PHP</div><div><span>07</span>MySQL</div><div><span>08</span>Firebase</div><div><span>09</span>REST API</div><div><span>10</span>HTML / CSS / JS</div><div><span>11</span>Bootstrap / Flexbox</div><div><span>12</span>Parsing</div><div><span>13</span>Bots</div><div><span>14</span>SEO / Performance</div>        </div>
+                        <div><span>01</span>Flutter</div><div><span>02</span>Kotlin</div><div><span>03</span>Swift</div><div><span>04</span>Laravel</div><div><span>05</span>OpenCart</div><div><span>06</span>PHP</div><div><span>07</span>MySQL</div><div><span>08</span>Firebase</div><div><span>09</span>REST API</div><div><span>10</span>HTML / CSS / JS</div><div><span>11</span>Bootstrap / Flexbox</div><div><span>12</span>Telegram Bot API</div><div><span>13</span>Telegram Mini Apps</div><div><span>14</span>Parsing</div><div><span>15</span>SEO / Performance</div>        </div>
     </section>
 </div>
 <script>
@@ -1472,7 +1475,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="ac-footer-index">AC / 2026</div>
             <div class="footer-brand ac-footer-brand">
                 <strong>Digital product development</strong>
-                <p>Mobile apps, websites, e-commerce platforms and complex integrations — focused on speed, UX and stability.</p>
+                <p>Mobile apps, websites, Telegram bots, Mini Apps and complex integrations — focused on speed, UX and stability.</p>
             </div>
             <div class="footer-links ac-footer-links">
                 <a href="/en/projects.html">Projects</a>
@@ -1691,9 +1694,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+        document.querySelectorAll('#filters .filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('#filters .filter-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentFilter = btn.dataset.filter;
                 filterReviews();

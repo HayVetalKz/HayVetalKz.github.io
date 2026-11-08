@@ -20,7 +20,7 @@
     <title>Страница не найдена</title>
     <base href="https://hayvetalkz.github.io/" />
     <meta name="description" content="Запрашиваемая страница не найдена" />
-    <meta name="keywords" content="Создание приложений, мобильная разработка, Flutter, Swift, Kotlin, Laravel, Android, iOS, разработка под ключ" />
+    <meta name="keywords" content="Создание приложений, мобильная разработка, Telegram-боты, Telegram Mini Apps, Flutter, Swift, Kotlin, Laravel, Android, iOS, разработка под ключ" />
     <meta property="og:title" content="Страница не найдена" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hayvetalkz.github.io/404" />
@@ -872,7 +872,7 @@ body.ac-muted-mode .ac-lang-btn {
                 <img src="/assets/img/vitaliy-portrait.jpg" alt="Виталий Хайченко">
                 <div class="ac-profile-status"><i></i>10+ лет в разработке</div>
                 <h2>Привет, я Виталий</h2>
-                <p>Создаю мобильные приложения, сайты и цифровые продукты для бизнеса.</p>
+                <p>Создаю мобильные приложения, сайты, Telegram-ботов и Mini Apps для бизнеса.</p>
                 <div class="ac-profile-actions">
                     <a href="/projects.html">Работы</a>
                 </div>
@@ -953,7 +953,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="ac-footer-index">AC / 2026</div>
             <div class="footer-brand ac-footer-brand">
                 <strong>Разработка цифровых продуктов</strong>
-                <p>Мобильные приложения, сайты, интернет-магазины и сложные интеграции — с фокусом на скорость, UX и стабильность.</p>
+                <p>Мобильные приложения, сайты, Telegram-боты, Mini Apps и сложные интеграции — с фокусом на скорость, UX и стабильность.</p>
             </div>
             <div class="footer-links ac-footer-links">
                 <a href="/projects.html">Работы</a>
@@ -1172,9 +1172,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+        document.querySelectorAll('#filters .filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('#filters .filter-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentFilter = btn.dataset.filter;
                 filterReviews();
